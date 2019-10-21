@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 public class Main {
-    static Aid alexa = new Aid(49);
+
     public static void main(final String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override

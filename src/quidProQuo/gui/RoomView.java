@@ -1,12 +1,18 @@
 package quidProQuo.gui;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 
 public class RoomView extends JPanel {
+    private BufferedImage background;
+
     private static final long serialVersionUID = 1L;
 
     /** Width of the window */
@@ -44,6 +50,9 @@ public class RoomView extends JPanel {
     public RoomView() {
         setBackground(new Color(255, 255, 255));
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
+
+        // Image will not work right now on other devices
+        background = loadImage("/Users/Jagr/Desktop/GameJam/src/quidProQuo/gui/RoomView.jpg");
 
 
         MouseAdapter listener = new MouseAdapter() {
@@ -91,8 +100,19 @@ public class RoomView extends JPanel {
         super.paintComponent(g);
 
         // TODO: draw selection (if there is one)
-
+        g.drawImage(background, 150, 150, null);
         // TODO: draw congratulatory message if player has won the game
+    }
+
+    private BufferedImage loadImage(String resourceName) {
+        BufferedImage image;
+        try {
+            System.out.println("Loading " + resourceName);
+            image = ImageIO.read(new File(resourceName));
+        } catch (Exception e) {
+            throw new IllegalStateException("Could not load " + resourceName);
+        }
+        return image;
     }
 
 
