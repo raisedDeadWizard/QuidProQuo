@@ -13,8 +13,9 @@ public class AidTopics {
         topics.add("your staff want to know when they will see the new draft of your tax plan?");
         topics.add("the people want to know what your response is to the shooting this past weekend?");
         topics.add("the press wants to know what your response is to the impeachment proceedings?");
+        topics.add("how do you respond to the allegations that you sexually assaulted numerous women?");
 
-        numTopics = 4;
+        numTopics = topics.size();
 
     }
 
