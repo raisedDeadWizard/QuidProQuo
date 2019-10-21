@@ -1,5 +1,6 @@
 package quidProQuo.gui;
 
+import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -52,7 +53,7 @@ public class RoomView extends JPanel {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
 
         // Image will not work right now on other devices
-        background = loadImage("/Users/Jagr/Desktop/GameJam/src/quidProQuo/gui/RoomView.jpg");
+        background = loadImage("RoomView.jpg");
 
 
         MouseAdapter listener = new MouseAdapter() {
@@ -108,7 +109,8 @@ public class RoomView extends JPanel {
         BufferedImage image;
         try {
             System.out.println("Loading " + resourceName);
-            image = ImageIO.read(new File(resourceName));
+            URL resource = RoomView.class.getResource(resourceName);
+            image = ImageIO.read(resource);
         } catch (Exception e) {
             throw new IllegalStateException("Could not load " + resourceName);
         }
