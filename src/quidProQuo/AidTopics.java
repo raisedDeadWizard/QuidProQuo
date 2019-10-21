@@ -9,10 +9,10 @@ public class AidTopics {
     public AidTopics(){
         topics = new ArrayList<String>();
 
-        topics.add("what you will do about the border crisis?");
-        topics.add("when they will see the dividends of your tax plan?");
-        topics.add("what your response is to the shooting this past weekend?");
-        topics.add("what your response is to the impeachment proceedings?");
+        topics.add("the people are wondering what you will do about the border crisis?");
+        topics.add("your staff want to know when they will see the new draft of your tax plan?");
+        topics.add("the people want to know what your response is to the shooting this past weekend?");
+        topics.add("the press wants to know what your response is to the impeachment proceedings?");
 
         numTopics = 4;
 

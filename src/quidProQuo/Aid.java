@@ -13,21 +13,21 @@ public class Aid {
 
         // choose a random topic from the first 20
         if (impeachPercent < 25){
-            line = "Hello Mr. President, the people are wondering " + topics.getTopic(rand.nextInt(topics.getNumTopics()));
+            line = "Hello Mr. President, " + topics.getTopic(rand.nextInt(topics.getNumTopics()));
         }
 
         // choose a random topic from the second 20
         else if (impeachPercent < 50){
-            line = "Hello Mr. President, the people are wondering " + topics.getTopic(rand.nextInt(topics.getNumTopics()));
+            line = "Hello Mr. President, " + topics.getTopic(rand.nextInt(topics.getNumTopics()));
         }
 
         // choose a random topic from the third 20
         else if (impeachPercent < 75){
-            line = "Hello Mr. President, the people are wondering " + topics.getTopic(rand.nextInt(topics.getNumTopics()));
+            line = "Hello Mr. President, " + topics.getTopic(rand.nextInt(topics.getNumTopics()));
         }
         // choose a random topic from the last 20
         else {
-            line = "Hello Mr. President, the people are wondering " + topics.getTopic(rand.nextInt(topics.getNumTopics()));
+            line = "Hello Mr. President, " + topics.getTopic(rand.nextInt(topics.getNumTopics()));
         }
     }
 
