@@ -2,7 +2,6 @@ package quidProQuo;
 import java.util.Random;
 
 public class Aid {
-    private int impeachPercent;
     private int gender;
     private String line;
     private AidTopics topics;
@@ -10,7 +9,6 @@ public class Aid {
 
     public Aid(int impeachPercent){
         topics = new AidTopics();
-        this.impeachPercent = impeachPercent;
         this.gender = rand.nextInt(2);
 
         // choose a random topic from the first 20
@@ -37,10 +35,6 @@ public class Aid {
     // 0 for male, 1 for female
     public int getGender(){
         return gender;
-    }
-
-    public int getImpeachPercent() {
-        return impeachPercent;
     }
 
     public String getLine(){
