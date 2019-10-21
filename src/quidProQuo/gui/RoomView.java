@@ -1,6 +1,6 @@
 package quidProQuo.gui;
 
-import javax.annotation.Resource;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
