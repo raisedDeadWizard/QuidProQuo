@@ -1,6 +1,8 @@
 package quidProQuo.gui;
 
 
+import quidProQuo.ImpeachmentBar;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -13,46 +15,26 @@ import java.net.URL;
 
 public class RoomView extends JPanel {
     private BufferedImage background;
+    private ImpeachmentBar iBar;
 
     private static final long serialVersionUID = 1L;
 
     /** Width of the window */
-    private static final int WIDTH = 800;
+    private static final int WIDTH = 1920;
 
     /** Height of window */
-    private static final int HEIGHT = 600;
+    private static final int HEIGHT = 1080;
 
-    /** Width of card images */
-    private static final int CARD_WIDTH = 80;
-
-    /** Height of card images */
-    private static final int CARD_HEIGHT = 116;
-
-    /** Offset of piles from left edge */
-    private static final int LEFT_OFFSET = 30;
-
-    /** Offset of top-row piles from top edge */
-    private static final int TOP_OFFSET = 20;
-
-    /** Offset of tableau piles from left edge */
-    private static final int FOUNDATION_LEFT_OFFSET = 360;
-
-    /** Offset of tableau piles from top edge */
-    private static final int TABLEAU_TOP_OFFSET = 160;
-
-    /** Spacing of piles horizontally */
-    private static final int HORIZONTAL_PILE_SPACING = 110;
-
-    /** Vertical spacing of cards in tableau piles */
-    public static final int VERTICAL_CARD_SPACING = 24;
 
 
     public RoomView() {
-        setBackground(new Color(255, 255, 255));
+
+        setBackground(Color.WHITE);
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
 
         // Image will not work right now on other devices
-        background = loadImage("RoomView.jpg");
+        background = loadImage("ovaloffice.png");
+        iBar = new ImpeachmentBar();
 
 
         MouseAdapter listener = new MouseAdapter() {
@@ -78,6 +60,10 @@ public class RoomView extends JPanel {
 
     protected void handleMousePressed(MouseEvent e) {
 
+        if (e.getX() > 20 && e.getX() < 500 && e.getY() > 20 && e.getY() < 65){
+            iBar.update(5);
+        }
+
         repaint();
     }
 
@@ -95,9 +81,15 @@ public class RoomView extends JPanel {
     protected void paintComponent(Graphics g) {
         // Paint background
         super.paintComponent(g);
+        g.drawImage(background, 0, 0, null);
 
        // drawing oval office to test
-        g.drawImage(background, 150, 150, null);
+        g.drawImage(iBar.getSprite(), 20,20,null);
+        g.setColor(Color.RED);
+        g.fillRect(iBar.getX()+8,iBar.getY()+3, Math.round(iBar.getImpeachPercent()*3), 18);
+        g.setColor(Color.BLACK);
+        g.drawChars(iBar.getPercent(), 0, iBar.getPercent().length,iBar.getX() + 175,iBar.getY() + 38);
+
     }
 
     private BufferedImage loadImage(String resourceName) {
