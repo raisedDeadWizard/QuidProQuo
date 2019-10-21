@@ -9,6 +9,7 @@ public class AidTopics {
     public AidTopics(){
         topics = new ArrayList<String>();
 
+        //TODO: Add the remaining topics, totalling 80
         topics.add("the people are wondering what you will do about the border crisis?");
         topics.add("your staff want to know when they will see the new draft of your tax plan?");
         topics.add("the people want to know what your response is to the shooting this past weekend?");

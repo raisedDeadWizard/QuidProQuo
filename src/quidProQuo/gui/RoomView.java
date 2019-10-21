@@ -46,7 +46,6 @@ public class RoomView extends JPanel {
     /** Vertical spacing of cards in tableau piles */
     public static final int VERTICAL_CARD_SPACING = 24;
 
-    // TODO: add other fields
 
     public RoomView() {
         setBackground(new Color(255, 255, 255));
@@ -78,19 +77,16 @@ public class RoomView extends JPanel {
 
 
     protected void handleMousePressed(MouseEvent e) {
-        // TODO: implement
 
         repaint();
     }
 
     protected void handleMouseDragged(MouseEvent e) {
-        // TODO: implement
 
         repaint();
     }
 
     protected void handleMouseReleased(MouseEvent e) {
-        // TODO: implement
 
         repaint();
     }
@@ -100,9 +96,8 @@ public class RoomView extends JPanel {
         // Paint background
         super.paintComponent(g);
 
-        // TODO: draw selection (if there is one)
+       // drawing oval office to test
         g.drawImage(background, 150, 150, null);
-        // TODO: draw congratulatory message if player has won the game
     }
 
     private BufferedImage loadImage(String resourceName) {
