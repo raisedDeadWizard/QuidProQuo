@@ -1,7 +1,8 @@
-package quidProQuo.gui;
+package quidProQuo.room;
 
 
-import quidProQuo.ImpeachmentBar;
+import quidProQuo.impeach.ImpeachmentBar;
+import quidProQuo.phone.Phone;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -9,13 +10,13 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 
 public class RoomView extends JPanel {
     private BufferedImage background;
-    private ImpeachmentBar iBar;
+    public static ImpeachmentBar iBar;
+    public static Phone phone;
+    private boolean isPhoneSelected;
 
     private static final long serialVersionUID = 1L;
 
@@ -35,6 +36,8 @@ public class RoomView extends JPanel {
         // Image will not work right now on other devices
         background = loadImage("ovaloffice.png");
         iBar = new ImpeachmentBar();
+        phone = new Phone();
+        isPhoneSelected = false;
 
 
         MouseAdapter listener = new MouseAdapter() {
@@ -52,9 +55,23 @@ public class RoomView extends JPanel {
             public void mouseReleased(MouseEvent e) {
                 handleMouseReleased(e);
             }
+
+            @Override
+            public void mouseMoved(MouseEvent e) { handleMouseMoved(e);}
+
         };
         addMouseListener(listener);
         addMouseMotionListener(listener);
+    }
+
+    protected void handleMouseMoved(MouseEvent e){
+        if (e.getX() > 870 && e.getX() < 1030 && e.getY() > 450 && e.getY() < 585){
+            isPhoneSelected = true;
+        }
+        else {
+            isPhoneSelected = false;
+        }
+        repaint();
     }
 
 
@@ -69,6 +86,7 @@ public class RoomView extends JPanel {
 
     protected void handleMouseDragged(MouseEvent e) {
 
+        System.out.println("X: " + e.getX() + " Y: " + e.getY());
         repaint();
     }
 
@@ -84,9 +102,10 @@ public class RoomView extends JPanel {
         g.drawImage(background, 0, 0, null);
 
        // drawing oval office to test
-        g.drawImage(iBar.getSprite(), 20,20,null);
+        g.drawImage(phone.getState(isPhoneSelected), phone.getX(), phone.getY(), null);
+        g.drawImage(iBar.getSprite(), iBar.getX(),iBar.getY(),null);
         g.setColor(Color.RED);
-        g.fillRect(iBar.getX()+8,iBar.getY()+3, Math.round(iBar.getImpeachPercent()*3), 18);
+        g.fillRect(iBar.getX()+8,iBar.getY()+3, iBar.getImpeachPercent()*3, 18);
         g.setColor(Color.BLACK);
         g.drawChars(iBar.getPercent(), 0, iBar.getPercent().length,iBar.getX() + 175,iBar.getY() + 38);
 

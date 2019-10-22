@@ -1,4 +1,4 @@
-package quidProQuo;
+package quidProQuo.aid;
 import java.util.Random;
 
 public class Aid {

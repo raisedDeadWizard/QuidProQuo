@@ -1,9 +1,10 @@
 package quidProQuo;
 
-import quidProQuo.gui.RoomView;
+import quidProQuo.room.RoomView;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+import java.awt.event.MouseEvent;
 
 public class Main {
 

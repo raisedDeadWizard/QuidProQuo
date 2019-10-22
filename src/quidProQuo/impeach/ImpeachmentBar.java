@@ -1,4 +1,4 @@
-package quidProQuo;
+package quidProQuo.impeach;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -7,7 +7,6 @@ import java.net.URL;
 public class ImpeachmentBar {
     private int impeachPercent;
     private BufferedImage sprite;
-    private double percent;
     private URL path;
     private int pos[];
 
@@ -29,15 +28,14 @@ public class ImpeachmentBar {
 
         impeachPercent += val;
 
-        if (impeachPercent > 123){
-            impeachPercent = 123;
+        if (impeachPercent > 100){
+            impeachPercent = 100;
         }
         else if (impeachPercent < 0){
             impeachPercent = 0;
         }
 
-        percent = (impeachPercent * 100) / 123.0;
-        percent = Math.round(percent);
+
     }
 
     public int getX(){
@@ -53,7 +51,7 @@ public class ImpeachmentBar {
     }
 
     public char[] getPercent(){
-        String p = Double.toString(percent);
+        String p = impeachPercent + "%";
         return p.toCharArray();
     }
 
