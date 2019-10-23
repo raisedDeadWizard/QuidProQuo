@@ -4,6 +4,7 @@ package quidProQuo.room;
 import quidProQuo.aid.Aid;
 import quidProQuo.impeach.ImpeachmentBar;
 import quidProQuo.phone.Phone;
+import quidProQuo.phone.PhoneTopics;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -19,8 +20,10 @@ import java.util.Random;
 public class RoomView extends JPanel implements ActionListener{
     private BufferedImage background;
     private Timer timer;
+    private int secsToTicks = 40;
     private ImpeachmentBar iBar;
     private Phone phone;
+    private PhoneTopics phoneTopics;
     private JButton phoneButton;
     private boolean isPhoneSelected;
     private int phoneTime = 0;
@@ -48,7 +51,8 @@ public class RoomView extends JPanel implements ActionListener{
         // Image will not work right now on other devices
         background = loadImage("OvalOfficePixelated.png");
         iBar = new ImpeachmentBar();
-        phone = new Phone();
+        phoneTopics = new PhoneTopics();
+        phone = new Phone(phoneTopics);
         isPhoneSelected = false;
         timer = new Timer(25, this);
         timer.start();
@@ -178,7 +182,7 @@ public class RoomView extends JPanel implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         phoneTime++;
 
-        if (phoneTime < 60 && phoneCall) {
+        if (phoneTime < 1.5*secsToTicks && phoneCall) {
             phone.setPos(phone.getX(), phone.getY() - 2);
 
             if (phone.getY() < phone.getStartY() - 5) {
@@ -186,11 +190,11 @@ public class RoomView extends JPanel implements ActionListener{
             }
         }
 
-        if (phoneTime / 80 == 1 && phoneCall){
+        if (phoneTime / 2*secsToTicks == 1 && phoneCall){
             phoneTime = 0;
         }
 
-        if (phoneTime > rand.nextInt(160) + 120){
+        if (phoneTime > rand.nextInt(4*secsToTicks) + 120){
             phoneCall = true;
             phoneTime = 0;
         }

@@ -4,15 +4,18 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.image.BufferedImage;
 import java.net.URL;
+import java.util.Random;
 
 public class Phone {
     private BufferedImage sprite, selectedSprite;
     private URL spritePath, selectedPath;
+    private Random rand;
     private int pos[];
     private final int startX = 428;
     private final int startY = 445;
+    private PhoneTopics topics;
 
-    public Phone()
+    public Phone(PhoneTopics topics)
 
     {
         pos = new int[2];
@@ -34,6 +37,18 @@ public class Phone {
         catch (Exception e){
             System.out.println("Phone (Selected) Image not Loaded");
         }
+
+        this.topics = topics;
+        rand = new Random();
+
+    }
+
+    public String getLine(){
+        return topics.getTopic(rand.nextInt(topics.getNumTopics()));
+    }
+
+    public PhoneResponse[] getResponses(String key){
+        return topics.getResponses(key);
     }
 
     public int getX(){

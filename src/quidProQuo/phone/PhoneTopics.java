@@ -1,15 +1,17 @@
-package quidProQuo.aid;
+package quidProQuo.phone;
+
+import quidProQuo.phone.PhoneResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AidTopics {
+public class PhoneTopics {
     private ArrayList<String> topics;
     private Map<String, PhoneResponse[]> responseTopics = new HashMap<String, PhoneResponse[]>();
     private int numTopics;
 
-    public AidTopics(){
+    public PhoneTopics(){
 
         topics.add("the people are wondering what you will do about the border crisis?");
         topics.add("your staff want to know when they will see the new draft of your tax plan?");
@@ -52,5 +54,8 @@ public class AidTopics {
         topics.remove(index);
         numTopics--;
         return topic;
+    }
+    public quidProQuo.phone.PhoneResponse[] getResponses(String key){
+        return responseTopics.get(key);
     }
 }
