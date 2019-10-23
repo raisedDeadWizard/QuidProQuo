@@ -9,13 +9,15 @@ public class Phone {
     private BufferedImage sprite, selectedSprite;
     private URL spritePath, selectedPath;
     private int pos[];
+    private final int startX = 428;
+    private final int startY = 445;
 
     public Phone()
 
     {
         pos = new int[2];
-        pos[0] = 428;
-        pos[1] = 445;
+        pos[0] = startX;
+        pos[1] = startY;
 
         try{
             spritePath = Phone.class.getResource("PhoneSpritePixel.png");
@@ -79,7 +81,16 @@ public class Phone {
         }
     }
 
+    public void setPos(int x, int y) {
+        pos[0] = x;
+        pos[1] = y;
+    }
 
+    public int getStartX(){
+        return startX;
+    }
 
-
+    public int getStartY(){
+        return startY;
+    }
 }

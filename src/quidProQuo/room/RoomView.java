@@ -8,19 +8,27 @@ import quidProQuo.phone.Phone;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.net.URL;
+import java.util.Random;
 
-public class RoomView extends JPanel {
+public class RoomView extends JPanel implements ActionListener{
     private BufferedImage background;
+    private Timer timer;
     private ImpeachmentBar iBar;
     private Phone phone;
-    private Aid aid;
     private JButton phoneButton;
     private boolean isPhoneSelected;
+    private int phoneTime = 0;
+    private boolean phoneCall = false;
+    private boolean isOnCall = false;
+    private Random rand;
+
+    private Aid aid;
 
     private static final long serialVersionUID = 1L;
 
@@ -42,6 +50,9 @@ public class RoomView extends JPanel {
         iBar = new ImpeachmentBar();
         phone = new Phone();
         isPhoneSelected = false;
+        timer = new Timer(25, this);
+        timer.start();
+        rand = new Random();
 
 
         MouseAdapter listener = new MouseAdapter() {
@@ -70,6 +81,8 @@ public class RoomView extends JPanel {
     }
 
     protected void handleMouseMoved(MouseEvent e){
+        System.out.println("X: " + e.getX() + " Y: " + e.getY());
+
         if (isOnPhone(e)){
             isPhoneSelected = true;
         }
@@ -86,12 +99,18 @@ public class RoomView extends JPanel {
             iBar.update(5);
         }
 
+        if (isOnPhone(e)){
+            phoneCall = false;
+            phoneTime = 0;
+            isOnCall = true;
+        }
+
         repaint();
     }
 
     protected void handleMouseDragged(MouseEvent e) {
 
-        System.out.println("X: " + e.getX() + " Y: " + e.getY());
+
         repaint();
     }
 
@@ -108,6 +127,9 @@ public class RoomView extends JPanel {
         g.drawImage(background, 0, 0, null);
 
        // draw objects
+       if(isOnCall){
+           drawPhoneResponseWindow(g);
+       }
        drawPhone(g, phone, isPhoneSelected);
        drawImpeachmentBar(g, iBar);
 
@@ -115,6 +137,11 @@ public class RoomView extends JPanel {
 
     private void drawPhone(Graphics g, Phone phone, boolean isPhoneSelected){
         g.drawImage(phone.getState(isPhoneSelected), phone.getX(isPhoneSelected), phone.getY(isPhoneSelected), null);
+    }
+
+    private void drawPhoneResponseWindow(Graphics g){
+        g.setColor(Color.GRAY);
+        g.fillRect(200, 80, 880, 150);
     }
 
     private void drawImpeachmentBar(Graphics g, ImpeachmentBar impeachmentBar){
@@ -147,4 +174,27 @@ public class RoomView extends JPanel {
     }
 
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        phoneTime++;
+
+        if (phoneTime < 60 && phoneCall) {
+            phone.setPos(phone.getX(), phone.getY() - 2);
+
+            if (phone.getY() < phone.getStartY() - 5) {
+                phone.setPos(phone.getStartX(), phone.getStartY());
+            }
+        }
+
+        if (phoneTime / 80 == 1 && phoneCall){
+            phoneTime = 0;
+        }
+
+        if (phoneTime > rand.nextInt(160) + 120){
+            phoneCall = true;
+            phoneTime = 0;
+        }
+
+        repaint();
+    }
 }
