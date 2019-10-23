@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class AidTopics {
     private ArrayList<String> topics;
-    private Map<String, PhoneResponse[]> responseTopics = new HashMap<String, PhoneResponse[]>();
+    private Map<String, AidResponse[]> responseTopics = new HashMap<String, AidResponse[]>();
     private int numTopics;
 
     public AidTopics(){
@@ -21,25 +21,25 @@ public class AidTopics {
         numTopics = topics.size();
 
         responseTopics.put(topics.get(0),
-                new PhoneResponse[]{new PhoneResponse("", 0, 0, 0, 0),
-                        new PhoneResponse("", 0, 0, 0, 0),
-                        new PhoneResponse("", 0, 0, 0, 0)});
+                new AidResponse[]{new AidResponse("", 0, 0, 0, 0),
+                        new AidResponse("", 0, 0, 0, 0),
+                        new AidResponse("", 0, 0, 0, 0)});
         responseTopics.put(topics.get(1),
-                new PhoneResponse[]{new PhoneResponse("", 0, 0, 0, 0),
-                        new PhoneResponse("", 0, 0, 0, 0),
-                        new PhoneResponse("", 0, 0, 0, 0)});
+                new AidResponse[]{new AidResponse("", 0, 0, 0, 0),
+                        new AidResponse("", 0, 0, 0, 0),
+                        new AidResponse("", 0, 0, 0, 0)});
         responseTopics.put(topics.get(2),
-                new PhoneResponse[]{new PhoneResponse("", 0, 0, 0, 0),
-                        new PhoneResponse("", 0, 0, 0, 0),
-                        new PhoneResponse("", 0, 0, 0, 0)});
+                new AidResponse[]{new AidResponse("", 0, 0, 0, 0),
+                        new AidResponse("", 0, 0, 0, 0),
+                        new AidResponse("", 0, 0, 0, 0)});
         responseTopics.put(topics.get(3),
-                new PhoneResponse[]{new PhoneResponse("", 0, 0, 0, 0),
-                        new PhoneResponse("", 0, 0, 0, 0),
-                        new PhoneResponse("", 0, 0, 0, 0)});
+                new AidResponse[]{new AidResponse("", 0, 0, 0, 0),
+                        new AidResponse("", 0, 0, 0, 0),
+                        new AidResponse("", 0, 0, 0, 0)});
         responseTopics.put(topics.get(topics.size() - 1),
-                new PhoneResponse[]{new PhoneResponse("", 0, 0, 0, 0),
-                        new PhoneResponse("", 0, 0, 0, 0),
-                        new PhoneResponse("", 0, 0, 0, 0)});
+                new AidResponse[]{new AidResponse("", 0, 0, 0, 0),
+                        new AidResponse("", 0, 0, 0, 0),
+                        new AidResponse("", 0, 0, 0, 0)});
 
     }
 

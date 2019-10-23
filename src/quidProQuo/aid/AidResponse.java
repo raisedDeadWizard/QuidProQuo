@@ -2,12 +2,12 @@ package quidProQuo.aid;
 
 import quidProQuo.Response;
 
-public class PhoneResponse implements Response {
+public class AidResponse implements Response {
 
     private String response;
     private int imVal, popVal, proVal, conVal;
 
-    public PhoneResponse(String response, int imVal, int popVal, int proVal, int conVal) {
+    public AidResponse(String response, int imVal, int popVal, int proVal, int conVal) {
         this.response = response;
         this.imVal = imVal;
         this.popVal = popVal;

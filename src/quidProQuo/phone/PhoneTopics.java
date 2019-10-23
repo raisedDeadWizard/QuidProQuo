@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PhoneTopics {
-    private ArrayList<String> topics;
+    private ArrayList<String> topics = new ArrayList<String>();
     private Map<String, PhoneResponse[]> responseTopics = new HashMap<String, PhoneResponse[]>();
     private int numTopics;
 
