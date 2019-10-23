@@ -1,12 +1,14 @@
 package quidProQuo.room;
 
 
+import quidProQuo.aid.Aid;
 import quidProQuo.impeach.ImpeachmentBar;
 import quidProQuo.phone.Phone;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
@@ -14,17 +16,19 @@ import java.net.URL;
 
 public class RoomView extends JPanel {
     private BufferedImage background;
-    public static ImpeachmentBar iBar;
-    public static Phone phone;
+    private ImpeachmentBar iBar;
+    private Phone phone;
+    private Aid aid;
+    private JButton phoneButton;
     private boolean isPhoneSelected;
 
     private static final long serialVersionUID = 1L;
 
     /** Width of the window */
-    private static final int WIDTH = 1920;
+    private static final int WIDTH = 1280;
 
     /** Height of window */
-    private static final int HEIGHT = 1080;
+    private static final int HEIGHT = 920;
 
 
 
@@ -34,7 +38,7 @@ public class RoomView extends JPanel {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
 
         // Image will not work right now on other devices
-        background = loadImage("ovaloffice.png");
+        background = loadImage("OvalOfficePixelated.png");
         iBar = new ImpeachmentBar();
         phone = new Phone();
         isPhoneSelected = false;
@@ -62,10 +66,11 @@ public class RoomView extends JPanel {
         };
         addMouseListener(listener);
         addMouseMotionListener(listener);
+
     }
 
     protected void handleMouseMoved(MouseEvent e){
-        if (e.getX() > 870 && e.getX() < 1030 && e.getY() > 450 && e.getY() < 585){
+        if (isOnPhone(e)){
             isPhoneSelected = true;
         }
         else {
@@ -97,18 +102,27 @@ public class RoomView extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
-        // Paint background
         super.paintComponent(g);
+
+        // Paint background
         g.drawImage(background, 0, 0, null);
 
-       // drawing oval office to test
-        g.drawImage(phone.getState(isPhoneSelected), phone.getX(), phone.getY(), null);
+       // draw objects
+       drawPhone(g, phone, isPhoneSelected);
+       drawImpeachmentBar(g, iBar);
+
+    }
+
+    private void drawPhone(Graphics g, Phone phone, boolean isPhoneSelected){
+        g.drawImage(phone.getState(isPhoneSelected), phone.getX(isPhoneSelected), phone.getY(isPhoneSelected), null);
+    }
+
+    private void drawImpeachmentBar(Graphics g, ImpeachmentBar impeachmentBar){
         g.drawImage(iBar.getSprite(), iBar.getX(),iBar.getY(),null);
         g.setColor(Color.RED);
         g.fillRect(iBar.getX()+8,iBar.getY()+3, iBar.getImpeachPercent()*3, 18);
         g.setColor(Color.BLACK);
         g.drawChars(iBar.getPercent(), 0, iBar.getPercent().length,iBar.getX() + 175,iBar.getY() + 38);
-
     }
 
     private BufferedImage loadImage(String resourceName) {
@@ -121,6 +135,15 @@ public class RoomView extends JPanel {
             throw new IllegalStateException("Could not load " + resourceName);
         }
         return image;
+    }
+
+    private boolean isOnPhone(MouseEvent e){
+        if (e.getX() > phone.getX() && e.getX() < phone.getX() + 75 && e.getY() > phone.getY() && e.getY() < phone.getY() + 60){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
 

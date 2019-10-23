@@ -1,6 +1,7 @@
 package quidProQuo.phone;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.image.BufferedImage;
 import java.net.URL;
 
@@ -9,13 +10,15 @@ public class Phone {
     private URL spritePath, selectedPath;
     private int pos[];
 
-    public Phone(){
+    public Phone()
+
+    {
         pos = new int[2];
-        pos[0] = 870;
-        pos[1] = 450;
+        pos[0] = 428;
+        pos[1] = 445;
 
         try{
-            spritePath = Phone.class.getResource("Phone Sprite.png");
+            spritePath = Phone.class.getResource("PhoneSpritePixel.png");
             sprite = ImageIO.read(spritePath);
         }
         catch (Exception e){
@@ -23,7 +26,7 @@ public class Phone {
         }
 
         try{
-            selectedPath = Phone.class.getResource("Phone Sprite Selected.png");
+            selectedPath = Phone.class.getResource("PhoneSelectedPixel.png");
             selectedSprite = ImageIO.read(selectedPath);
         }
         catch (Exception e){
@@ -38,6 +41,27 @@ public class Phone {
     public int getY(){
         return pos[1];
     }
+
+    public int getX(boolean isSelected){
+       if (isSelected){
+           return pos[0];
+       }
+       else {
+            return pos[0];
+       }
+
+    }
+
+    public int getY(boolean isSelected){
+        if (isSelected){
+            return pos[1];
+        }
+        else {
+            return pos[1];
+        }
+    }
+
+
 
     public BufferedImage getSprite(){
         return sprite;
