@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.event.MouseEvent;
 
 public class Main {
-    public static Timer timer;
+
     public static void main(final String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
@@ -18,7 +18,7 @@ public class Main {
                 frame.pack();
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.setVisible(true);
-                timer.start();
+
 
             }
         });

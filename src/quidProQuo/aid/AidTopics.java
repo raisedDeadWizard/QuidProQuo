@@ -53,4 +53,8 @@ public class AidTopics {
         numTopics--;
         return topic;
     }
+
+    public AidResponse[] getResponses(String topic){
+        return responseTopics.get(topic);
+    }
 }

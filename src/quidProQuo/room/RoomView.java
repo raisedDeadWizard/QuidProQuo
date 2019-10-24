@@ -4,6 +4,7 @@ package quidProQuo.room;
 import quidProQuo.aid.Aid;
 import quidProQuo.impeach.ImpeachmentBar;
 import quidProQuo.phone.Phone;
+import quidProQuo.phone.PhoneResponse;
 import quidProQuo.phone.PhoneTopics;
 
 import javax.imageio.ImageIO;
@@ -24,6 +25,8 @@ public class RoomView extends JPanel implements ActionListener{
     private ImpeachmentBar iBar;
     private Phone phone;
     private PhoneTopics phoneTopics;
+    private String currentPhoneTopic;
+    private PhoneResponse[] currentResponseSet;
     private JButton phoneButton;
     private boolean isPhoneSelected;
     private int phoneTime = 0;
@@ -103,10 +106,13 @@ public class RoomView extends JPanel implements ActionListener{
             iBar.update(5);
         }
 
-        if (isOnPhone(e)){
+        if (isOnPhone(e) && !isOnCall && phoneCall){
             phoneCall = false;
             phoneTime = 0;
             isOnCall = true;
+
+            currentPhoneTopic = phone.getLine();
+            currentResponseSet = phone.getResponses(currentPhoneTopic);
         }
 
         repaint();
@@ -132,7 +138,7 @@ public class RoomView extends JPanel implements ActionListener{
 
        // draw objects
        if(isOnCall){
-           drawPhoneResponseWindow(g);
+           drawPhoneResponseWindow(g, currentPhoneTopic, currentResponseSet);
        }
        drawPhone(g, phone, isPhoneSelected);
        drawImpeachmentBar(g, iBar);
@@ -140,17 +146,30 @@ public class RoomView extends JPanel implements ActionListener{
     }
 
     private void drawPhone(Graphics g, Phone phone, boolean isPhoneSelected){
-        g.drawImage(phone.getState(isPhoneSelected), phone.getX(isPhoneSelected), phone.getY(isPhoneSelected), null);
+        g.drawImage(phone.getState(isPhoneSelected), phone.getX(), phone.getY(), null);
     }
 
-    private void drawPhoneResponseWindow(Graphics g){
+    private void drawPhoneResponseWindow(Graphics g, String line, PhoneResponse[] responses ){
         g.setColor(Color.GRAY);
         g.fillRect(200, 80, 880, 150);
+
+        g.setColor(Color.BLACK);
+        g.drawImage(responses[0].getAvatar(),970,80,null);
+        g.drawChars(responses[0].getCaller().toCharArray(), 0, responses[0].getCaller().length(), 970, 200);
+
+
+        g.drawChars(line.toCharArray(), 0, line.length(),210, 95);
+        g.drawChars(responses[0].getResponseToPrint(), 0, responses[0].getResponseToPrint().length,230, 130);
+        g.drawChars(responses[1].getResponseToPrint(), 0, responses[1].getResponseToPrint().length,230, 170);
+        g.drawChars(responses[2].getResponseToPrint(), 0, responses[2].getResponseToPrint().length,230, 210);
+
     }
 
     private void drawImpeachmentBar(Graphics g, ImpeachmentBar impeachmentBar){
         g.drawImage(iBar.getSprite(), iBar.getX(),iBar.getY(),null);
-        g.setColor(Color.RED);
+
+        g.setColor(new Color(impeachmentBar.getImpeachPercent() * 2, 200 - impeachmentBar.getImpeachPercent()* 2,0));
+
         g.fillRect(iBar.getX()+8,iBar.getY()+3, iBar.getImpeachPercent()*3, 18);
         g.setColor(Color.BLACK);
         g.drawChars(iBar.getPercent(), 0, iBar.getPercent().length,iBar.getX() + 175,iBar.getY() + 38);
@@ -190,11 +209,11 @@ public class RoomView extends JPanel implements ActionListener{
             }
         }
 
-        if (phoneTime / 2*secsToTicks == 1 && phoneCall){
+        if (phoneTime / (2 *secsToTicks) == 1 && phoneCall){
             phoneTime = 0;
         }
 
-        if (phoneTime > rand.nextInt(4*secsToTicks) + 120){
+        if (phoneTime > rand.nextInt(8*secsToTicks) + 14*secsToTicks){
             phoneCall = true;
             phoneTime = 0;
         }

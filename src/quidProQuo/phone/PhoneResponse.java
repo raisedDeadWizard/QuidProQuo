@@ -2,17 +2,22 @@ package quidProQuo.phone;
 
 import quidProQuo.Response;
 
+import java.awt.image.BufferedImage;
+
 public class PhoneResponse implements Response {
 
-    private String response;
+    private String response, caller;
     private int imVal, popVal, proVal, conVal;
+    private BufferedImage avatar;
 
-    public PhoneResponse(String response, int imVal, int popVal, int proVal, int conVal) {
+    public PhoneResponse(String response, int imVal, int popVal, int proVal, int conVal, BufferedImage avatar, String caller) {
         this.response = response;
         this.imVal = imVal;
         this.popVal = popVal;
         this.proVal = proVal;
         this.conVal = conVal;
+        this.avatar = avatar;
+        this.caller = caller;
     }
 
 
@@ -40,4 +45,8 @@ public class PhoneResponse implements Response {
     public int getConVal() {
         return conVal;
     }
+
+    public BufferedImage getAvatar() { return avatar;}
+
+    public String getCaller(){ return caller; }
 }

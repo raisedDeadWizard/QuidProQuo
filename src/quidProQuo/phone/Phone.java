@@ -8,12 +8,12 @@ import java.util.Random;
 
 public class Phone {
     private BufferedImage sprite, selectedSprite;
-    private URL spritePath, selectedPath;
     private Random rand;
-    private int pos[];
+    private int[] pos;
     private final int startX = 428;
     private final int startY = 445;
     private PhoneTopics topics;
+    private PhoneResponse currentResponse;
 
     public Phone(PhoneTopics topics)
 
@@ -23,7 +23,7 @@ public class Phone {
         pos[1] = startY;
 
         try{
-            spritePath = Phone.class.getResource("PhoneSpritePixel.png");
+            URL spritePath = Phone.class.getResource("PhoneSpritePixel.png");
             sprite = ImageIO.read(spritePath);
         }
         catch (Exception e){
@@ -31,7 +31,7 @@ public class Phone {
         }
 
         try{
-            selectedPath = Phone.class.getResource("PhoneSelectedPixel.png");
+            URL selectedPath = Phone.class.getResource("PhoneSelectedPixel.png");
             selectedSprite = ImageIO.read(selectedPath);
         }
         catch (Exception e){
@@ -44,12 +44,34 @@ public class Phone {
     }
 
     public String getLine(){
-        return topics.getTopic(rand.nextInt(topics.getNumTopics()));
+        return topics.getTopic(0);
+        //return topics.getTopic(rand.nextInt(topics.getNumTopics()));
     }
 
     public PhoneResponse[] getResponses(String key){
-        return topics.getResponses(key);
+        PhoneResponse[] r = topics.getResponses(key);
+        currentResponse = r[0];
+        return r;
     }
+
+    public String getCaller(){
+        if (currentResponse == null){
+            return "There is no one calling";
+        }
+        else {
+            return currentResponse.getCaller();
+        }
+    }
+
+    public BufferedImage getCallerAvatar(){
+        if (currentResponse == null){
+            return null;
+        }
+        else {
+            return currentResponse.getAvatar();
+        }
+    }
+
 
     public int getX(){
         return pos[0];
@@ -58,27 +80,6 @@ public class Phone {
     public int getY(){
         return pos[1];
     }
-
-    public int getX(boolean isSelected){
-       if (isSelected){
-           return pos[0];
-       }
-       else {
-            return pos[0];
-       }
-
-    }
-
-    public int getY(boolean isSelected){
-        if (isSelected){
-            return pos[1];
-        }
-        else {
-            return pos[1];
-        }
-    }
-
-
 
     public BufferedImage getSprite(){
         return sprite;
