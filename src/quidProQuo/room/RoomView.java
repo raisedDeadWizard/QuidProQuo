@@ -148,6 +148,7 @@ public class RoomView extends JPanel implements ActionListener{
             phoneCall = false;
             phoneTime = 0;
             isOnCall = true;
+            ringCounter = 0;
 
             currentPhoneTopic = phone.getLine();
             currentResponseSet = phone.getResponses(currentPhoneTopic);
@@ -327,7 +328,7 @@ public class RoomView extends JPanel implements ActionListener{
             ringCounter++;
         }
 
-        if (phoneTime > rand.nextInt(8*secsToTicks) + 14*secsToTicks){
+        if (phoneTime > (rand.nextInt(8)*secsToTicks) + 10*secsToTicks){
             phoneCall = true;
             phoneTime = 0;
         }
