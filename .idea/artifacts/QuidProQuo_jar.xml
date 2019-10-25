@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="QuidProQuo:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/QuidProQuo_jar</output-path>
+    <root id="archive" name="QuidProQuo.jar">
+      <element id="module-output" name="QuidProQuo" />
+    </root>
+  </artifact>
+</component>

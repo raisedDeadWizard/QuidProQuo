@@ -19,7 +19,7 @@ public class PhoneTopics {
         topics = new ArrayList<String>();
         responseTopics = new HashMap<String, PhoneResponse[]>();
 
-        topics.add("Boss... I think I found some dirt on your political opponent for next election, what do you want to do with it?");
+        topics.add("Boss... I think I found some dirt on your political opponent for next election, ya want it?");
         topics.add("your staff want to know when they will see the new draft of your tax plan?");
         topics.add("the people want to know what your response is to the shooting this past weekend?");
         topics.add("the press wants to know what your response is to the impeachment proceedings?");
