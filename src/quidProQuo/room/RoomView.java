@@ -38,6 +38,7 @@ public class RoomView extends JPanel implements ActionListener{
     private boolean isOnCall = false;
     private PhoneDialogue dialogueBox;
     private int dialogueOption = 0;
+    private int ringCounter = 0;
     private Random rand;
     private Font font;
 
@@ -204,7 +205,13 @@ public class RoomView extends JPanel implements ActionListener{
     }
 
     private void drawPhone(Graphics g, Phone phone, boolean isPhoneSelected){
-        g.drawImage(phone.getState(isPhoneSelected), phone.getX(), phone.getY(), null);
+        if (ringCounter > 4){
+            g.drawImage(phone.getMissedSprite(), phone.getX(), phone.getY(), null);
+        }
+        else {
+            g.drawImage(phone.getState(isPhoneSelected), phone.getX(), phone.getY(), null);
+        }
+
     }
 
     private void drawPhoneResponseWindow(Graphics g, BufferedImage window, String line, PhoneResponse[] responses ){
@@ -254,6 +261,17 @@ public class RoomView extends JPanel implements ActionListener{
             return false;
         }
     }
+
+    public void missCall(){
+        int d = rand.nextInt(1) + 1;
+
+        if (d == 1){
+            //TODO: Implement the random decrement of pro-party popularity
+        }
+        else {
+            //TODO: Implement the random decrement of con-party popularity
+        }
+    }
  //350 1040 120/20/10
     private boolean isOnOption0(MouseEvent e){
         if (e.getX() > dialogueBox.getX() + 150 && e.getX() < dialogueBox.getX() + 1030 && e.getY() > dialogueBox.getY() + 40 && e.getY() < dialogueBox.getY() + 60){
@@ -286,7 +304,16 @@ public class RoomView extends JPanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         phoneTime++;
-
+        if (ringCounter == 5){
+            phoneCall = false;
+            ringCounter++;
+            phoneTime = 0;
+        }
+        else if (ringCounter == 6 && phoneTime > secsToTicks){
+            missCall();
+            ringCounter = 0;
+            phoneTime = 0;
+        }
         if (phoneTime < 1.5*secsToTicks && phoneCall) {
             phone.setPos(phone.getX(), phone.getY() - 2);
 
@@ -297,6 +324,7 @@ public class RoomView extends JPanel implements ActionListener{
 
         if (phoneTime / (2 *secsToTicks) == 1 && phoneCall){
             phoneTime = 0;
+            ringCounter++;
         }
 
         if (phoneTime > rand.nextInt(8*secsToTicks) + 14*secsToTicks){

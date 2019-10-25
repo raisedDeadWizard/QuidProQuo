@@ -7,7 +7,7 @@ import java.net.URL;
 import java.util.Random;
 
 public class Phone {
-    private BufferedImage sprite, selectedSprite;
+    private BufferedImage sprite, selectedSprite, missedSprite;
     private Random rand;
     private int[] pos;
     private final int startX = 428;
@@ -38,6 +38,14 @@ public class Phone {
             System.out.println("Phone (Selected) Image not Loaded");
         }
 
+        try{
+            URL selectedPath = Phone.class.getResource("PhoneSpritePixelMissed.png");
+            missedSprite = ImageIO.read(selectedPath);
+        }
+        catch (Exception e){
+            System.out.println("Phone (Selected) Image not Loaded");
+        }
+
         this.topics = topics;
         rand = new Random();
 
@@ -63,16 +71,6 @@ public class Phone {
         }
     }
 
-    public BufferedImage getCallerAvatar(){
-        if (currentResponse == null){
-            return null;
-        }
-        else {
-            return currentResponse.getAvatar();
-        }
-    }
-
-
     public int getX(){
         return pos[0];
     }
@@ -87,6 +85,7 @@ public class Phone {
     public BufferedImage getSelectedSprite(){
         return selectedSprite;
     }
+    public BufferedImage getMissedSprite(){return missedSprite; }
 
     public BufferedImage getState(boolean isSelected){
         if (isSelected){
