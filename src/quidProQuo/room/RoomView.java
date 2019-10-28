@@ -2,11 +2,15 @@ package quidProQuo.room;
 
 
 import quidProQuo.aid.Aid;
+import quidProQuo.conparty.ConPartyBar;
 import quidProQuo.impeach.ImpeachmentBar;
+import quidProQuo.national.NationalBar;
 import quidProQuo.phone.Phone;
 import quidProQuo.phone.PhoneDialogue;
 import quidProQuo.phone.PhoneResponse;
 import quidProQuo.phone.PhoneTopics;
+import quidProQuo.proparty.ProPartyBar;
+import quidProQuo.reelection.ReElectionBar;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -27,11 +31,14 @@ public class RoomView extends JPanel implements ActionListener{
     private Timer timer;
     private int secsToTicks = 40;
     private ImpeachmentBar iBar;
+    private ReElectionBar reBar;
+    private NationalBar nBar;
+    private ProPartyBar proBar;
+    private ConPartyBar conBar;
     private Phone phone;
     private PhoneTopics phoneTopics;
     private String currentPhoneTopic;
     private PhoneResponse[] currentResponseSet;
-    private JButton phoneButton;
     private boolean isPhoneSelected;
     private int phoneTime = 0;
     private boolean phoneCall = false;
@@ -63,6 +70,10 @@ public class RoomView extends JPanel implements ActionListener{
         // Image will not work right now on other devices
         background = loadImage("OvalOfficePixelated.png");
         iBar = new ImpeachmentBar();
+        reBar = new ReElectionBar();
+        nBar = new NationalBar();
+        proBar = new ProPartyBar();
+        conBar = new ConPartyBar();
         phoneTopics = new PhoneTopics();
         phone = new Phone(phoneTopics);
         isPhoneSelected = false;
@@ -157,19 +168,15 @@ public class RoomView extends JPanel implements ActionListener{
         if (isOnCall){
             if (isOnOption0(e)){
 
-
-                iBar.update(currentResponseSet[0].getImVal());
-                isOnCall = false;
+                handleBarUpdates(currentResponseSet, 0);
             }
             else if (isOnOption1(e)){
 
-                iBar.update(currentResponseSet[1].getImVal());
-                isOnCall = false;
+                handleBarUpdates(currentResponseSet, 1);
             }
             else if (isOnOption2(e)){
 
-                iBar.update(currentResponseSet[2].getImVal());
-                isOnCall = false;
+                handleBarUpdates(currentResponseSet, 2);
             }
         }
 
@@ -201,7 +208,16 @@ public class RoomView extends JPanel implements ActionListener{
            drawPhoneResponseWindow(g, dialogueBox.getSprite(dialogueOption), currentPhoneTopic, currentResponseSet);
        }
        drawPhone(g, phone, isPhoneSelected);
-       drawImpeachmentBar(g, iBar);
+       g.setColor(Color.GRAY);
+       g.fillRect(10, 0, 335, 280);
+       g.setColor(Color.BLACK);
+       g.drawRect(10, 0, 335, 280);
+       drawImpeachmentBar(g);
+       drawReElectionBar(g);
+       drawNationalBar(g);
+       drawProBar(g);
+       drawConBar(g);
+
 
     }
 
@@ -232,14 +248,54 @@ public class RoomView extends JPanel implements ActionListener{
 
     }
 
-    private void drawImpeachmentBar(Graphics g, ImpeachmentBar impeachmentBar){
+    private void drawImpeachmentBar(Graphics g){
         g.drawImage(iBar.getSprite(), iBar.getX(),iBar.getY(),null);
 
-        g.setColor(new Color(impeachmentBar.getImpeachPercent() * 2, 200 - impeachmentBar.getImpeachPercent()* 2,0));
+        g.setColor(new Color(iBar.getImpeachPercent() * 2, 200 - iBar.getImpeachPercent()* 2,0));
 
         g.fillRect(iBar.getX()+8,iBar.getY()+3, iBar.getImpeachPercent()*3, 18);
         g.setColor(Color.BLACK);
         g.drawChars(iBar.getPercent(), 0, iBar.getPercent().length,iBar.getX() + 175,iBar.getY() + 38);
+    }
+
+    private void drawReElectionBar(Graphics g){
+        g.drawImage(reBar.getSprite(), reBar.getX(),reBar.getY(),null);
+
+        g.setColor(Color.GREEN);
+
+        g.fillRect(reBar.getX()+8,reBar.getY()+3, reBar.getReElectPercent()*3, 18);
+        g.setColor(Color.BLACK);
+        g.drawChars(reBar.getPercent(), 0, reBar.getPercent().length,reBar.getX() + 175,reBar.getY() + 38);
+    }
+
+    private void drawNationalBar(Graphics g){
+        g.drawImage(nBar.getSprite(), nBar.getX(),nBar.getY(),null);
+
+        g.setColor(Color.MAGENTA);
+
+        g.fillRect(nBar.getX()+8,nBar.getY()+3, nBar.getNatPercent()*3, 18);
+        g.setColor(Color.BLACK);
+        g.drawChars(nBar.getPercent(), 0, nBar.getPercent().length,nBar.getX() + 175,nBar.getY() + 38);
+    }
+
+    private void drawProBar(Graphics g){
+        g.drawImage(proBar.getSprite(), proBar.getX(),proBar.getY(),null);
+
+        g.setColor(Color.RED);
+
+        g.fillRect(proBar.getX()+8,proBar.getY()+3, proBar.getProPartyPercent()*3, 18);
+        g.setColor(Color.BLACK);
+        g.drawChars(proBar.getPercent(), 0, proBar.getPercent().length,proBar.getX() + 175,proBar.getY() + 38);
+    }
+
+    private void drawConBar(Graphics g){
+        g.drawImage(conBar.getSprite(), conBar.getX(),conBar.getY(),null);
+
+        g.setColor(Color.BLUE);
+
+        g.fillRect(conBar.getX()+8,conBar.getY()+3, conBar.getConParty()*3, 18);
+        g.setColor(Color.BLACK);
+        g.drawChars(conBar.getPercent(), 0, conBar.getPercent().length,conBar.getX() + 175,conBar.getY() + 38);
     }
 
     private BufferedImage loadImage(String resourceName) {
@@ -263,15 +319,24 @@ public class RoomView extends JPanel implements ActionListener{
         }
     }
 
-    public void missCall(){
-        int d = rand.nextInt(1) + 1;
+    private void missCall(){
+        int d = rand.nextInt(2) + 1;
 
         if (d == 1){
-            //TODO: Implement the random decrement of pro-party popularity
+            proBar.update(- (rand.nextInt(5) + 2));
         }
         else {
-            //TODO: Implement the random decrement of con-party popularity
+            conBar.update(- (rand.nextInt(5) + 2));
         }
+    }
+
+    private void handleBarUpdates(PhoneResponse[] currentResponseSet, int i){
+        iBar.update(currentResponseSet[i].getImVal());
+        reBar.update(currentResponseSet[i].getReVal());
+        conBar.update(currentResponseSet[i].getConVal());
+        proBar.update(currentResponseSet[i].getProVal());
+        nBar.update(currentResponseSet[i].getPopVal());
+        isOnCall = false;
     }
  //350 1040 120/20/10
     private boolean isOnOption0(MouseEvent e){

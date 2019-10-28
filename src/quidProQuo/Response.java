@@ -11,4 +11,6 @@ public interface Response {
     public int getProVal();
 
     public int getConVal();
+
+    public int getReVal();
 }

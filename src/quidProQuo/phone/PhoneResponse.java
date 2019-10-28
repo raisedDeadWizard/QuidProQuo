@@ -7,11 +7,12 @@ import java.awt.image.BufferedImage;
 public class PhoneResponse implements Response {
 
     private String response, caller;
-    private int imVal, popVal, proVal, conVal;
+    private int reVal, imVal, popVal, proVal, conVal;
     private BufferedImage avatar;
 
-    public PhoneResponse(String response, int imVal, int popVal, int proVal, int conVal, BufferedImage avatar, String caller) {
+    public PhoneResponse(String response, int reVal, int imVal, int popVal, int proVal, int conVal, BufferedImage avatar, String caller) {
         this.response = response;
+        this.reVal = reVal;
         this.imVal = imVal;
         this.popVal = popVal;
         this.proVal = proVal;
@@ -45,6 +46,12 @@ public class PhoneResponse implements Response {
     public int getConVal() {
         return conVal;
     }
+
+    @Override
+    public int getReVal() {
+        return reVal;
+    }
+
 
     public BufferedImage getAvatar() { return avatar;}
 

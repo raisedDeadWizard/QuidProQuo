@@ -40,4 +40,9 @@ public class AidResponse implements Response {
     public int getConVal() {
         return conVal;
     }
+
+    @Override
+    public int getReVal() {
+        return 0;
+    }
 }

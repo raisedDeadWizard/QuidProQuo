@@ -9,8 +9,8 @@ public class PhoneDialogue {
     private BufferedImage[] sprites;
     private Random rand;
     private int[] pos;
-    private final int startX = 200;
-    private final int startY = 80;
+    private final int startX = 370;
+    private final int startY = 20;
 
     public PhoneDialogue()
 
@@ -25,7 +25,7 @@ public class PhoneDialogue {
             sprites[0] = ImageIO.read(spritePath);
         }
         catch (Exception e){
-            System.out.println("Phone Image not Loaded");
+            System.out.println("Dialogue box sprite 0 not loaded");
         }
 
         try{
@@ -33,7 +33,7 @@ public class PhoneDialogue {
             sprites[1] = ImageIO.read(selectedPath);
         }
         catch (Exception e){
-            System.out.println("Phone (Selected) Image not Loaded");
+            System.out.println("Dialogue box sprite 1 not loaded");
         }
 
         try{
@@ -41,7 +41,7 @@ public class PhoneDialogue {
             sprites[2] = ImageIO.read(selectedPath);
         }
         catch (Exception e){
-            System.out.println("Phone (Selected) Image not Loaded");
+            System.out.println("Dialogue box sprite 2 not loaded");
         }
 
         try{
@@ -49,7 +49,7 @@ public class PhoneDialogue {
             sprites[3] = ImageIO.read(selectedPath);
         }
         catch (Exception e){
-            System.out.println("Phone (Selected) Image not Loaded");
+            System.out.println("Dialogue box sprite 3 not loaded");
         }
 
         rand = new Random();

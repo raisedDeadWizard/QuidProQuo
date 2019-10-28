@@ -29,25 +29,25 @@ public class PhoneTopics {
         numTopics = topics.size();
 
         responseTopics.put(topics.get(0),
-                new PhoneResponse[]{new PhoneResponse("Well don't leave me hanging, give me that information!", 100, 0, 0, 0, loadImage("RudyPixel.png"),"Personal Lawyer"),
-                        new PhoneResponse("We should probably call the FBI about that", -5, 0, 0, 0,null,""),
-                        new PhoneResponse("Huh? What? I can't hear you *hang up*", 0, 0, 0, 0,null,"")});
+                new PhoneResponse[]{new PhoneResponse("Well don't leave me hanging, give me that information!", 10,10, 0, 5, 0, loadImage("RudyPixel.png"),"Personal Lawyer"),
+                        new PhoneResponse("We should probably call the FBI about that", 0,-5, 0, -5, 5,null,""),
+                        new PhoneResponse("Huh? What? I can't hear you *hang up*", 0,0, 0, -2, 0,null,"")});
         responseTopics.put(topics.get(1),
-                new PhoneResponse[]{new PhoneResponse("", 0, 0, 0, 0,null,""),
-                        new PhoneResponse("", 0, 0, 0, 0,null,""),
-                        new PhoneResponse("", 0, 0, 0, 0,null,"")});
+                new PhoneResponse[]{new PhoneResponse("", 0,0, 0, 0, 0,null,""),
+                        new PhoneResponse("", 0,0, 0, 0, 0,null,""),
+                        new PhoneResponse("", 0,0, 0, 0, 0,null,"")});
         responseTopics.put(topics.get(2),
-                new PhoneResponse[]{new PhoneResponse("", 0, 0, 0, 0,null,""),
-                        new PhoneResponse("", 0, 0, 0, 0,null,""),
-                        new PhoneResponse("", 0, 0, 0, 0,null,"")});
+                new PhoneResponse[]{new PhoneResponse("", 0,0, 0, 0, 0,null,""),
+                        new PhoneResponse("", 0,0, 0, 0, 0,null,""),
+                        new PhoneResponse("", 0,0, 0, 0, 0,null,"")});
         responseTopics.put(topics.get(3),
-                new PhoneResponse[]{new PhoneResponse("", 0, 0, 0, 0,null,""),
-                        new PhoneResponse("", 0, 0, 0, 0,null,""),
-                        new PhoneResponse("", 0, 0, 0, 0,null,"")});
+                new PhoneResponse[]{new PhoneResponse("", 0,0, 0, 0, 0,null,""),
+                        new PhoneResponse("", 0,0, 0, 0, 0,null,""),
+                        new PhoneResponse("", 0,0, 0, 0, 0,null,"")});
         responseTopics.put(topics.get(topics.size() - 1),
-                new PhoneResponse[]{new PhoneResponse("", 0, 0, 0, 0,null,""),
-                        new PhoneResponse("", 0, 0, 0, 0,null,""),
-                        new PhoneResponse("", 0, 0, 0, 0,null,"")});
+                new PhoneResponse[]{new PhoneResponse("", 0,0, 0, 0, 0,null,""),
+                        new PhoneResponse("", 0,0, 0, 0, 0,null,""),
+                        new PhoneResponse("", 0,0, 0, 0, 0,null,"")});
 
     }
 
