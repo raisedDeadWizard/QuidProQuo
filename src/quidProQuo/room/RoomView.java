@@ -27,7 +27,10 @@ import java.net.URL;
 import java.util.Random;
 
 public class RoomView extends JPanel implements ActionListener{
-    private BufferedImage background;
+    private BufferedImage background, desk;
+    private BufferedImage[] trump = new BufferedImage[2];
+    private boolean bounce = false;
+    private int bounceCount = 0;
     private Timer timer;
     private int secsToTicks = 40;
     private ImpeachmentBar iBar;
@@ -69,6 +72,9 @@ public class RoomView extends JPanel implements ActionListener{
 
         // Image will not work right now on other devices
         background = loadImage("OvalOfficePixelated.png");
+        desk = loadImage("desk.png");
+        trump[0] = loadImage("trump1.png");
+        trump[1] = loadImage("trump2.png");
         iBar = new ImpeachmentBar();
         reBar = new ReElectionBar();
         nBar = new NationalBar();
@@ -202,6 +208,13 @@ public class RoomView extends JPanel implements ActionListener{
 
         // Paint background
         g.drawImage(background, 0, 0, null);
+        if (bounce){
+            g.drawImage(trump[1], 220, 290, null);
+        }
+        else {
+            g.drawImage(trump[0], 220, 280, null);
+        }
+        g.drawImage(desk, 145, 475, null);
 
        // draw objects
        if(isOnCall){
@@ -234,11 +247,14 @@ public class RoomView extends JPanel implements ActionListener{
     private void drawPhoneResponseWindow(Graphics g, BufferedImage window, String line, PhoneResponse[] responses ){
         g.setColor(Color.GRAY);
         //g.fillRect(200, 80, 880, 150);
-        g.drawImage(responses[0].getAvatar(),dialogueBox.getX() + 24,dialogueBox.getY()+23,null);
+        g.drawImage(responses[0].getAvatar(),dialogueBox.getX() + 15,dialogueBox.getY()+23,null);
         g.drawImage(window, dialogueBox.getX(),dialogueBox.getY(), null);
 
+        g.setColor(Color.WHITE);
+        g.fillRect(dialogueBox.getX() + 80 - responses[0].getCaller().length() * 4, dialogueBox.getY() + 120, responses[0].getCaller().length() * 8, 20);
         g.setColor(Color.BLACK);
-        //g.drawChars(responses[0].getCaller().toCharArray(), 0, responses[0].getCaller().length(), 970, 200);
+        g.drawRect(dialogueBox.getX() + 80 - responses[0].getCaller().length() * 4, dialogueBox.getY() + 120, responses[0].getCaller().length() * 8, 20);
+        g.drawChars(responses[0].getCaller().toCharArray(), 0, responses[0].getCaller().length(), dialogueBox.getX() + 80 - responses[0].getCaller().length() * 4 + 10, dialogueBox.getY() + 135);
 
 
         g.drawChars(line.toCharArray(), 0, line.length(),dialogueBox.getX()+160, dialogueBox.getY()+25);
@@ -369,6 +385,17 @@ public class RoomView extends JPanel implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        bounceCount++;
+
+        if (bounceCount < 8){
+            bounce = false;
+        }
+        else if (bounceCount < 16){
+            bounce = true;
+        }
+        else {
+            bounceCount = 0;
+        }
         phoneTime++;
         if (ringCounter == 5){
             phoneCall = false;
