@@ -2,10 +2,12 @@ package quidProQuo;
 
 public class Decision {
     private String query;
+    private boolean isMajor;
     private Response[] responses = new Response[3];
 
-    public Decision(String query, Response one, Response two, Response three){
+    public Decision(String query, Response one, Response two, Response three, boolean isMajor){
         this.query = query;
+        this.isMajor = isMajor;
         responses[0] = one;
         responses[1] = two;
         responses[2] = three;
