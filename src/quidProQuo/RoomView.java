@@ -26,9 +26,9 @@ public class RoomView extends JPanel implements ActionListener{
     private BufferedImage background;
 
     // Width of the window
-    private static final int WIDTH = 1920;
+    private static final int WIDTH = 1627;
     //Height of window
-    private static final int HEIGHT = 1080;
+    private static final int HEIGHT = 925;
 
 
 
