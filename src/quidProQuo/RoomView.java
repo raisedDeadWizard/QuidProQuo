@@ -4,6 +4,9 @@ import com.sun.tools.internal.jxc.ap.Const;
 import mediaResources.Resources;
 
 import javax.imageio.ImageIO;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,6 +14,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Random;
@@ -19,13 +23,18 @@ public class RoomView extends JPanel implements ActionListener{
 
     // Timer to manage game runtime, and animation frequency
     private Timer timer;
+    private int ticks = 0, blinkTick = 120;
+
 
     // Random variable member
     private Random rand;
     private Topics topics;
     private Font font;
+    private boolean blink = false;
     private BufferedImage background, desk, coke;
+    private BufferedImage[] donald = new BufferedImage[2];
 
+    private Clip cokeClip;
     // Width of the window
     private static final int WIDTH = 1480;
     //Height of window
@@ -43,6 +52,11 @@ public class RoomView extends JPanel implements ActionListener{
         background = loadImage("OvalOffice.png");
         desk = loadImage("Desk.png");
         coke = loadImage("DietCoke.png");
+        cokeClip = loadSound("DietCoke.wav");
+
+
+        donald[0] = loadImage("Donald.png");
+        donald[1] = loadImage("DonaldBlinking.png");
 
         try {
             String fontName = "PressStart2P-Regular.ttf";
@@ -93,6 +107,10 @@ public class RoomView extends JPanel implements ActionListener{
 
 
     protected void handleMousePressed(MouseEvent e) {
+        if (isOnCan(e)) {
+            cokeClip.setFramePosition(0);
+            cokeClip.start();
+        }
         repaint();
     }
 
@@ -118,6 +136,14 @@ public class RoomView extends JPanel implements ActionListener{
         //Desk sprite
         g.drawImage(desk, Constants.deskX, Constants.deskY, null);
 
+        if (blink){
+            g.drawImage(donald[1], Constants.donaldX, Constants.donaldY, null);
+        }
+        else {
+            g.drawImage(donald[0], Constants.donaldX, Constants.donaldY, null);
+        }
+
+
         //Diet Coke
         g.drawImage(coke, Constants.cokeX, Constants.cokeY, null);
 
@@ -136,9 +162,45 @@ public class RoomView extends JPanel implements ActionListener{
         return image;
     }
 
+    private Clip loadSound(String resourceName) {
+        AudioInputStream stream;
+        Clip clip;
+        try {
+            System.out.println("Loading " + resourceName);
+            URL resource = Resources.class.getResource(resourceName);
+            stream = AudioSystem.getAudioInputStream(resource);
+            clip = AudioSystem.getClip();
+            clip.open(stream);
+            //clip.loop(0);
+        } catch (Exception e) {
+            throw new IllegalStateException("Could not load " + resourceName);
+        }
+        return clip;
+    }
+
+    public boolean isOnCan(MouseEvent e){
+        if (e.getX() > Constants.cokeX && e.getX() < Constants.cokeX + 80 && e.getY() > Constants.cokeY && e.getY() < Constants.cokeY + 100){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     /** reoccuring events to animate go in this function**/
     @Override
     public void actionPerformed(ActionEvent e) {
+        ticks++;
+
+        if (ticks > blinkTick){
+            blink = true;
+        }
+
+        if (ticks > blinkTick + 5){
+            blink = false;
+            ticks = 0;
+        }
+
         repaint();
     }
 }
