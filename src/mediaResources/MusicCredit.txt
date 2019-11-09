@@ -1,0 +1,16 @@
+The file "newGame.wav" uses 3 distinct songs, The Stars and Stripes Forever, The Thunderer, and The Washington Post.
+
+The Stars and Stripes Forever was recorded by The United States Marine Band, conducted by Jason Fettig.
+It was published in "The Complete Marches of John Philip Sousa, No. 53" in 2016.
+It is licensed under the Creative Commons Attribution 4.0.
+
+The Thunderer was recorded by The United States Marine Band, conducted by Jason Fettig.
+It was published in "The Complete Marches of John Philip Sousa, No. 37" in 2016.
+It is licensed under the Creative Commons Attribution 4.0.
+
+The Washington Post was recorded by The United States Marine Band, conducted by Jason Fettig.
+It was published in "The Complete Marches of John Philip Sousa, No. 38" in 2016.
+It is licensed under the Creative Commons Attribution 4.0.
+
+The file "hailToCheif.wav" was a remix by Youtuber Raxlen Slice
+Youtube link: https://www.youtube.com/watch?v=CRx1yV6T0ns
