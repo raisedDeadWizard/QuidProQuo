@@ -7,6 +7,7 @@ import javax.imageio.ImageIO;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.sound.sampled.FloatControl;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -54,6 +55,8 @@ public class RoomView extends JPanel implements ActionListener{
         coke = loadImage("DietCoke.png");
         cokeClip = loadSound("DietCoke.wav");
         soundTrack = loadSound("hailToCheif.wav");
+        FloatControl volume = (FloatControl) soundTrack.getControl(FloatControl.Type.MASTER_GAIN);
+        volume.setValue(-20);
         soundTrack.loop(Clip.LOOP_CONTINUOUSLY);
 
 
