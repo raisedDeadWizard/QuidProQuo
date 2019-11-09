@@ -108,8 +108,7 @@ public class RoomView extends JPanel implements ActionListener{
         return image;
     }
 
-
-
+    /** reoccuring events to animate go in this function**/
     @Override
     public void actionPerformed(ActionEvent e) {
         repaint();
