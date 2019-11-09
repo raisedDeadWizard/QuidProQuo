@@ -1,9 +1,6 @@
 package quidProQuo;
 
-import quidProQuo.room.RoomView;
-
 import javax.swing.*;
-import java.awt.event.MouseEvent;
 
 public class Main {
 
