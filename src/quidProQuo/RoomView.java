@@ -1,5 +1,7 @@
 package quidProQuo;
 
+import mediaResources.Resources;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -21,6 +23,7 @@ public class RoomView extends JPanel implements ActionListener{
     private Random rand;
     private Topics topics;
     private Font font;
+    private BufferedImage background;
 
     // Width of the window
     private static final int WIDTH = 1920;
@@ -36,6 +39,7 @@ public class RoomView extends JPanel implements ActionListener{
 
         // Sets the window size
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        background = loadImage("OvalOffice.png");
 
         try {
             String fontName = "PressStart2P-Regular.ttf";
@@ -102,6 +106,7 @@ public class RoomView extends JPanel implements ActionListener{
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setFont(font);
+        g.drawImage(background, 0, 0,null);
 
     }
 
@@ -110,7 +115,7 @@ public class RoomView extends JPanel implements ActionListener{
         BufferedImage image;
         try {
             System.out.println("Loading " + resourceName);
-            URL resource = RoomView.class.getResource(resourceName);
+            URL resource = Resources.class.getResource(resourceName);
             image = ImageIO.read(resource);
         } catch (Exception e) {
             throw new IllegalStateException("Could not load " + resourceName);
