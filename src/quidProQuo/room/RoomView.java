@@ -15,36 +15,37 @@ import java.net.URL;
 import java.util.Random;
 
 public class RoomView extends JPanel implements ActionListener{
+
+    // Timer to manage game runtime, and animation frequency
     private Timer timer;
+
+    // Random variable member
     private Random rand;
 
-
-
-
-    private static final long serialVersionUID = 1L;
-
-    /** Width of the window */
+    // Width of the window
     private static final int WIDTH = 1920;
-
-    /** Height of window */
+    //Height of window
     private static final int HEIGHT = 1080;
 
 
 
     public RoomView() {
 
+        // Sets the background color of the window
         setBackground(Color.WHITE);
+
+        // Sets the window size
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
 
 
-        // Image will not work right now on other devices
+        // Initalize timer, with ticks interating ever *25* miliseconds
         timer = new Timer(25, this);
         timer.start();
+
+        //Initialize random variable
         rand = new Random();
 
-
-
-
+        // Listener for user interaction
         MouseAdapter listener = new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
@@ -71,7 +72,6 @@ public class RoomView extends JPanel implements ActionListener{
     }
 
     protected void handleMouseMoved(MouseEvent e){
-
         repaint();
     }
 
@@ -81,21 +81,17 @@ public class RoomView extends JPanel implements ActionListener{
     }
 
     protected void handleMouseDragged(MouseEvent e) {
-
-
         repaint();
     }
 
     protected void handleMouseReleased(MouseEvent e) {
-
         repaint();
     }
 
+    /** Paint Component **/
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-
-
 
     }
 
@@ -114,11 +110,8 @@ public class RoomView extends JPanel implements ActionListener{
 
 
 
-
     @Override
     public void actionPerformed(ActionEvent e) {
-
-
         repaint();
     }
 }
