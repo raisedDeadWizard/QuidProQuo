@@ -34,7 +34,7 @@ public class RoomView extends JPanel implements ActionListener{
     private BufferedImage background, desk, coke;
     private BufferedImage[] donald = new BufferedImage[2];
 
-    private Clip cokeClip;
+    private Clip cokeClip, soundTrack;
     // Width of the window
     private static final int WIDTH = 1480;
     //Height of window
@@ -53,6 +53,8 @@ public class RoomView extends JPanel implements ActionListener{
         desk = loadImage("Desk.png");
         coke = loadImage("DietCoke.png");
         cokeClip = loadSound("DietCoke.wav");
+        soundTrack = loadSound("hailToCheif.wav");
+        soundTrack.loop(Clip.LOOP_CONTINUOUSLY);
 
 
         donald[0] = loadImage("Donald.png");
