@@ -16,6 +16,8 @@ public class Bar {
         return curVal;
     }
 
+    public int getLength() {return curVal;}
+
     public void updateVal(int val) {
         curVal = val;
     }
