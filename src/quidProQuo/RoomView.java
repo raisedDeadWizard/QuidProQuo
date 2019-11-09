@@ -54,7 +54,7 @@ public class RoomView extends JPanel implements ActionListener{
         desk = loadImage("Desk.png");
         coke = loadImage("DietCoke.png");
         cokeClip = loadSound("DietCoke.wav");
-        soundTrack = loadSound("hailToCheif.wav");
+        soundTrack = loadSound("newGame.wav");
         FloatControl volume = (FloatControl) soundTrack.getControl(FloatControl.Type.MASTER_GAIN);
         volume.setValue(-20);
         soundTrack.loop(Clip.LOOP_CONTINUOUSLY);
@@ -168,15 +168,13 @@ public class RoomView extends JPanel implements ActionListener{
     }
 
     private Clip loadSound(String resourceName) {
-        AudioInputStream stream;
         Clip clip;
         try {
             System.out.println("Loading " + resourceName);
             URL resource = Resources.class.getResource(resourceName);
-            stream = AudioSystem.getAudioInputStream(resource);
+            AudioInputStream stream = AudioSystem.getAudioInputStream(resource);
             clip = AudioSystem.getClip();
             clip.open(stream);
-            //clip.loop(0);
         } catch (Exception e) {
             throw new IllegalStateException("Could not load " + resourceName);
         }
