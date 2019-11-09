@@ -24,7 +24,7 @@ public class RoomView extends JPanel implements ActionListener{
     private Random rand;
     private Topics topics;
     private Font font;
-    private BufferedImage background, desk;
+    private BufferedImage background, desk, coke;
 
     // Width of the window
     private static final int WIDTH = 1480;
@@ -42,6 +42,7 @@ public class RoomView extends JPanel implements ActionListener{
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
         background = loadImage("OvalOffice.png");
         desk = loadImage("Desk.png");
+        coke = loadImage("DietCoke.png");
 
         try {
             String fontName = "PressStart2P-Regular.ttf";
@@ -112,8 +113,13 @@ public class RoomView extends JPanel implements ActionListener{
         // Background image
         g.drawImage(background, 0, 0,null);
 
+        //TODO: Donald Trump Sprite
+
         //Desk sprite
         g.drawImage(desk, Constants.deskX, Constants.deskY, null);
+
+        //Diet Coke
+        g.drawImage(coke, 1084, 460, null);
 
     }
 
