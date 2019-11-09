@@ -1,10 +1,10 @@
 package quidProQuo;
 
 public class Response {
-    private String res;
+    private String res, impact;
     private int dem, rep, nat;
 
-    public Response(String res, int dem, int rep, int nat){
+    public Response(String res, int dem, int rep, int nat, String impact){
         this.res = res;
         this.dem = dem;
         this.rep = rep;
@@ -17,6 +17,10 @@ public class Response {
 
     public char[] toCharArray(){
         return res.toCharArray();
+    }
+
+    public String getImpact(){
+        return impact;
     }
 
     public int getDem(){
