@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.Random;
 
@@ -19,6 +20,7 @@ public class RoomView extends JPanel implements ActionListener{
     // Random variable member
     private Random rand;
     private Topics topics;
+    private Font font;
 
     // Width of the window
     private static final int WIDTH = 1920;
@@ -35,6 +37,13 @@ public class RoomView extends JPanel implements ActionListener{
         // Sets the window size
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
 
+        try {
+            String fontName = "PressStart2P-Regular.ttf";
+            InputStream is = RoomView.class.getResourceAsStream(fontName);
+            font = Font.createFont(Font.TRUETYPE_FONT, is);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         // Initalize timer, with ticks interating ever *25* miliseconds
         timer = new Timer(25, this);
@@ -92,6 +101,7 @@ public class RoomView extends JPanel implements ActionListener{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        g.setFont(font);
 
     }
 
