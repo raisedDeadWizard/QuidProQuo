@@ -1,5 +1,6 @@
 package quidProQuo;
 
+import com.sun.tools.internal.jxc.ap.Const;
 import mediaResources.Resources;
 
 import javax.imageio.ImageIO;
@@ -23,7 +24,7 @@ public class RoomView extends JPanel implements ActionListener{
     private Random rand;
     private Topics topics;
     private Font font;
-    private BufferedImage background;
+    private BufferedImage background, desk;
 
     // Width of the window
     private static final int WIDTH = 1480;
@@ -40,6 +41,7 @@ public class RoomView extends JPanel implements ActionListener{
         // Sets the window size
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
         background = loadImage("OvalOffice.png");
+        desk = loadImage("Desk.png");
 
         try {
             String fontName = "PressStart2P-Regular.ttf";
@@ -106,7 +108,12 @@ public class RoomView extends JPanel implements ActionListener{
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setFont(font);
+
+        // Background image
         g.drawImage(background, 0, 0,null);
+
+        //Desk sprite
+        g.drawImage(desk, Constants.deskX, Constants.deskY, null);
 
     }
 
