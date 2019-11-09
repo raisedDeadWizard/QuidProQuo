@@ -7,4 +7,6 @@ public class Constants {
     public static final int minorNum = 20;//the number of topics for the minor arrays
     public static final int deskX = 663; // x position of desk sprite
     public static final int deskY = 212; // y position of desk sprite
+    public static final int cokeX = 1084;
+    public static final int cokeY = 460;
 }

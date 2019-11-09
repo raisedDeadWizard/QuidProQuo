@@ -119,7 +119,7 @@ public class RoomView extends JPanel implements ActionListener{
         g.drawImage(desk, Constants.deskX, Constants.deskY, null);
 
         //Diet Coke
-        g.drawImage(coke, 1084, 460, null);
+        g.drawImage(coke, Constants.cokeX, Constants.cokeY, null);
 
     }
 
