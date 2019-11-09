@@ -18,6 +18,7 @@ public class RoomView extends JPanel implements ActionListener{
 
     // Random variable member
     private Random rand;
+    private Topics topics;
 
     // Width of the window
     private static final int WIDTH = 1920;
@@ -41,6 +42,8 @@ public class RoomView extends JPanel implements ActionListener{
 
         //Initialize random variable
         rand = new Random();
+
+        topics = new Topics();
 
         // Listener for user interaction
         MouseAdapter listener = new MouseAdapter() {
