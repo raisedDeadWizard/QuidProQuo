@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Topics {
 
 
-    private ArrayList<Highlight> highlights = new ArrayList<Highlight>();
+    public static ArrayList<Highlight> highlights = new ArrayList<Highlight>();
     private ArrayList<Decision> year1Major = new ArrayList<Decision>();
     private ArrayList<String> year1MajorLinks = new ArrayList<String>();
     private ArrayList<Decision> year1Minor = new ArrayList<Decision>();
@@ -79,7 +79,7 @@ public class Topics {
             try {
                 Scanner high = new Scanner(new File(Topics.class.getResource("highlight.txt").getPath()));
 
-                for(int i = 0; i < Constants.majorNum*3; i++){
+                for(int i = 0; i < Constants.majorNum *9; i++){
                     highlights.add(new Highlight(high.nextLine(), high.nextLine(), high.nextLine()));
                 }
             }
