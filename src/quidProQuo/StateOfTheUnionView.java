@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class StateOfTheUnionView extends JPanel {
     private static final int WIDTH = 1480;
     private static final int HEIGHT = 825;
+    private int fakeYear;
     private static int year;
     private Clip newTrack;
     private FloatControl volume;
@@ -28,7 +29,43 @@ public class StateOfTheUnionView extends JPanel {
     public StateOfTheUnionView(int year, ArrayList<Decision> yearHighlights, ArrayList<Response> highlightResponses) {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
         setBackground(Color.BLACK);
+        this.fakeYear = year;
+        this.yearHighlights = yearHighlights;
+        this.highlightResponses = highlightResponses;
 
+        stateBox = loadImage("stateBox.png");
+        descBox = loadImage("Impact.png");
+        resBox = loadImage("resBox.png");
+        StateOfTheUnionView.year = year;
+        MouseAdapter listener = new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                handleMousePressed(e);
+            }
+
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                handleMouseDragged(e);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                handleMouseReleased(e);
+            }
+
+            @Override
+            public void mouseMoved(MouseEvent e) { handleMouseMoved(e);}
+
+        };
+        addMouseListener(listener);
+        addMouseMotionListener(listener);
+    }
+
+    public StateOfTheUnionView(int year, ArrayList<Decision> yearHighlights, ArrayList<Response> highlightResponses, int fakeYear) {
+        setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        setBackground(Color.BLACK);
+
+        this.fakeYear = fakeYear;
         this.yearHighlights = yearHighlights;
         this.highlightResponses = highlightResponses;
 
@@ -99,7 +136,7 @@ public class StateOfTheUnionView extends JPanel {
         g.fillRect(0,0,WIDTH,HEIGHT);
         g.setColor(Color.WHITE);
         g.setFont(new Font(Font.DIALOG, Font.BOLD, 72));
-        g.drawString("Year " + year + " Summary", WIDTH/2 - 300, 100);
+        g.drawString("Year " + fakeYear + " Summary", WIDTH/2 - 300, 100);
 
         g.drawImage(stateBox, 20, 390, null);
         g.drawImage(stateBox, 495, 390, null);

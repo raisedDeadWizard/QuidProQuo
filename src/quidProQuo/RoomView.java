@@ -24,6 +24,7 @@ import java.util.Random;
 
 public class RoomView extends JPanel implements ActionListener{
 
+    public static ArrayList<StateOfTheUnionView> view  = new ArrayList<StateOfTheUnionView>();
     // Timer to manage game runtime, and animation frequency
     private Timer timer;
     private int ticks = 0, blinkTick = 120, aidTicks = 0, aidCount = 0;
@@ -336,7 +337,10 @@ public class RoomView extends JPanel implements ActionListener{
             Main.rep = repBar.getVal();
             Main.nat = natBar.getVal();
             Main.year = yearValue+1;
-            Main.frame.setContentPane(new StateOfTheUnionView(yearValue, yearHighlights, highlightResponses));
+            Main.decisions.add(yearHighlights);
+            Main.responses.add(highlightResponses);
+            StateOfTheUnionView stateView = new StateOfTheUnionView(yearValue, yearHighlights, highlightResponses);
+            Main.frame.setContentPane(stateView);
             Main.frame.pack();
             Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Main.frame.setVisible(true);

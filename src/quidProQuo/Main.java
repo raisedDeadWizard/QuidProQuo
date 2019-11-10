@@ -10,12 +10,13 @@ public class Main {
     public static int rep = 80;
     public static int nat = 50;
     public static int year = 1;
-    public static ArrayList<Decision> majors;
+    public static ArrayList<ArrayList<Decision>> decisions = new ArrayList<ArrayList<Decision>>();
+    public static ArrayList<ArrayList<Response>> responses = new ArrayList<ArrayList<Response>>();
+
     public static void main(final String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-
                 StartView start = new StartView();
                 frame = new JFrame("Quid Pro Quo");
                 frame.setContentPane(start);
