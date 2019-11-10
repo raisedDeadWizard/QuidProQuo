@@ -1,6 +1,7 @@
 package quidProQuo;
 
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class Main {
     public static JFrame frame;
@@ -9,6 +10,7 @@ public class Main {
     public static int rep = 80;
     public static int nat = 50;
     public static int year = 1;
+    public static ArrayList<Decision> majors;
     public static void main(final String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
