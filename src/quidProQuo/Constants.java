@@ -18,4 +18,6 @@ public class Constants {
     public static final int repBarY = 160;
     public static final int natBarX = 20;
     public static final int natBarY = 300;
+    public static final int dialogueBoxX = 550;
+    public static final int dialogueBoxY = 20;
 }

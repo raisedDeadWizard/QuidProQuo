@@ -26,18 +26,25 @@ public class RoomView extends JPanel implements ActionListener{
 
     // Timer to manage game runtime, and animation frequency
     private Timer timer;
-    private int ticks = 0, blinkTick = 120;
+    private int ticks = 0, blinkTick = 120, aidTicks = 0, aidCount = 0;
 
 
     // Random variable member
+    private Decision currentDesc;
     private Random rand;
     private Topics topics;
     private Font font;
     private boolean blink = false;
+    private boolean dialogue = false;
+    private boolean isOnResOne = false, isOnResTwo = false, isOnResThree = false;
+    private boolean aidOne = false, aidTwo = false, aidThree = false;
     private BufferedImage background, desk, coke;
     private BufferedImage[] donald = new BufferedImage[2];
+    private BufferedImage[] dialogueBox = new BufferedImage[4];
     private ArrayList<Aid> aids = new ArrayList<Aid>();
     private Bar demBar, repBar, natBar;
+    private Aid currentAidOne;
+    private ArrayList<Decision> year1;
 
 
 
@@ -53,7 +60,7 @@ public class RoomView extends JPanel implements ActionListener{
     public RoomView() {
 
         // Sets the background color of the window
-        setBackground(Color.WHITE);
+        setBackground(Color.BLACK);
 
         // Sets the window size
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
@@ -73,14 +80,21 @@ public class RoomView extends JPanel implements ActionListener{
         donald[0] = loadImage("Donald.png");
         donald[1] = loadImage("DonaldBlinking.png");
 
-        aids.add(new Aid(loadImage("Aid1.png"), 0, 400));
-        aids.add(new Aid(loadImage("Aid2.png"), 0, 400));
-        aids.add(new Aid(loadImage("Aid3.png"), 0, 400));
-        aids.add(new Aid(loadImage("Aid4.png"), 0, 400));
-        aids.add(new Aid(loadImage("Aid5.png"), 0, 400));
-        aids.add(new Aid(loadImage("Aid6.png"), 0, 400));
+        aids.add(new Aid(loadImage("Aid1.png"), 0, 850));
+        aids.add(new Aid(loadImage("Aid2.png"), 0, 850));
+        aids.add(new Aid(loadImage("Aid3.png"), 0, 850));
+        aids.add(new Aid(loadImage("Aid4.png"), 0, 850));
+        aids.add(new Aid(loadImage("Aid5.png"), 0, 850));
+        aids.add(new Aid(loadImage("Aid6.png"), 0, 850));
 
         Collections.shuffle(aids);
+
+        currentAidOne = aids.get(0);
+
+        dialogueBox[0] = loadImage("speechBubble.png");
+        dialogueBox[1] = loadImage("speechBubble1.png");
+        dialogueBox[2] = loadImage("speechBubble2.png");
+        dialogueBox[3] = loadImage("speechBubble3.png");
 
 
 
@@ -92,6 +106,8 @@ public class RoomView extends JPanel implements ActionListener{
         rand = new Random();
 
         topics = new Topics();
+        year1 = topics.getYear1();
+
 
         // Listener for user interaction
         MouseAdapter listener = new MouseAdapter() {
@@ -120,6 +136,27 @@ public class RoomView extends JPanel implements ActionListener{
     }
 
     protected void handleMouseMoved(MouseEvent e){
+        if (isOnResOne(e)){
+            isOnResOne = true;
+        }
+        else {
+            isOnResOne = false;
+        }
+
+        if (isOnResTwo(e)){
+            isOnResTwo = true;
+        }
+        else {
+            isOnResTwo = false;
+        }
+
+        if (isOnResThree(e)){
+            isOnResThree = true;
+        }
+        else {
+            isOnResThree = false;
+        }
+
         repaint();
     }
 
@@ -128,6 +165,27 @@ public class RoomView extends JPanel implements ActionListener{
         if (isOnCan(e)) {
             cokeClip.setFramePosition(0);
             cokeClip.start();
+        }
+        if (dialogue) {
+            if (isOnResOne(e)) {
+                dialogue = false;
+                Response a = currentDesc.getDemRes();
+                demBar.updateVal(demBar.getVal() + a.getDem());
+                repBar.updateVal(repBar.getVal() + a.getRep());
+                natBar.updateVal(natBar.getVal() + a.getNat());
+            } else if (isOnResTwo(e)) {
+                Response a = currentDesc.getRepRes();
+                dialogue = false;
+                demBar.updateVal(demBar.getVal() + a.getDem());
+                repBar.updateVal(repBar.getVal() + a.getRep());
+                natBar.updateVal(natBar.getVal() + a.getNat());
+            } else if (isOnResThree(e)) {
+                Response a = currentDesc.getModRes();
+                dialogue = false;
+                demBar.updateVal(demBar.getVal() + a.getDem());
+                repBar.updateVal(repBar.getVal() + a.getRep());
+                natBar.updateVal(natBar.getVal() + a.getNat());
+            }
         }
         repaint();
     }
@@ -186,6 +244,7 @@ public class RoomView extends JPanel implements ActionListener{
         //Desk sprite
         g.drawImage(desk, Constants.deskX, Constants.deskY, null);
 
+
         //Donald trump sprite
         if (blink){
             g.drawImage(donald[1], Constants.donaldX, Constants.donaldY, null);
@@ -194,8 +253,28 @@ public class RoomView extends JPanel implements ActionListener{
             g.drawImage(donald[0], Constants.donaldX, Constants.donaldY, null);
         }
 
+
+
         //Diet Coke
         g.drawImage(coke, Constants.cokeX, Constants.cokeY, null);
+
+        g.drawImage(currentAidOne.getSprite(), currentAidOne.getX(), currentAidOne.getY(), null);
+
+        if (dialogue){
+            if (isOnResOne){
+                g.drawImage(dialogueBox[1], Constants.dialogueBoxX, Constants.dialogueBoxY, null);
+            }
+            else if (isOnResTwo){
+                g.drawImage(dialogueBox[2], Constants.dialogueBoxX, Constants.dialogueBoxY, null);
+            }
+            else if (isOnResThree){
+                g.drawImage(dialogueBox[3], Constants.dialogueBoxX, Constants.dialogueBoxY, null);
+            }
+            else {
+                g.drawImage(dialogueBox[0], Constants.dialogueBoxX, Constants.dialogueBoxY, null);
+            }
+
+        }
 
 
 
@@ -238,10 +317,38 @@ public class RoomView extends JPanel implements ActionListener{
         }
     }
 
+    public boolean isOnResOne(MouseEvent e){
+        if (e.getX() > Constants.dialogueBoxX && e.getX() < Constants.dialogueBoxX + 400 && e.getY() > Constants.dialogueBoxY + 200 && e.getY() < Constants.dialogueBoxY + 340){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public boolean isOnResTwo(MouseEvent e){
+        if (e.getX() > Constants.dialogueBoxX && e.getX() < Constants.dialogueBoxX + 400 && e.getY() > Constants.dialogueBoxY + 345 && e.getY() < Constants.dialogueBoxY + 485){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public boolean isOnResThree(MouseEvent e){
+        if (e.getX() > Constants.dialogueBoxX && e.getX() < Constants.dialogueBoxX + 400 && e.getY() > Constants.dialogueBoxY + 490 && e.getY() < Constants.dialogueBoxY + 630){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     /** reoccuring events to animate go in this function**/
     @Override
     public void actionPerformed(ActionEvent e) {
         ticks++;
+        aidTicks++;
 
         if (ticks > blinkTick){
             blink = true;
@@ -251,6 +358,23 @@ public class RoomView extends JPanel implements ActionListener{
             blink = false;
             ticks = 0;
         }
+
+        if (!dialogue && aidTicks > 10*Constants.ticksPerSec + Constants.ticksPerSec*rand.nextInt(10) && aidCount < 3){
+            currentAidOne = aids.get(rand.nextInt(6));
+            currentDesc = year1.remove(rand.nextInt(year1.size()));
+            aidCount++;
+            aidTicks = 0;
+        }
+
+        if (aidCount == 1 && currentAidOne.getX() < 400 && currentAidOne.getY() > 200){
+            currentAidOne.moveX(5);
+            currentAidOne.moveY(-7);
+        }
+        else if (aidCount == 1){
+            dialogue = true;
+        }
+
+
 
         repaint();
     }
