@@ -79,7 +79,7 @@ public class Topics {
             try {
                 Scanner high = new Scanner(new File(Topics.class.getResource("highlight.txt").getPath()));
 
-                for(int i = 0; i < Constants.majorNum*3; i++){
+                for(int i = 0; i < Constants.majorNum *9; i++){
                     highlights.add(new Highlight(high.nextLine(), high.nextLine(), high.nextLine()));
                 }
             }
