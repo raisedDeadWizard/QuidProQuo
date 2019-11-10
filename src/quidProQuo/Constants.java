@@ -12,4 +12,10 @@ public class Constants {
     public static final int donaldX = 950;
     public static final int donaldY = 125;
     public static final int ticksPerSec = 40;
+    public static final int demBarX = 20;
+    public static final int demBarY = 20;
+    public static final int repBarX = 20;
+    public static final int repBarY = 160;
+    public static final int natBarX = 20;
+    public static final int natBarY = 300;
 }

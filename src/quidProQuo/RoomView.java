@@ -34,6 +34,11 @@ public class RoomView extends JPanel implements ActionListener{
     private boolean blink = false;
     private BufferedImage background, desk, coke;
     private BufferedImage[] donald = new BufferedImage[2];
+    private BufferedImage[] aids = new BufferedImage[6];
+    private Bar demBar, repBar, natBar;
+
+
+
 
     private Clip cokeClip, soundTrack;
     // Width of the window
@@ -58,18 +63,24 @@ public class RoomView extends JPanel implements ActionListener{
         FloatControl volume = (FloatControl) soundTrack.getControl(FloatControl.Type.MASTER_GAIN);
         volume.setValue(-20);
         soundTrack.loop(Clip.LOOP_CONTINUOUSLY);
+        demBar = new Bar(30,Constants.demBarX, Constants.demBarY);
+        repBar = new Bar(80,Constants.repBarX, Constants.repBarY);
+        natBar = new Bar(51,Constants.natBarX, Constants.natBarY);
 
 
         donald[0] = loadImage("Donald.png");
         donald[1] = loadImage("DonaldBlinking.png");
 
-        try {
-            String fontName = "PressStart2P-Regular.ttf";
-            InputStream is = RoomView.class.getResourceAsStream(fontName);
-            font = Font.createFont(Font.TRUETYPE_FONT, is);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        aids[0] = loadImage("Aid1.png");
+        aids[1] = loadImage("Aid2.png");
+        aids[2] = loadImage("Aid3.png");
+        aids[3] = loadImage("Aid4.png");
+        aids[4] = loadImage("Aid5.png");
+        aids[5] = loadImage("Aid6.png");
+
+
+
+
 
         // Initalize timer, with ticks interating ever *25* miliseconds
         timer = new Timer(25, this);
@@ -131,16 +142,49 @@ public class RoomView extends JPanel implements ActionListener{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.setFont(font);
+
 
         // Background image
         g.drawImage(background, 0, 0,null);
 
-        //TODO: Donald Trump Sprite
+        // demBar sprite
+        g.drawImage(demBar.getSprite(), demBar.getX(), demBar.getY(), null);
+        g.setColor(Color.BLUE);
+        g.fillRect(demBar.getX()+24, demBar.getY()+12, demBar.getLength(), 62);
+        g.setColor(Color.BLACK);
+        g.setFont(new Font(Font.DIALOG, Font.BOLD, 36));
+        g.drawChars(demBar.getValChar(), 0, demBar.getValChar().length, demBar.getX()+176, demBar.getY()+55);
+        String d = "Reputation with Democrats";
+        g.setFont(new Font(Font.DIALOG, Font.BOLD, 24));
+        g.drawChars(d.toCharArray(), 0, d.length(), demBar.getX()+35, demBar.getY()+110);
+
+        // repBar sprite
+        g.drawImage(repBar.getSprite(), repBar.getX(), repBar.getY(), null);
+        g.setColor(Color.RED);
+        g.fillRect(repBar.getX()+24, repBar.getY()+12, repBar.getLength(), 62);
+        g.setColor(Color.BLACK);
+        g.setFont(new Font(Font.DIALOG, Font.BOLD, 36));
+        g.drawChars(repBar.getValChar(), 0, repBar.getValChar().length, repBar.getX()+176, repBar.getY()+55);
+        String s = "Reputation with Republicans";
+        g.setFont(new Font(Font.DIALOG, Font.BOLD, 24));
+        g.drawChars(s.toCharArray(), 0, s.length(), repBar.getX()+25, repBar.getY()+110);
+
+        // natBar sprite
+        g.drawImage(natBar.getSprite(), natBar.getX(), natBar.getY(), null);
+        g.setColor(Color.GREEN);
+        g.fillRect(natBar.getX()+24, natBar.getY()+12, natBar.getLength(), 62);
+        g.setColor(Color.BLACK);
+        g.setFont(new Font(Font.DIALOG, Font.BOLD, 36));
+        g.drawChars(natBar.getValChar(), 0, natBar.getValChar().length, natBar.getX()+176, natBar.getY()+55);
+        String a = "Approval Rating";
+        g.setFont(new Font(Font.DIALOG, Font.BOLD, 24));
+        g.drawChars(a.toCharArray(), 0, a.length(), natBar.getX()+105, natBar.getY()+110);
+
 
         //Desk sprite
         g.drawImage(desk, Constants.deskX, Constants.deskY, null);
 
+        //Donald trump sprite
         if (blink){
             g.drawImage(donald[1], Constants.donaldX, Constants.donaldY, null);
         }
@@ -148,9 +192,10 @@ public class RoomView extends JPanel implements ActionListener{
             g.drawImage(donald[0], Constants.donaldX, Constants.donaldY, null);
         }
 
-
         //Diet Coke
         g.drawImage(coke, Constants.cokeX, Constants.cokeY, null);
+
+
 
     }
 
