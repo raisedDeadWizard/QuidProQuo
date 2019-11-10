@@ -16,7 +16,7 @@ public class Topics {
     private ArrayList<Decision> year3Major = new ArrayList<Decision>();
     private ArrayList<String> year3MajorLinks = new ArrayList<String>();
     private ArrayList<Decision> year3Minor = new ArrayList<Decision>();
-    private HashMap<String, String> highMap = new HashMap<String, String>();
+
 
 
     Topics(){
@@ -26,11 +26,13 @@ public class Topics {
 
             //Each for loop assigns the responses to each array from the text file
             for (int i = 0; i < Constants.majorNum; i++) {
+
                 year1Major.add(new Decision(scan.nextLine(), new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()),
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()),
                         new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()),
                                 Integer.parseInt(scan.nextLine()), scan.nextLine()), new Response(scan.nextLine(),
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()), true));
+
             }
 
             for (int i = 0; i < Constants.minorNum; i++) {
@@ -73,17 +75,6 @@ public class Topics {
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()), false));
             }
             scan.close();
-
-            try {
-                Scanner high = new Scanner(new File(Topics.class.getResource("highlight.txt").getPath()));
-
-                for (int i = 0; i < Constants.majorNum * 9; i++) {
-                    highMap.put(high.nextLine(), high.nextLine());
-                    String link = high.nextLine();
-                }
-            } catch (Exception e) {
-
-            }
 
             //scan major links information, add that to arraylists
 
@@ -154,9 +145,7 @@ public class Topics {
         return place;
     }
 
-    public String getBlurb(String key){
-        return highMap.get(key);
-    }
+
 
     public ArrayList<Decision> getAllResponses(){
         ArrayList<Decision> allResp = new ArrayList<Decision>();

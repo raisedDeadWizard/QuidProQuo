@@ -339,7 +339,7 @@ public class RoomView extends JPanel implements ActionListener{
             Main.year = yearValue+1;
             Main.decisions.add(yearHighlights);
             Main.responses.add(highlightResponses);
-            StateOfTheUnionView stateView = new StateOfTheUnionView(yearValue, yearHighlights, highlightResponses, topics);
+            StateOfTheUnionView stateView = new StateOfTheUnionView(yearValue, yearHighlights, highlightResponses);
             Main.frame.setContentPane(stateView);
             Main.frame.pack();
             Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

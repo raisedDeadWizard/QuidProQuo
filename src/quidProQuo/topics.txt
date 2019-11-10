@@ -14,7 +14,7 @@ Yes, I promised the American people I would pass the tax cut.
 3
 1
 Your supporters are satisfied you fulfilled your promises, but government programs suffer as a result.
-An African American man was recently shot and killed by police. The Black Lives Matter movement is demanding that the officer responsible be prosecuted. What would you like to do in response? 
+An African American man was recently shot and killed by police. The Black Lives Matter movement is demanding that the officer responsible be prosecuted. What would you like to do in response?
 Make a statement commending the work done by police officers to keep the American people safe. 
 -4
 2
@@ -30,7 +30,7 @@ Insist that the officer be prosecuted for their actions and back the BLM movemen
 -4
 1
 The African American community is encouraged by your support but supporters of the police are outraged.
-The Syrian government attacked civilians with chemical weapons. How would you like to respond? 
+The Syrian government attacked civilians with chemical weapons. How would you like to respond?
 Respond aggressively and launch missiles on a government airbase. 
 0
 3
@@ -46,7 +46,7 @@ Place additional economic sanctions on the Syrian government.
 2
 2
 The American people commend you for taking action against the human rights violations, but your relationship with Syria suffers as a result of their weakened economy.
-Mr. President, we discovered the location of ISIS members in Afghanistan. How would you like to respond? 
+Mr. President, we discovered the location of ISIS members in Afghanistan. How would you like to respond?
 Drop a MOAB weapon on the ISIS base (small risk of civilian casualties).
 3
 4
@@ -78,7 +78,7 @@ Encourage Congress to focus on decreasing unemployment, so that more people can 
 -1
 2
 The American people are happy at your attempts to bolster the economy but still feel like action should be taken to improve healthcare.
-The United Nations has made an accord to increase efforts to combat global warming. Should the United States remain in this deal? 
+The United Nations has made an accord to increase efforts to combat global warming. Should the United States remain in this deal?
 No, this deal puts unfair environmental standards on American businesses.
 -4
 2
@@ -94,7 +94,7 @@ Yes, global warming is one of the most important issues facing society.
 -4
 0
 Climate activists are delighted, but there are serious economic concerns primarily regarding the removal of jobs in fossil fuel industries.
-A group of white nationalists are marching in Charlottesville and protesting the removal of Confederate statues. How would you like to respond? 
+A group of white nationalists are marching in Charlottesville and protesting the removal of Confederate statues. How would you like to respond?
 Express sympathy for their cause and desire to preserve history.
 -4
 1
@@ -110,7 +110,7 @@ Claim that both sides in the debate regarding Civil War statues are valid.
 -1
 -1
 Both sides are irritated that you didn’t take a stronger stance towards their side and against the opposing viewpoint.
-Your executive order calling for a travel ban has caused controversy due to some people believing it is islamophobic. What would you like to do? 
+Your executive order calling for a travel ban has caused controversy due to some people believing it is islamophobic. What would you like to do?
 Insist that it was passed to protect the American people from terrorism. 
 -2
 3
@@ -141,8 +141,8 @@ Appoint Zephyr Teachout, a liberal law professor.
 5
 -5
 2
-Liberal voters are particularly delighted at such a surprising choice, but conservative voters are shocked and seriously disappointed by your decision 
-Protests in support of gender equality are insinuating that you do not support women’s rights. How will you respond? 
+Liberal voters are particularly delighted at such a surprising choice, but conservative voters are shocked and seriously disappointed by your decision
+Protests in support of gender equality are insinuating that you do not support women’s rights. How will you respond?
 Remind them that they had their chance to voice their opinion in the election. 
 -2
 2
@@ -606,7 +606,7 @@ Appoint Sri Srivinasan, a liberal federal appeals court judge.
 -5
 0
 Liberal voters are extremely happy that a solid chunk of the Supreme Court is left-wing, but conservative voters are appalled for the same reason.
-Congress will not pass a federal funding bill without support for the DACA (Deferred Action for Childhood Arrivals) program, allowing child immigrants to stay in the country. What is your plan? 
+Congress will not pass a federal funding bill without support for the DACA (Deferred Action for Childhood Arrivals) program, allowing child immigrants to stay in the country. What is your plan?
 Refuse to cooperate with Congress and shut down the government over the issue.
 -4
 -3
@@ -989,7 +989,7 @@ Change the details of the project in order to gain a broader base of support.
 3
 1
 1
-After accepting that your project was clearly too unpopular in its current form, you try to revise it to make it more appealing to a wider range of political views, but ultimately the project falls apart and is never implemented. 
+After accepting that your project was clearly too unpopular in its current form, you try to revise it to make it more appealing to a wider range of political views, but ultimately the project falls apart and is never implemented.
 Due to disagreements about a new government budget, the government has been shut down. You are frustrated by the lack of progress during meetings. How do you react?
 Walk out of meetings with the opposing party in exasperation.
 -3
@@ -1037,7 +1037,7 @@ Continue with your emergency actions but hold a conference to discuss the issue 
 1
 1
 -1
-Many people on both sides of the issue are pleased by your obvious willingness to discuss this issue, but some members of the public are unhappy with you capitulating to pressure so easily. 
+Many people on both sides of the issue are pleased by your obvious willingness to discuss this issue, but some members of the public are unhappy with you capitulating to pressure so easily.
 A white supremacist committed an act of terrorism against two mosques in New Zeland, killing 51 people. How will you respond to this attack?
 Condemn the shooter and offer your condolences to the people affected.
 1
@@ -1053,7 +1053,7 @@ Denounce the actions of the shooter, but mention that white supremacy is not a m
 -1
 1
 -1
-While people are pleased with your response to the shooter, many liberal voters are worried by your dismissal of the issue of white supremacists. 
+While people are pleased with your response to the shooter, many liberal voters are worried by your dismissal of the issue of white supremacists.
 Robert Mueller has just published his report on the Russian interference in the 2016 election. How will you react to this report?
 Accuse Mueller of being biased and try to suppress the content of the report.
 -3
@@ -1085,7 +1085,7 @@ Attend the meeting but do not offer your support to any specific motions and pro
 1
 1
 0
-People on both sides of the climate change issue are relatively satisfied by your actions, but many voters are displeased by your lack of action one way or the other. 
+People on both sides of the climate change issue are relatively satisfied by your actions, but many voters are displeased by your lack of action one way or the other.
 People have been raising concerns about the various troops the United States has posted abroad. Would you like to do anything about the current deployment of U.S. troops?
 All the American soldiers stationed abroad right now are necessary to protect American interests around the world.
 -1
@@ -1101,7 +1101,7 @@ Yes, there are too many American troops stationed abroad, but any hasty actions 
 2
 -1
 1
-Some liberals are pleased by the decrease in U.S. military involvement around the world and some conservatives are displeased by the same,but the populus is generally pleased by what they see as definite actions by the government. 
+Some liberals are pleased by the decrease in U.S. military involvement around the world and some conservatives are displeased by the same,but the populus is generally pleased by what they see as definite actions by the government.
 The 2020 election is coming up and you are beginning to worry about your chance of reelection. Is there anything you are interested in doing to try and gain an advantage over your opponents?
 Ask foreign countries for damaging information on political opponents.
 -6

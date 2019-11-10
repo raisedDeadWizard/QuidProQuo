@@ -1,26 +1,34 @@
 package quidProQuo;
 
+import java.io.File;
+import java.util.HashMap;
+import java.util.Scanner;
+
 public class Highlight {
-    private String blurb, key, link;
+    private Topics topics;
+    private HashMap<Integer, String> highMap = new HashMap<Integer, String>();
+
+    public Highlight(){
 
 
-    public Highlight( String key, String blurb, String link){
-        this.blurb = blurb;
-        this.key = key;
-        this.link = link;
+
+
+        try {
+            Scanner high = new Scanner(new File(Topics.class.getResource("highlight.txt").getPath()));
+
+            while (high.hasNextLine()) {
+                highMap.put(high.nextInt(), high.nextLine());
+            }
+        } catch (Exception e) {
+
+        }
     }
 
-    public String getKey(){
-        return key;
+    public String getBlurb(int key){
+        return highMap.get(key);
     }
 
-    public String getBlurb(){
-        return blurb;
-    }
 
-    public String getLink(){
-        return link;
-    }
 
 
 }
