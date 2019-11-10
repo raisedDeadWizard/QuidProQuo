@@ -8,7 +8,6 @@ import java.awt.event.MouseEvent;
 public class CreditsView extends JPanel {
     private static final int WIDTH = 1480;
     private static final int HEIGHT = 825;
-    private static String credits = "CREDITS";
 
     public CreditsView() {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
@@ -65,6 +64,30 @@ public class CreditsView extends JPanel {
         super.paintComponent(g);
 
         g.setColor(Color.WHITE);
-        g.drawString(credits, 500, 100);
+        String creditsTitle = "CREDITS";
+        String songCredits = "The file \"newGame.wav\" uses 3 distinct songs, The Stars and Stripes Forever, The Thunderer, and The Washington Post.\n" +
+                "\n" +
+                "The Stars and Stripes Forever was recorded by The United States Marine Band, conducted by Jason Fettig.\n" +
+                "It was published in \"The Complete Marches of John Philip Sousa, No. 53\" in 2016.\n" +
+                "It is licensed under the Creative Commons Attribution 4.0.\n" +
+                "\n" +
+                "The Thunderer was recorded by The United States Marine Band, conducted by Jason Fettig.\n" +
+                "It was published in \"The Complete Marches of John Philip Sousa, No. 37\" in 2016.\n" +
+                "It is licensed under the Creative Commons Attribution 4.0.\n" +
+                "\n" +
+                "The Washington Post was recorded by The United States Marine Band, conducted by Jason Fettig.\n" +
+                "It was published in \"The Complete Marches of John Philip Sousa, No. 38\" in 2016.\n" +
+                "It is licensed under the Creative Commons Attribution 4.0.\n" +
+                "\n" +
+                "The file \"hailToCheif.wav\" was a remix by Youtuber Raxlen Slice\n" +
+                "Youtube link: https://www.youtube.com/watch?v=CRx1yV6T0ns";
+        g.drawString(creditsTitle, WIDTH / 2, 25);
+
+        //at each line break, the string is separated and is drawn separately as its own string
+        int songIterator = 0;
+        for(String str : songCredits.split("\n")) {
+            songIterator++;
+            g.drawString(str, WIDTH/4, 50 + songIterator*20);
+        }
     }
 }
