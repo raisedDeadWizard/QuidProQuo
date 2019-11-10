@@ -18,7 +18,7 @@ public class Main {
             @Override
             public void run() {
                 StartView start = new StartView();
-                frame = new JFrame("Quid Pro Quo");
+                frame = new JFrame("Hail To The Chief");
                 frame.setContentPane(start);
                 frame.pack();
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
