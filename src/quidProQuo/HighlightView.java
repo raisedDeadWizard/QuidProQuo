@@ -16,12 +16,13 @@ import java.net.URL;
 public class HighlightView extends JPanel{
     private static final int WIDTH = 1480;
     private static final int HEIGHT = 825;
+    int score;
 
     public HighlightView() {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
         setBackground(Color.BLACK);
 
-        int score = Main.dem * Main.rep * Main.nat;
+        this.score = Main.dem * Main.rep * Main.nat;
 
         MouseAdapter listener = new MouseAdapter() {
             @Override
@@ -71,6 +72,13 @@ public class HighlightView extends JPanel{
             Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Main.frame.setVisible(true);
         }
+        else if (isOnReturn(e)){
+            Main.reset();
+            Main.frame.setContentPane(new StartView(true));
+            Main.frame.pack();
+            Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            Main.frame.setVisible(true);
+        }
 
 
 
@@ -115,6 +123,31 @@ public class HighlightView extends JPanel{
         g.drawRect(1150,150,250,100);
         g.setFont(new Font(Font.DIALOG, Font.BOLD, 30));
         g.drawString("View Year 3", 1175, 210);
+
+
+        g.setColor(Color.WHITE);
+        g.fillRect(1480/2 - (""+score).length()*35, 365, (""+score).length()*70, 5);
+        g.setFont(new Font(Font.DIALOG, Font.BOLD, 96));
+        g.drawString("Score", 1480/2 - 140, 350);
+
+        g.drawString(""+score, 1480/2 - (""+score).length()*35, 450);
+
+        g.setColor(Color.GRAY);
+        g.fillRect(615,550,250,100);
+        g.setColor(Color.BLACK);
+        g.drawRect(615,550,250,100);
+        g.setFont(new Font(Font.DIALOG, Font.BOLD, 30));
+        g.drawString("Return to Start", 625, 610);
+
+    }
+
+    private boolean isOnReturn(MouseEvent e){
+        if (e.getX() > 615 && e.getX() < 865 && e.getY()>550 && e.getY() < 650){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     private boolean isOnView1(MouseEvent e){
@@ -142,20 +175,6 @@ public class HighlightView extends JPanel{
         else {
             return false;
         }
-    }
-
-    private Clip loadSound(String resourceName) {
-        Clip clip;
-        try {
-            System.out.println("Loading " + resourceName);
-            URL resource = Resources.class.getResource(resourceName);
-            AudioInputStream stream = AudioSystem.getAudioInputStream(resource);
-            clip = AudioSystem.getClip();
-            clip.open(stream);
-        } catch (Exception e) {
-            throw new IllegalStateException("Could not load " + resourceName);
-        }
-        return clip;
     }
 
     private BufferedImage loadImage(String resourceName) {

@@ -20,8 +20,8 @@ public class StateOfTheUnionView extends JPanel {
     private static final int HEIGHT = 825;
     private int fakeYear;
     private static int year;
-    private Clip newTrack;
-    private FloatControl volume;
+    //private Clip newTrack;
+    //private FloatControl volume;
     private ArrayList<Decision> yearHighlights;
     private ArrayList<Response> highlightResponses;
     private BufferedImage stateBox, resBox, descBox;

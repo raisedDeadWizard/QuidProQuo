@@ -70,6 +70,50 @@ public class StartView extends JPanel{
 
     }
 
+    public StartView(boolean isRedo){
+
+        background = loadImage("StartMenu.png");
+        playButton[0] = loadImage("playbutton.png");
+        playButton[1] = loadImage("playbutton1.png");
+        creditsButton[0] = loadImage("CreditsButton.png");
+        creditsButton[1] = loadImage("CreditsButton1.png");
+        setPreferredSize(new Dimension(WIDTH, HEIGHT));
+
+        if(!isRedo) {
+            openingTrack = loadSound("hailToCheif.wav");
+            FloatControl volume = (FloatControl) openingTrack.getControl(FloatControl.Type.MASTER_GAIN);
+            volume.setValue(-20);
+            openingTrack.loop(Clip.LOOP_CONTINUOUSLY);
+        }
+
+
+        MouseAdapter listener = new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                handleMousePressed(e);
+            }
+
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                handleMouseDragged(e);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                handleMouseReleased(e);
+            }
+
+            @Override
+            public void mouseMoved(MouseEvent e) { handleMouseMoved(e);}
+
+        };
+        addMouseListener(listener);
+        addMouseMotionListener(listener);
+
+
+
+    }
+
     protected void handleMouseMoved(MouseEvent e){
         if (isOnPlay(e)){
             isOnPlay = true;
@@ -96,6 +140,7 @@ public class StartView extends JPanel{
             Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Main.frame.setVisible(true);
             openingTrack.stop();
+            openingTrack.close();
         }
 
         if (isOnCredits){
@@ -104,6 +149,7 @@ public class StartView extends JPanel{
             Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Main.frame.setVisible(true);
             openingTrack.stop();
+            openingTrack.close();
 
         }
 

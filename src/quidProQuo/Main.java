@@ -28,4 +28,14 @@ public class Main {
             }
         });
     }
+
+    public static void reset(){
+        dem = 30;
+        rep = 80;
+        nat = 50;
+        year = 1;
+        decisions = new ArrayList<ArrayList<Decision>>();
+        responses = new ArrayList<ArrayList<Response>>();
+
+    }
 }
