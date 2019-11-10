@@ -64,7 +64,7 @@ Notify Afghanistan’s government of the location of the base.
 XXX
 The Republican Party is concerned about the Affordable Care Act. How would you like to respond?
 Encourage Congress to repeal Obamacare and pass more conservative healthcare legislation. 
--3t
+-3
 3
 0
 XXX
@@ -544,7 +544,7 @@ Notify Afghanistan’s government of the location of the base.
 XXX
 The Republican Party is concerned about the Affordable Care Act. How would you like to respond?
 Encourage Congress to repeal Obamacare and pass more conservative healthcare legislation.
--3t
+-3
 3
 0
 XXX
@@ -1024,7 +1024,7 @@ Notify Afghanistan’s government of the location of the base.
 XXX
 The Republican Party is concerned about the Affordable Care Act. How would you like to respond?
 Encourage Congress to repeal Obamacare and pass more conservative healthcare legislation.
--3t
+-3
 3
 0
 XXX
