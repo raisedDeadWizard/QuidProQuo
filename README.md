@@ -16,4 +16,4 @@ When playing our game you will first be greeted with a menu screen. Clicking “
 
 ## Credits
 
-This game was created through the efforts of Tyler Comisk, Jagr Krtanjek, Evan Kozierok, Alexa Spaventa, Thomas Brusilovsky, and Jacob Brkowitz at the 2019 Games 4 Social Impact game jam. 
+This game was created through the efforts of Tyler Comisky, Jagr Krtanjek, Evan Kozierok, Alexa Spaventa, Thomas Brusilovsky, and Jacob Brkowitz at the 2019 Games 4 Social Impact game jam. 
