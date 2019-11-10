@@ -1,6 +1,6 @@
 package quidProQuo;
 
-import com.sun.tools.internal.jxc.ap.Const;
+//import com.sun.tools.internal.jxc.ap.Const;
 import mediaResources.Resources;
 
 import javax.imageio.ImageIO;
@@ -299,29 +299,35 @@ public class RoomView extends JPanel implements ActionListener{
             }
 
             g.setFont(new Font(Font.DIALOG, Font.BOLD, 16));
-            String z = "";
-            int len = 0;
+            String line = "";
             int jump = 0;
-            for (char c : currentDesc.toCharArray()) {
-                z += c;
-                len++;
+            for (String word : currentDesc.toString().split(" ")) {
+                if (line.length() + word.length() <= 38) {
+                    line += word + " ";
+                }
+                else {
 
-                if (len > 38) {
-
-                    g.drawString(z + "-" , Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 45 + g.getFontMetrics().getHeight() * jump);
+                    g.drawString(line, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 45 + g.getFontMetrics().getHeight() * jump);
                     jump++;
-                    z = "";
-                    len = 0;
+                    line = word +  " ";
                 }
             }
-            g.drawString(z, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 45 + g.getFontMetrics().getHeight() * jump);
+            g.drawString(line, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 45 + g.getFontMetrics().getHeight() * jump);
             g.setFont(new Font(Font.DIALOG, Font.BOLD, 14));
 
-            z = "";
-            len = 0;
+            line = "";
             jump = 0;
-            for (char c : currentDesc.getResOne().toCharArray()) {
-                z += c;
+            for (String word : currentDesc.getResOne().toString().split(" ")) {
+                if (line.length() + word.length() <= 40) {
+                    line += word + " ";
+                }
+                else {
+
+                    g.drawString(line, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 250 + g.getFontMetrics().getHeight() * jump);
+                    jump++;
+                    line = word + " ";
+                }
+                /*z += c;
                 len++;
 
                 if (len > 40) {
@@ -330,15 +336,23 @@ public class RoomView extends JPanel implements ActionListener{
                     jump++;
                     z = "";
                     len = 0;
-                }
+                }*/
             }
-            g.drawString(z, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 250 + g.getFontMetrics().getHeight() * jump);
+            g.drawString(line, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 250 + g.getFontMetrics().getHeight() * jump);
 
-            z = "";
-            len = 0;
+            line = "";
             jump = 0;
-            for (char c : currentDesc.getResTwo().toCharArray()) {
-                z += c;
+            for (String word : currentDesc.getResTwo().toString().split(" ")) {
+                if (line.length() + word.length() <= 40) {
+                    line += word + " ";
+                }
+                else {
+
+                    g.drawString(line, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 370 + g.getFontMetrics().getHeight() * jump);
+                    jump++;
+                    line = word + " ";
+                }
+                /*z += c;
                 len++;
 
                 if (len > 40) {
@@ -347,14 +361,22 @@ public class RoomView extends JPanel implements ActionListener{
                     jump++;
                     z = "";
                     len = 0;
-                }
+                }*/
             }
-            g.drawString(z, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 370 + g.getFontMetrics().getHeight() * jump);
-            z = "";
-            len = 0;
+            g.drawString(line, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 370 + g.getFontMetrics().getHeight() * jump);
+            line = "";
             jump = 0;
-            for (char c : currentDesc.getResThree().toCharArray()) {
-                z += c;
+            for (String word : currentDesc.getResThree().toString().split(" ")) {
+                if (line.length() + word.length() <= 38) {
+                    line += word + " ";
+                }
+                else {
+
+                    g.drawString(line, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 490 + g.getFontMetrics().getHeight() * jump);
+                    jump++;
+                    line = word + " ";
+                }
+                /*z += c;
                 len++;
 
                 if (len > 40) {
@@ -363,9 +385,9 @@ public class RoomView extends JPanel implements ActionListener{
                     jump++;
                     z = "";
                     len = 0;
-                }
+                }*/
             }
-            g.drawString(z, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 490 + g.getFontMetrics().getHeight() * jump);
+            g.drawString(line, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 490 + g.getFontMetrics().getHeight() * jump);
         }
 
 
