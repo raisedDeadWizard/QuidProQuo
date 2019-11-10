@@ -1,4 +1,4 @@
-# QuidProQuo
+# Hail to the Chief
 
 ## Games for Social Impact Game Jam
 
