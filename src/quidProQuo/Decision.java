@@ -33,6 +33,10 @@ public class Decision {
         return responses[2];
     }
 
+    public boolean isMajor(){
+        return isMajor;
+    }
+
 
 
 

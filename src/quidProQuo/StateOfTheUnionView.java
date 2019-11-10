@@ -13,6 +13,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class StateOfTheUnionView extends JPanel {
     private static final int WIDTH = 1480;
@@ -20,11 +21,15 @@ public class StateOfTheUnionView extends JPanel {
     private static int year;
     private Clip newTrack;
     private FloatControl volume;
+    private ArrayList<Decision> yearHighlights;
+    private ArrayList<Response> highlightResponses;
 
-    public StateOfTheUnionView(int year) {
+    public StateOfTheUnionView(int year, ArrayList<Decision> yearHighlights, ArrayList<Response> highlightResponses) {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
         setBackground(Color.BLACK);
 
+        this.yearHighlights = yearHighlights;
+        this.highlightResponses = highlightResponses;
 
         StateOfTheUnionView.year = year;
         MouseAdapter listener = new MouseAdapter() {

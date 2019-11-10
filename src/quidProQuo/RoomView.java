@@ -47,6 +47,8 @@ public class RoomView extends JPanel implements ActionListener{
     private ArrayList<Aid> aids = new ArrayList<Aid>();
     private Bar demBar, repBar, natBar;
     private Aid currentAidOne;
+    private ArrayList<Decision> yearHighlights;
+    private ArrayList<Response> highlightResponses;
     private ArrayList<Decision> year;
     private ArrayList<Decision> year1;
     private ArrayList<Decision> year2;
@@ -202,6 +204,10 @@ public class RoomView extends JPanel implements ActionListener{
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
                 natBar.updateVal(natBar.getVal() + a.getNat());
+                if (currentDesc.isMajor()){
+                    highlightResponses.add(a);
+                    yearHighlights.add(currentDesc);
+                }
 
             } else if (isOnResTwo(e)) {
                 Response a = currentDesc.getResTwo();
@@ -210,6 +216,10 @@ public class RoomView extends JPanel implements ActionListener{
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
                 natBar.updateVal(natBar.getVal() + a.getNat());
+                if (currentDesc.isMajor()){
+                    highlightResponses.add(a);
+                    yearHighlights.add(currentDesc);
+                }
 
             } else if (isOnResThree(e)) {
                 Response a = currentDesc.getResThree();
@@ -218,6 +228,11 @@ public class RoomView extends JPanel implements ActionListener{
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
                 natBar.updateVal(natBar.getVal() + a.getNat());
+                if (currentDesc.isMajor()){
+                    highlightResponses.add(a);
+                    yearHighlights.add(currentDesc);
+                }
+
 
             }
         }
@@ -299,7 +314,7 @@ public class RoomView extends JPanel implements ActionListener{
             Main.rep = repBar.getVal();
             Main.nat = natBar.getVal();
             Main.year = yearValue+1;
-            Main.frame.setContentPane(new StateOfTheUnionView(yearValue));
+            Main.frame.setContentPane(new StateOfTheUnionView(yearValue, yearHighlights, highlightResponses));
             Main.frame.pack();
             Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Main.frame.setVisible(true);
