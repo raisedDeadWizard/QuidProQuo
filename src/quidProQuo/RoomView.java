@@ -409,7 +409,7 @@ public class RoomView extends JPanel implements ActionListener{
     }
 
     public boolean isOnResOne(MouseEvent e){
-        if (e.getX() > Constants.dialogueBoxX && e.getX() < Constants.dialogueBoxX + 400 && e.getY() > Constants.dialogueBoxY + 200 && e.getY() < Constants.dialogueBoxY + 340){
+        if (e.getX() > Constants.dialogueBoxX + 55 && e.getX() < Constants.dialogueBoxX + 410 && e.getY() > Constants.dialogueBoxY + 225 && e.getY() < Constants.dialogueBoxY + 312){
             return true;
         }
         else {
@@ -418,7 +418,7 @@ public class RoomView extends JPanel implements ActionListener{
     }
 
     public boolean isOnResTwo(MouseEvent e){
-        if (e.getX() > Constants.dialogueBoxX && e.getX() < Constants.dialogueBoxX + 400 && e.getY() > Constants.dialogueBoxY + 345 && e.getY() < Constants.dialogueBoxY + 470){
+        if (e.getX() > Constants.dialogueBoxX + 55 && e.getX() < Constants.dialogueBoxX + 410 && e.getY() > Constants.dialogueBoxY + 345 && e.getY() < Constants.dialogueBoxY + 435){
             return true;
         }
         else {
@@ -427,7 +427,7 @@ public class RoomView extends JPanel implements ActionListener{
     }
 
     public boolean isOnResThree(MouseEvent e){
-        if (e.getX() > Constants.dialogueBoxX && e.getX() < Constants.dialogueBoxX + 400 && e.getY() > Constants.dialogueBoxY + 475 && e.getY() < Constants.dialogueBoxY + 630){
+        if (e.getX() > Constants.dialogueBoxX + 55 && e.getX() < Constants.dialogueBoxX + 410 && e.getY() > Constants.dialogueBoxY + 465 && e.getY() < Constants.dialogueBoxY + 555){
             return true;
         }
         else {
