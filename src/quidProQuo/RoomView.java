@@ -169,18 +169,18 @@ public class RoomView extends JPanel implements ActionListener{
         if (dialogue) {
             if (isOnResOne(e)) {
                 dialogue = false;
-                Response a = currentDesc.getDemRes();
+                Response a = currentDesc.getResOne();
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
                 natBar.updateVal(natBar.getVal() + a.getNat());
             } else if (isOnResTwo(e)) {
-                Response a = currentDesc.getRepRes();
+                Response a = currentDesc.getResTwo();
                 dialogue = false;
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
                 natBar.updateVal(natBar.getVal() + a.getNat());
             } else if (isOnResThree(e)) {
-                Response a = currentDesc.getModRes();
+                Response a = currentDesc.getResThree();
                 dialogue = false;
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
