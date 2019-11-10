@@ -113,11 +113,13 @@ public class RoomView extends JPanel implements ActionListener{
         //Initialize random variable
         rand = new Random();
 
+        //each .getYearX randomly picks 3 major topics and 7 minor topics for each year
         topics = new Topics();
         year1 = topics.getYear1();
         year2 = topics.getYear2();
         year3 = topics.getYear3();
 
+        //combines all of the randomly assigned decisions into one arraylist, sorted by year
         year = new ArrayList<Decision>(year1);
         year.addAll(year2);
         year.addAll(year3);
