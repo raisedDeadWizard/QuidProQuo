@@ -40,13 +40,15 @@ public class RoomView extends JPanel implements ActionListener{
     private boolean aidMoving = false;
     private boolean dialogue = false;
     private boolean isOnResOne = false, isOnResTwo = false, isOnResThree = false;
-    private boolean aidOne = false, aidTwo = false, aidThree = false;
+    private boolean impact = false;
     private BufferedImage background, desk, coke;
     private BufferedImage[] donald = new BufferedImage[2];
     private BufferedImage[] dialogueBox = new BufferedImage[4];
+    private BufferedImage impactBox;
     private ArrayList<Aid> aids = new ArrayList<Aid>();
     private Bar demBar, repBar, natBar;
     private Aid currentAidOne;
+    private Response currentResponse;
     private ArrayList<Decision> yearHighlights;
     private ArrayList<Response> highlightResponses;
     private ArrayList<Decision> year;
@@ -89,6 +91,9 @@ public class RoomView extends JPanel implements ActionListener{
         repBar = new Bar(rep,Constants.repBarX, Constants.repBarY);
         natBar = new Bar(nat,Constants.natBarX, Constants.natBarY);
 
+        yearHighlights = new ArrayList<Decision>();
+        highlightResponses = new ArrayList<Response>();
+
 
         donald[0] = loadImage("Donald.png");
         donald[1] = loadImage("DonaldBlinking.png");
@@ -108,6 +113,8 @@ public class RoomView extends JPanel implements ActionListener{
         dialogueBox[1] = loadImage("speechBubble1.png");
         dialogueBox[2] = loadImage("speechBubble2.png");
         dialogueBox[3] = loadImage("speechBubble3.png");
+
+        impactBox = loadImage("Impact.png");
 
 
 
@@ -198,43 +205,58 @@ public class RoomView extends JPanel implements ActionListener{
         }
         if (dialogue) {
             if (isOnResOne(e)) {
+                Response a = currentDesc.getResOne();
                 dialogue = false;
                 aidLeaving = true;
-                Response a = currentDesc.getResOne();
+                currentResponse = a;
+                impact = false;
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
                 natBar.updateVal(natBar.getVal() + a.getNat());
                 if (currentDesc.isMajor()){
+                    impact = true;
                     highlightResponses.add(a);
                     yearHighlights.add(currentDesc);
+
                 }
 
             } else if (isOnResTwo(e)) {
                 Response a = currentDesc.getResTwo();
                 dialogue = false;
                 aidLeaving = true;
+                currentResponse = a;
+                impact = false;
+
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
                 natBar.updateVal(natBar.getVal() + a.getNat());
                 if (currentDesc.isMajor()){
+                    impact = true;
                     highlightResponses.add(a);
                     yearHighlights.add(currentDesc);
+
                 }
 
             } else if (isOnResThree(e)) {
                 Response a = currentDesc.getResThree();
                 dialogue = false;
                 aidLeaving = true;
+                currentResponse = a;
+                impact = false;
+
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
                 natBar.updateVal(natBar.getVal() + a.getNat());
                 if (currentDesc.isMajor()){
+                    impact = true;
                     highlightResponses.add(a);
                     yearHighlights.add(currentDesc);
+
                 }
 
 
             }
+            System.out.println(currentDesc.getResOne().getImpact());
         }
         repaint();
     }
@@ -432,6 +454,27 @@ public class RoomView extends JPanel implements ActionListener{
         }
 
 
+        if (impact && currentResponse != null){
+            g.drawImage(impactBox, 620, 600, null);
+            g.setColor(Color.BLACK);
+            g.setFont(new Font(Font.DIALOG, Font.BOLD, 30));
+            g.drawString("Impact", 620 + 125, 600 + 45);
+
+            g.setFont(new Font(Font.DIALOG, Font.BOLD, 14));
+            String line = "";
+            int jump = 0;
+            for (String word : currentResponse.getImpact().split(" ")) {
+                if (line.length() + word.length() <= 35) {
+                    line += word + " ";
+                } else {
+
+                    g.drawString(line, 620 + 30, 600 + 100 + g.getFontMetrics().getHeight() * jump);
+                    jump++;
+                    line = word + " ";
+                }
+            }
+            g.drawString(line, 620 + 30, 600 + 100 + g.getFontMetrics().getHeight() * jump);
+        }
 
 
     }

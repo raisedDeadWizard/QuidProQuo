@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class Topics {
 
 
+    private ArrayList<Highlight> highlights = new ArrayList<Highlight>();
     private ArrayList<Decision> year1Major = new ArrayList<Decision>();
     private ArrayList<String> year1MajorLinks = new ArrayList<String>();
     private ArrayList<Decision> year1Minor = new ArrayList<Decision>();
@@ -74,6 +75,17 @@ public class Topics {
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()), false));
             }
             scan.close();
+
+            try {
+                Scanner high = new Scanner(new File(Topics.class.getResource("highlight.txt").getPath()));
+
+                for(int i = 0; i < Constants.majorNum*3; i++){
+                    highlights.add(new Highlight(high.nextLine(), high.nextLine(), high.nextLine()));
+                }
+            }
+            catch (Exception e){
+
+            }
 
             //scan major links information, add that to arraylists
 

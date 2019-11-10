@@ -53,7 +53,7 @@ public class HighlightView extends JPanel{
 
     protected void handleMousePressed(MouseEvent e) {
 
-        Main.frame.setContentPane(new RoomView(Main.year, Main.dem, Main.rep, Main.nat));
+        Main.frame.setContentPane(new StartView());
         Main.frame.pack();
         Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Main.frame.setVisible(true);
