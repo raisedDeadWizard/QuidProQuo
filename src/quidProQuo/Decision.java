@@ -21,15 +21,15 @@ public class Decision {
         return query.toCharArray();
     }
 
-    public Response getDemRes(){
+    public Response getResOne(){
         return responses[0];
     }
 
-    public Response getModRes(){
+    public Response getResTwo(){
         return responses[1];
     }
 
-    public Response getRepRes(){
+    public Response getResThree(){
         return responses[2];
     }
 
