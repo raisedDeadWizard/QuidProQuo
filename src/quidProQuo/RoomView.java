@@ -270,20 +270,17 @@ public class RoomView extends JPanel implements ActionListener{
 
         g.drawImage(currentAidOne.getSprite(), currentAidOne.getX(), currentAidOne.getY(), null);
 
-        if (dialogue && !aidLeaving && !aidMoving){
+        if (dialogue && !aidLeaving && !aidMoving) {
 
-            if (isOnResOne){
+            if (isOnResOne) {
                 g.drawImage(dialogueBox[1], Constants.dialogueBoxX, Constants.dialogueBoxY, null);
 
 
-            }
-            else if (isOnResTwo){
+            } else if (isOnResTwo) {
                 g.drawImage(dialogueBox[2], Constants.dialogueBoxX, Constants.dialogueBoxY, null);
-            }
-            else if (isOnResThree){
+            } else if (isOnResThree) {
                 g.drawImage(dialogueBox[3], Constants.dialogueBoxX, Constants.dialogueBoxY, null);
-            }
-            else {
+            } else {
                 g.drawImage(dialogueBox[0], Constants.dialogueBoxX, Constants.dialogueBoxY, null);
             }
 
@@ -291,27 +288,70 @@ public class RoomView extends JPanel implements ActionListener{
             String z = "";
             int len = 0;
             int jump = 0;
-            for (char c : currentDesc.toCharArray()){
+            for (char c : currentDesc.toCharArray()) {
                 z += c;
                 len++;
 
-                if (len > 38){
+                if (len > 38) {
 
-                    g.drawString(z + "-", Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 45 + g.getFontMetrics().getHeight()*jump);
+                    g.drawString(z + "-" , Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 45 + g.getFontMetrics().getHeight() * jump);
                     jump++;
                     z = "";
                     len = 0;
                 }
             }
-            g.drawString(z, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 45 + g.getFontMetrics().getHeight()*jump);
+            g.drawString(z, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 45 + g.getFontMetrics().getHeight() * jump);
             g.setFont(new Font(Font.DIALOG, Font.BOLD, 14));
 
-            g.drawChars(currentDesc.getResOne().toCharArray(), 0, currentDesc.getResOne().toCharArray().length,
-                    Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 250);
-            g.drawChars(currentDesc.getResTwo().toCharArray(), 0, currentDesc.getResTwo().toCharArray().length,
-                    Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 370);
-            g.drawChars(currentDesc.getResThree().toCharArray(), 0, currentDesc.getResThree().toCharArray().length,
-                    Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 490);
+            z = "";
+            len = 0;
+            jump = 0;
+            for (char c : currentDesc.getResOne().toCharArray()) {
+                z += c;
+                len++;
+
+                if (len > 40) {
+
+                    g.drawString(z + "-" , Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 250 + g.getFontMetrics().getHeight() * jump);
+                    jump++;
+                    z = "";
+                    len = 0;
+                }
+            }
+            g.drawString(z, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 250 + g.getFontMetrics().getHeight() * jump);
+
+            z = "";
+            len = 0;
+            jump = 0;
+            for (char c : currentDesc.getResTwo().toCharArray()) {
+                z += c;
+                len++;
+
+                if (len > 40) {
+
+                    g.drawString(z + "-" , Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 370 + g.getFontMetrics().getHeight() * jump);
+                    jump++;
+                    z = "";
+                    len = 0;
+                }
+            }
+            g.drawString(z, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 370 + g.getFontMetrics().getHeight() * jump);
+            z = "";
+            len = 0;
+            jump = 0;
+            for (char c : currentDesc.getResThree().toCharArray()) {
+                z += c;
+                len++;
+
+                if (len > 40) {
+
+                    g.drawString(z + "-" , Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 490 + g.getFontMetrics().getHeight() * jump);
+                    jump++;
+                    z = "";
+                    len = 0;
+                }
+            }
+            g.drawString(z, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 490 + g.getFontMetrics().getHeight() * jump);
         }
 
 
