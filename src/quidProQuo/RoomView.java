@@ -74,6 +74,8 @@ public class RoomView extends JPanel implements ActionListener{
         desk = loadImage("Desk.png");
         coke = loadImage("DietCoke.png");
         cokeClip = loadSound("DietCoke.wav");
+        FloatControl cokeVolume = (FloatControl) cokeClip.getControl(FloatControl.Type.MASTER_GAIN);
+        cokeVolume.setValue(-15);
         soundTrack = loadSound("newGame.wav");
         FloatControl volume = (FloatControl) soundTrack.getControl(FloatControl.Type.MASTER_GAIN);
         volume.setValue(-20);
@@ -176,6 +178,7 @@ public class RoomView extends JPanel implements ActionListener{
 
     protected void handleMousePressed(MouseEvent e) {
         if (isOnCan(e)) {
+
             cokeClip.setFramePosition(0);
             cokeClip.start();
         }
