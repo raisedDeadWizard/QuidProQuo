@@ -293,7 +293,8 @@ public class RoomView extends JPanel implements ActionListener{
         g.setColor(Color.BLACK);
         g.drawRect(1330, 20, 100, 50);
         g.drawString("Year " + getYear(), 1340, 55);
-        if(year.size() == 0) {
+        if(year.size() == 0 && !aidLeaving && currentAidOne.getY() > 825) {
+            soundTrack.stop();
             Main.dem = demBar.getVal();
             Main.rep = repBar.getVal();
             Main.nat = natBar.getVal();

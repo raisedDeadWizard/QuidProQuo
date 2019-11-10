@@ -104,6 +104,7 @@ public class StartView extends JPanel{
             Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Main.frame.setVisible(true);
             openingTrack.stop();
+
         }
 
 
