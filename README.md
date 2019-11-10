@@ -8,7 +8,7 @@ As one of the World’s leading Democracies, the United States is often seen by 
 
 **Download Instructions**
 
-To play the game, 
+The game requires Java 1.8 to run. Just download the game and double click the jar file.
 
 **Playing the Game**
 
