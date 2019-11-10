@@ -9,6 +9,7 @@ public class Response {
         this.dem = dem;
         this.rep = rep;
         this.nat = nat;
+        this.impact = impact;
     }
 
     public String toString(){
