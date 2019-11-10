@@ -51,6 +51,8 @@ public class RoomView extends JPanel implements ActionListener{
     private ArrayList<Decision> year1;
     private ArrayList<Decision> year2;
     private ArrayList<Decision> year3;
+    private ArrayList<Decision> yearAll;
+
 
 
 
@@ -118,6 +120,7 @@ public class RoomView extends JPanel implements ActionListener{
         year1 = topics.getYear1();
         year2 = topics.getYear2();
         year3 = topics.getYear3();
+        yearAll = topics.getAllResponses();
 
         //combines all of the randomly assigned decisions into one arraylist, sorted by year
         year = new ArrayList<Decision>(year1);
@@ -492,7 +495,10 @@ public class RoomView extends JPanel implements ActionListener{
 
         if (!dialogue && !aidLeaving && !aidMoving && year.size() != 0){
             currentAidOne = new Aid(aids.get(rand.nextInt(6)).getSprite(), 0, 825);
+            // comment out following line to test all responses
             currentDesc = year.remove(0);
+            // uncomment following line to test all responses
+            //currentDesc = yearAll.remove(0);
             aidMoving = true;
         }
 

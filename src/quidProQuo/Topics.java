@@ -155,4 +155,15 @@ public class Topics {
         Collections.shuffle(place);
         return place;
     }
+
+    public ArrayList<Decision> getAllResponses(){
+        ArrayList<Decision> allResp = new ArrayList<Decision>();
+        allResp.addAll(year1Major);
+        allResp.addAll(year1Minor);
+        allResp.addAll(year2Major);
+        allResp.addAll(year2Minor);
+        allResp.addAll(year3Major);
+        allResp.addAll(year3Minor);
+        return allResp;
+    }
 }
