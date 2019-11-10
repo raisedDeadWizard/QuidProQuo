@@ -32,10 +32,12 @@ public class RoomView extends JPanel implements ActionListener{
     // Random variable member
     private Decision currentDesc;
     private Random rand;
+    private int i = 0;
     private Topics topics;
     private Font font;
     private boolean blink = false;
     private boolean aidLeaving = false;
+    private boolean aidMoving = false;
     private boolean dialogue = false;
     private boolean isOnResOne = false, isOnResTwo = false, isOnResThree = false;
     private boolean aidOne = false, aidTwo = false, aidThree = false;
@@ -176,7 +178,7 @@ public class RoomView extends JPanel implements ActionListener{
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
                 natBar.updateVal(natBar.getVal() + a.getNat());
-                aidTicks = 0;
+
             } else if (isOnResTwo(e)) {
                 Response a = currentDesc.getResTwo();
                 dialogue = false;
@@ -184,7 +186,7 @@ public class RoomView extends JPanel implements ActionListener{
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
                 natBar.updateVal(natBar.getVal() + a.getNat());
-                aidTicks = 0;
+
             } else if (isOnResThree(e)) {
                 Response a = currentDesc.getResThree();
                 dialogue = false;
@@ -192,7 +194,7 @@ public class RoomView extends JPanel implements ActionListener{
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
                 natBar.updateVal(natBar.getVal() + a.getNat());
-                aidTicks = 0;
+
             }
         }
         repaint();
@@ -268,7 +270,7 @@ public class RoomView extends JPanel implements ActionListener{
 
         g.drawImage(currentAidOne.getSprite(), currentAidOne.getX(), currentAidOne.getY(), null);
 
-        if (dialogue){
+        if (dialogue && !aidLeaving && !aidMoving){
             if (isOnResOne){
                 g.drawImage(dialogueBox[1], Constants.dialogueBoxX, Constants.dialogueBoxY, null);
             }
@@ -356,7 +358,7 @@ public class RoomView extends JPanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         ticks++;
-        aidTicks++;
+
 
         if (ticks > blinkTick){
             blink = true;
@@ -367,31 +369,27 @@ public class RoomView extends JPanel implements ActionListener{
             ticks = 0;
         }
 
-        if (!dialogue && aidTicks > 3*Constants.ticksPerSec + Constants.ticksPerSec*rand.nextInt(6) && !aidLeaving){
-            currentAidOne = aids.get(rand.nextInt(6));
+        if (!dialogue && !aidLeaving && !aidMoving && year1.size() != 0){
+            currentAidOne = new Aid(aids.get(rand.nextInt(6)).getSprite(), 0, 825);
             currentDesc = year1.remove(0);
-            aidTicks = 0;
-            aidLeaving = false;
+            aidMoving = true;
         }
 
-        if (!aidLeaving && currentAidOne.getX() < 400 && currentAidOne.getY() > 200){
+        if (aidMoving && currentAidOne.getX() < 400){
             currentAidOne.moveX(5);
             currentAidOne.moveY(-7);
         }
-
-        if (aidLeaving){
-            currentAidOne.moveY(5);
-            if (currentAidOne.getY() > 825){
-                aidLeaving = false;
-            }
-        }
-
-
-
-        if (!aidLeaving && currentAidOne.getX() == 390){
+        else if (aidMoving && currentAidOne.getX() > 390){
+            aidMoving = false;
             dialogue = true;
         }
 
+        if (aidLeaving && currentAidOne.getY() < 840){
+            currentAidOne.moveY(5);
+        }
+        else if (aidLeaving && currentAidOne.getY() > 825){
+            aidLeaving = false;
+        }
         repaint();
     }
 }
