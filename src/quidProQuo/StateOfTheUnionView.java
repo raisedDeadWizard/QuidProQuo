@@ -245,6 +245,48 @@ public class StateOfTheUnionView extends JPanel {
         }
         g.drawString(line, 1010 + 30, 270 + 120 + g.getFontMetrics().getHeight() * jump);
 
+
+        g.setFont(new Font(Font.DIALOG, Font.BOLD, 14));
+        line = "Impact: ";
+        jump = 0;
+        for (String word : highlightResponses.get(0).getImpact().split(" ")) {
+            if (line.length() + word.length() <= 40) {
+                line += word + " ";
+            } else {
+
+                g.drawString(line, 20 + 30, 390 + 140 + g.getFontMetrics().getHeight() * jump);
+                jump++;
+                line = word + " ";
+            }
+        }
+        g.drawString(line, 20 + 30, 390 + 140 + g.getFontMetrics().getHeight() * jump);
+        line = "Impact: ";
+        jump = 0;
+        for (String word : highlightResponses.get(1).getImpact().split(" ")) {
+            if (line.length() + word.length() <= 40) {
+                line += word + " ";
+            } else {
+
+                g.drawString(line, 495 + 30, 390 + 140 + g.getFontMetrics().getHeight() * jump);
+                jump++;
+                line = word + " ";
+            }
+        }
+        g.drawString(line, 495 + 30, 390 + 140 + g.getFontMetrics().getHeight() * jump);
+        line = "Impact: ";
+        jump = 0;
+        for (String word : highlightResponses.get(2).getImpact().split(" ")) {
+            if (line.length() + word.length() <= 40) {
+                line += word + " ";
+            } else {
+
+                g.drawString(line, 980 + 30, 390 + 140 + g.getFontMetrics().getHeight() * jump);
+                jump++;
+                line = word + " ";
+            }
+        }
+        g.drawString(line, 980 + 30, 390 + 140 + g.getFontMetrics().getHeight() * jump);
+
         g.setColor(Color.WHITE);
         g.setFont(new Font(Font.DIALOG, Font.BOLD, 24));
         g.drawString("Click Anywhere to Continue", 525, 810);
