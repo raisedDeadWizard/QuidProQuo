@@ -47,7 +47,10 @@ public class RoomView extends JPanel implements ActionListener{
     private ArrayList<Aid> aids = new ArrayList<Aid>();
     private Bar demBar, repBar, natBar;
     private Aid currentAidOne;
+    private ArrayList<Decision> year;
     private ArrayList<Decision> year1;
+    private ArrayList<Decision> year2;
+    private ArrayList<Decision> year3;
 
 
 
@@ -110,6 +113,12 @@ public class RoomView extends JPanel implements ActionListener{
 
         topics = new Topics();
         year1 = topics.getYear1();
+        year2 = topics.getYear2();
+        year3 = topics.getYear3();
+
+        year = new ArrayList<Decision>(year1);
+        year.addAll(year2);
+        year.addAll(year3);
 
 
 
