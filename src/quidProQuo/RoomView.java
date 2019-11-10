@@ -18,6 +18,8 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class RoomView extends JPanel implements ActionListener{
@@ -34,7 +36,7 @@ public class RoomView extends JPanel implements ActionListener{
     private boolean blink = false;
     private BufferedImage background, desk, coke;
     private BufferedImage[] donald = new BufferedImage[2];
-    private BufferedImage[] aids = new BufferedImage[6];
+    private ArrayList<Aid> aids = new ArrayList<Aid>();
     private Bar demBar, repBar, natBar;
 
 
@@ -71,14 +73,14 @@ public class RoomView extends JPanel implements ActionListener{
         donald[0] = loadImage("Donald.png");
         donald[1] = loadImage("DonaldBlinking.png");
 
-        aids[0] = loadImage("Aid1.png");
-        aids[1] = loadImage("Aid2.png");
-        aids[2] = loadImage("Aid3.png");
-        aids[3] = loadImage("Aid4.png");
-        aids[4] = loadImage("Aid5.png");
-        aids[5] = loadImage("Aid6.png");
+        aids.add(new Aid(loadImage("Aid1.png"), 0, 400));
+        aids.add(new Aid(loadImage("Aid2.png"), 0, 400));
+        aids.add(new Aid(loadImage("Aid3.png"), 0, 400));
+        aids.add(new Aid(loadImage("Aid4.png"), 0, 400));
+        aids.add(new Aid(loadImage("Aid5.png"), 0, 400));
+        aids.add(new Aid(loadImage("Aid6.png"), 0, 400));
 
-
+        Collections.shuffle(aids);
 
 
 
@@ -194,6 +196,7 @@ public class RoomView extends JPanel implements ActionListener{
 
         //Diet Coke
         g.drawImage(coke, Constants.cokeX, Constants.cokeY, null);
+
 
 
 

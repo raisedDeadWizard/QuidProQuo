@@ -55,5 +55,12 @@ public class Bar {
 
     public void updateVal(int val) {
         curVal = val;
+
+        if (curVal > 100){
+            curVal = 100;
+        }
+        else if (curVal < 0){
+            curVal = 0;
+        }
     }
 }
