@@ -105,7 +105,7 @@ public class Topics {
                 place.add(year1Major.remove(n));
             }
             else {
-                int n = rand.nextInt(Constants.minorNum - i);
+                int n = rand.nextInt(Constants.minorNum - i+3);
                 place.add(year1Minor.remove(n));
             }
         }
@@ -128,7 +128,7 @@ public class Topics {
                 place.add(year2Major.remove(n));
             }
             else {
-                int n = rand.nextInt(Constants.minorNum - i);
+                int n = rand.nextInt(Constants.minorNum - i+3);
                 place.add(year2Minor.remove(n));
             }
         }
@@ -147,7 +147,7 @@ public class Topics {
                 place.add(year3Major.remove(n));
             }
             else {
-                int n = rand.nextInt(Constants.minorNum - i);
+                int n = rand.nextInt(Constants.minorNum - i+3);
                 place.add(year3Minor.remove(n));
             }
         }

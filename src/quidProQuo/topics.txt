@@ -1,213 +1,213 @@
-Republicans are calling for the tax cut you promised in your campaign. Would you like to sign it into law?
+﻿Republicans are calling for the tax cut you promised in your campaign. Would you like to sign it into law?
 Yes, I feel that the tax cut will help the middle and upper class. 
 -4
 3
 1
 The tax cut has provided relief for the upper/upper-middle class, but neglected the needs of others.
-No, the tax cut will hurt social programs and infrastructure.
+No, the tax cut will hurt social programs and infrastructure.  
 2
 -3
 -1
 You have more tax money to fund government programs, but your supporters feel you have broken your promises to them.
-Yes, I promised the American people I would pass the tax cut.
+Yes, I promised the American people I would pass the tax cut.  
 -3
 3
 1
 Your supporters are satisfied you fulfilled your promises, but government programs suffer as a result.
-An African American man was recently shot and killed by police. The Black Lives Matter movement is demanding that the officer responsible be prosecuted. What would you like to do in response?
-Make a statement commending the work done by police officers to keep the American people safe.
+An African American man was recently shot and killed by police. The Black Lives Matter movement is demanding that the officer responsible be prosecuted. What would you like to do in response? 
+Make a statement commending the work done by police officers to keep the American people safe. 
 -4
 2
 -1
-The Africa
-Condemn the officer’s actions and claim that his response was too extreme but avoid legal action.
+The African American community feels you don’t care about them, but supporters of the police are happy.
+Condemn the officer’s actions and claim that his response was too extreme but avoid legal action. 
 3
 -3
 0
-XXX
-Insist that the officer be prosecuted for their actions and back the BLM movement.
+The African American community appreciates your statement but feels that further action must be taken.
+Insist that the officer be prosecuted for their actions and back the BLM movement.  
 5
 -4
 1
-XXX
-The Syrian government attacked civilians with chemical weapons. How would you like to respond?
-Respond aggressively and launch missiles on a government airbase.
+The African American community is encouraged by your support but supporters of the police are outraged.
+The Syrian government attacked civilians with chemical weapons. How would you like to respond? 
+Respond aggressively and launch missiles on a government airbase. 
 0
 3
 1
-XXX
-Make a statement condemning the actions of the Syrian government.
+Human rights advocates are pleased, but your relationship with Syria suffers.
+Make a statement condemning the actions of the Syrian government. 
 0
 0
 -1
-XXX
-Place additional economic sanctions on the Syrian government.
+The American people are generally displeased that you didn’t take stronger action.
+Place additional economic sanctions on the Syrian government. 
 3
 2
 2
-XXX
-Mr. President, we discovered the location of ISIS members in Afghanistan. How would you like to respond?
+The American people commend you for taking action against the human rights violations, but your relationship with Syria suffers as a result of their weakened economy.
+Mr. President, we discovered the location of ISIS members in Afghanistan. How would you like to respond? 
 Drop a MOAB weapon on the ISIS base (small risk of civilian casualties).
 3
 4
 3
-XXX
-Send in military special forces to attack the base.
+The strike was successful; 36 terrorists were killed with no civilian casualties. The U.S. applauds your actions.
+Send in military special forces to attack the base. 
 1
 2
 1
-XXX
-Notify Afghanistan’s government of the location of the base.
+The task force successfully killed 36 terrorists but 3 American soldiers died in the operation. The American people are satisfied by your actions but are disappointed the operation did not go as well as it could have.
+Notify Afghanistan’s government of the location of the base.  
 1
 -1
 -1
-XXX
+The American people wish you had taken action as they feel the government of Afghanistan will not be as effective in fighting the terrorists.
 The Republican Party is concerned about the Affordable Care Act. How would you like to respond?
-Encourage Congress to repeal Obamacare and pass more conservative healthcare legislation.
+Encourage Congress to repeal Obamacare and pass more conservative healthcare legislation. 
 -3
 3
 0
-XXX
-Encourage Congress to keep the current legislation in place.
+Lower-class Americans are concerned about their ability to afford healthcare, and the partisan divide increases.
+Encourage Congress to keep the current legislation in place. 
 1
--2
+-3
 -1
-XXX
+Obama’s supporters are happy his legislation is upheld but those who don’t like it are upset that you are not taking action to make healthcare more effective.
 Encourage Congress to focus on decreasing unemployment, so that more people can afford healthcare.
 3
 -1
 2
-XXX
-The United Nations has made an accord to increase efforts to combat global warming. Should the United States remain in this deal?
+The American people are happy at your attempts to bolster the economy but still feel like action should be taken to improve healthcare.
+The United Nations has made an accord to increase efforts to combat global warming. Should the United States remain in this deal? 
 No, this deal puts unfair environmental standards on American businesses.
 -4
 2
 -1
-XXX
-No, it is Congress’ responsibility to pass legislation that targets global warming.
+Environmentalists grow more concerned about the state of the climate, but the economy remains strong.
+No, it is Congress’ responsibility to pass legislation that targets global warming. 
 2
 -3
 0
-XXX
-Yes, global warming is one of the most important issues facing society.
+Environmentalists are satisfied that you recognize the issue but wish you would cooperate with international efforts. Concerns about the economy begin to accumulate.
+Yes, global warming is one of the most important issues facing society. 
 4
 -4
 0
-XXX
-A group of white nationalists are marching in Charlottesville and protesting the removal of Confederate statues. How would you like to respond?
+Climate activists are delighted, but there are serious economic concerns primarily regarding the removal of jobs in fossil fuel industries.
+A group of white nationalists are marching in Charlottesville and protesting the removal of Confederate statues. How would you like to respond? 
 Express sympathy for their cause and desire to preserve history.
 -4
 1
 -2
-XXX
-Release a statement condemning any group that has racist viewpoints.
+People of color, particularly the African American community, view your statement as racist and are infuriated at your support.
+Release a statement condemning any group that has racist viewpoints. 
 3
 -1
 1
-XXX
-Claim that both sides in the debate regarding Civil War statues are valid.
+People of color are reassured by your support of diversity, but some voters who don’t believe the group did much wrong are irritated.
+Claim that both sides in the debate regarding Civil War statues are valid.   
 -1
 -1
 -1
-XXX
-Your executive order calling for a travel ban has caused controversy due to some people believing it is islamophobic. What would you like to do?
-Insist that it was passed to protect the American people from terrorism.
+Both sides are irritated that you didn’t take a stronger stance towards their side and against the opposing viewpoint.
+Your executive order calling for a travel ban has caused controversy due to some people believing it is islamophobic. What would you like to do? 
+Insist that it was passed to protect the American people from terrorism. 
 -2
 3
 1
-XXX
-Revoke the order and voice your support for religious diversity.
+The Muslim community is highly offended, but some voters who were concerned about national security following 9/11 are given some peace of mind.
+Revoke the order and voice your support for religious diversity.  
 4
 -3
 1
-XXX
-Keep the order in place but decrease its restrictiveness.
+The Muslim community and civil liberty groups applaud your support of diversity, but fears of terrorist attacks rise across the country.
+Keep the order in place but decrease its restrictiveness.   
 -1
 -2
 -1
-XXX
+Nobody is pleased by the decision - the ban’s critics still see it as discriminatory, and its supporters remain concerned that terrorists may sneak into the country using some loophole.
 One of the justices on the Supreme Court has passed away. Who would you like to appoint?
 Appoint Neil Gorsuch, a conservative federal appeals court judge.
 -5
 5
 0
-XXX
-Appoint Merrick Garland, a moderate circuit judge.
+Conservative voters and voters who believe the Constitution should be interpreted exactly as written are delighted, but many people are furious that Merrick Garland was never even voted on.
+Appoint Merrick Garland, a moderate circuit judge previously appointed by President Obama. 
 3
 -2
 2
-XXX
-Appoint Zephyr Teachout, a liberal law professor.
+Conservative voters are disappointed because they were looking for a more right-leaning judge, but the measure is generally appreciated for preserving the balance of the court.
+Appoint Zephyr Teachout, a liberal law professor.  
 5
 -5
 2
-XXX
-Protests in support of gender equality are insinuating that you do not support women’s rights. How will you respond?
-Remind them that they had their chance to voice their opinion in the election.
+Liberal voters are particularly delighted at such a surprising choice, but conservative voters are shocked and seriously disappointed by your decision 
+Protests in support of gender equality are insinuating that you do not support women’s rights. How will you respond? 
+Remind them that they had their chance to voice their opinion in the election. 
 -2
 2
 -1
-XXX
-Insist that you support women and tweet in support of the march.
+Your comments further inflame the opinions of the protesters (most, if not all, of whom voted against you) and make it less likely that women will support you in the future.
+Insist that you support women and tweet in support of the march. 
 2
 0
 1
-XXX
-Ignore the protest and remain neutral.
+The protesters are happy you are supporting them and the issue of gender equality.
+Ignore the protest and remain neutral.   
 -1
 0
 0
+The protesters are irritated that their movement has no impact on you, but generally, the American people remain neutral.
+Mr. President, how do you plan to interact with the press at tonight’s conference? 
+Accuse the news media of putting out fake news. 
+-3
+1
+-1 
 XXX
-Mr. President, how do you plan to interact with the press at tonight’s conference?
-Accuse the news media of putting out fake news.
+Answer their questions honestly and try to have a productive discussion. 
+1
+1
+2
+XXX
+Only answer questions that highlight the positive impact you’ve had on the country. 
 -3
 1
 -1
 XXX
-Answer their questions honestly and try to have a productive discussion.
-1
-1
-2
-XXX
-Only answer questions that highlight the positive impact you’ve had on the country.
--3
-1
--1
-XXX
-Mr. President, you have an upcoming address to congress. What would you like to talk about?
-An address that focuses on diversity and national unity.
+Mr. President, you have an upcoming address to congress. What would you like to talk about? 
+An address that focuses on diversity and national unity. 
 3
 1
 1
 XXX
-An address focused on economic revival and investments in infrastructure.
+An address focused on economic revival and investments in infrastructure. 
 1
 2
 1
 XXX
-An address that is critical of certain members of Congress and accusing them of harming the country.
+An address that is critical of certain members of Congress and accusing them of harming the country. 
 -2
 0
 -2
 XXX
-A Sheriff has been convicted of criminal contempt following his use of hard-line tactics on undocumented immigrants. How would you like to respond?
-Grant him full pardon and compliment him on a job well done.
+A Sheriff has been convicted of criminal contempt following his use of hard-line tactics on undocumented immigrants. How would you like to respond? 
+Grant him full pardon and compliment him on a job well done. 
 -4
 2
 -2
 XXX
-Agree with the decision of the court.
+Agree with the decision of the court. 
 2
 -1
 1
 XXX
-Condemn his actions and promote proper police conduct.
+Condemn his actions and promote proper police conduct.  
 3
 -3
 1
 XXX
-A hurricane has hit Texas leaving Houston severely flooded. What would you like to do in response?
-Visit emergency shelters and wish the people well.
+A hurricane has hit Texas leaving Houston severely flooded. What would you like to do in response? 
+Visit emergency shelters and wish the people well. 
 1
 1
 1
@@ -217,45 +217,45 @@ Allocate government funds to Texas.
 1
 2
 XXX
-Give a speech complimenting the work of the emergency personnel.
+Give a speech complimenting the work of the emergency personnel.  
 1
 1
 0
 XXX
-The Republican Party is concerned about the impacts of the DACA program. How would you like to respond?
-Make actions to remove the program and make your opposition to illegal immigration clear.
+The Republican Party is concerned about the impacts of the DACA (Deferred Action for Childhood Arrivals) program. How would you like to respond?
+Make actions to remove the program and make your opposition to illegal immigration clear. 
 -4
 2
 -1
 XXX
-Allow the program to remain in place and insist that children are not responsible for the actions of their parents.
+Allow the program to remain in place and insist that children are not responsible for the actions of their parents. 
 2
 -2
 1
 XXX
-Further the goals of DACA and encourage more legislation that assists immigrants.
+Further the goals of DACA and encourage more legislation that assists immigrants. 
 4
 -4
 1
 XXX
-A massive hurricane has struck Puerto Rico and left it in ruins and without power. What would you like to do to help?
-Throw paper towels at them. (Maybe they can use them to mop up the water)
+A massive hurricane has struck Puerto Rico and left it in ruins and without power. What would you like to do to help? 
+Throw paper towels at them. (Maybe they can use them to mop up the water) 
 -1
 -1
 -2
 XXX
-Encourage Congress to send recovery funds.
+Encourage Congress to send recovery funds. 
 2
 -1
 1
 XXX
-Wish the people of Puerto Rico well and thank the emergency personnel.
+Wish the people of Puerto Rico well and thank the emergency personnel. 
 -1
 0
 -1
 XXX
-NFL players have decided to kneel during the national anthem to protest police brutality. How would like to respond?
-State that they are being unpatriotic and encourage Americans to boycott the NFL.
+NFL players have decided to kneel during the national anthem to protest police brutality. How would you like to respond? 
+State that they are being unpatriotic and encourage Americans to boycott the NFL. 
 -1
 1
 -2
@@ -265,13 +265,13 @@ Make it clear that you plan to increase efforts to combat police brutality.
 0
 1
 XXX
-Encourage their right to free speech.
+Encourage their right to free speech. 
 2
 -1
 0
 XXX
-You have an upcoming meeting with the United Nations. What stance would you like to take on the issues surrounding North Korea?
- Promise to meet North Korea’s weapons programs with heavy opposition if they continue testing missiles.
+You have an upcoming meeting with the United Nations. What stance would you like to take on the issues surrounding North Korea? 
+Promise to meet North Korea’s weapons programs with heavy opposition if they continue testing missiles. 
 0
 3
 2
@@ -281,29 +281,29 @@ Try to maintain friendly relations with North Korea.
 -2
 -3
 XXX
-Condemn the human rights violations that take place in North Korea.
+Condemn the human rights violations that take place in North Korea.  
 1
 1
 1
 XXX
-The most deadly mass shooting in United States history just occurred, killing 58 people in Las Vegas. What would you like to do in response?
-Condemn the shooter and cite his mental health as a likely cause of the shooting.
+The most deadly mass shooting in United States history just occurred, killing 58 people in Las Vegas. What would you like to do in response? 
+Condemn the shooter and cite his mental health as a likely cause of the shooting. 
 -1
 0
 0
 XXX
-Call for Congress to push for more restrictive gun legislation and ban bump stocks.
+Call for Congress to push for more restrictive gun legislation and ban bump stocks.  
 3
 -5
 1
 XXX
-Focus on the grieving families and refuse to comment on issues regarding gun control.
+Focus on the grieving families and refuse to comment on issues regarding gun control. 
 0
 0
 0
 XXX
-A mass shooting just occurred in Texas killing 26 people in a Baptist church. How would you like to respond?
-Honor the civilian who stopped the shooting by using a personal firearm and push forward efforts to help the grieving families.
+A mass shooting just occurred in Texas killing 26 people in a Baptist church. How would you like to respond? 
+Honor the civilian who stopped the shooting by using a personal firearm and push forward efforts to help the grieving families.  
 -1
 5
 2
@@ -313,71 +313,71 @@ Call for an increase in mental health programs.
 0
 0
 XXX
-Encourage Congress to pass stricter gun control legislation.
+Encourage Congress to pass stricter gun control legislation. 
 3
 -3
 0
 XXX
-World leaders are disagreeing over the recognized capital of Israel. How would you like to respond?
-Tel Aviv should remain the capital to avoid conflict.
+World leaders are disagreeing over the recognized capital of Israel. How would you like to respond?  
+Tel Aviv should remain the capital to avoid conflict. 
 1
 0
 0
 XXX
-We should recognize Jerusalem to show our support of Israel.
+We should recognize Jerusalem to show our support of Israel.  
 -2
 2
 1
 XXX
-Pull support from Israel and remove the embassy.
+Pull support from Israel and remove the embassy. 
 -4
 -4
 -4
 XXX
 The #MeToo movement is increasing in popularity and the American people are wondering what stance you’d like to take on the issue of sexual assault in the United States.
-Make a statement that it is a scary time to be a man in the United States.
+Make a statement that it is a scary time to be a man in the United States. 
 -3
 0
 -2
 XXX
-Make a statement in support of the movement and speak out against sexual assault.
+Make a statement in support of the movement and speak out against sexual assault. 
 2
 0
 1
 XXX
-Allow the legal system to handle each case individually.
+Allow the legal system to handle each case individually. 
 -1
 2
 0
 XXX
 This year’s March for Life protest is occurring. How would you like to respond?
-Agree with the protestors that abortion is morally wrong and state that life should be valued at all stages.
+Agree with the protesters that abortion is morally wrong and state that life should be valued at all stages. 
 -3
 2
 0
 XXX
-Disagree with their message and claim that abortion can be justified in some rare cases.
+Disagree with their message and claim that abortion can be justified in some rare cases. 
 0
 1
 1
 XXX
-State that you fully support a woman’s right to choose and voice your opposition for the march.
+State that you fully support a woman’s right to choose and voice your opposition for the march. 
 3
 -3
 0
 XXX
 The People’s Climate March is occurring today. What would you like to say in response?
-State that you appreciate their concern for the environment and further your efforts to push for clean coal.
+State that you appreciate their concern for the environment and further your efforts to push for clean coal. 
 -2
 3
 1
 XXX
-State that climate change is a hoax created by the Chinese to harm American Industry.
+State that climate change is a hoax created by the Chinese to harm American Industry. 
 -5
 -1
 -4
 XXX
-Voice your support for the march and alternative energy sources such as wind and solar power.
+Voice your support for the march and alternative energy sources such as wind and solar power. 
 3
 -2
 1
@@ -393,23 +393,23 @@ Endorse Democrat Doug Jones, who has no history of sexual assault.
 -4
 0
 XXX
-Avoid endorsing either candidate.
+Avoid endorsing either candidate. 
 0
 0
 0
 XXX
-Pennsylvania has recently decided to open new coal mines that focus on producing clean coal. How would you like to respond?
-Commend the efforts of Pennsylvania to produce energy in an environmentally friendly way.
+Pennsylvania has recently decided to open new coal mines that focus on producing clean coal. How would you like to respond? 
+Commend the efforts of Pennsylvania to produce energy in an environmentally friendly way. 
 -1
 2
 1
 XXX
-Remind the American people that coal is a nonrenewable resource and push for more wind and solar power.
+Remind the American people that coal is a nonrenewable resource and push for more wind and solar power.  
 2
 -2
 0
 XXX
-Congratulate Pennsylvania for creating more jobs and increasing the coal industry.
+Congratulate Pennsylvania for creating more jobs and increasing the coal industry. 
 -1
 3
 2
@@ -427,11 +427,11 @@ We need to further efforts to get people with drug addiction mental help.
 XXX
 Declare a public health emergency and push Congress to pass legislation.
 2
--1
+-2
 1
 XXX
 Protests are still occurring over Dakota Access Pipeline due to their infringement on Native American land. How do you respond?
-Propose legislation criminalizing participation in pipeline protests.
+Propose legislation criminalizing participation in pipeline protests. 
 -4
 -1
 -3
@@ -441,13 +441,13 @@ Respect the protestors’ rights to free speech, but take the opposing side.
 3
 1
 XXX
-Support the stance of the protestor and argue that their stance is valid.
+Support the stance of the protestor and argue that their stance is valid. 
 3
 -3
 0
 XXX
-California is currently suffering from the effects of massive wildfires. How would you like to help?
-Criticize the forest management efforts of California’s government.
+California is currently suffering from the effects of massive wildfires. How would you like to help?  
+Criticize the forest management efforts of California’s government. 
 -2
 0
 -1
@@ -457,7 +457,7 @@ Commend the work of the firefighters but refuse to offer monetary aid.
 2
 0
 XXX
-Provide California with as much aid as possible and wish them well.
+Provide California with as much aid as possible and wish them well. 
 3
 0
 2
@@ -473,173 +473,174 @@ Reinforce a traditional stance on marriage between a man and a woman.
 2
 -2
 XXX
-Refuse to support LGBT causes, but respect the rights of those individuals
+Refuse to support LGBT causes, but respect the rights of those individuals.
 -1
 0
 0
 XXX
-Caravans of Central American migrants are approaching the southern border. How will you respond? *
+Caravans of Central American migrants are approaching the southern border. How will you respond?
 Declare the situation a national emergency and divert military resources to stop the caravans.
 -3
 4
 1
-XXX
+The migrants are left with nowhere to go, but you’ve appeased Americans looking to maintain isolationist policies.
 Work with Mexico to house the migrants.
 2
 -1
 0
-XXX
+Mexico is grateful for your assistance in ending a humanitarian crisis. Some Americans question the safety of allowing the migrants into the country.
 Declare a national emergency and cut aid to Central American countries in retaliation.
 -5
-4
+3
 -1
-XXX
+The migrants are left with nowhere to go and the conditions in Central America deteriorate. 
+Nationalist voters are happy with your decision to prioritize American interests.
 ISIS has lost most of its ground in Syria. Are you ready to call the operations successful?
 Yes, ISIS is defeated! Pull out all U.S. troops.
 -5
 -5
 -5
-XXX
+Your move is widely criticized as dangerous, as it allows ISIS to potentially regrow instead of being fully eliminated.
 No, remain in Syria to ensure ISIS is completely driven out.
 0
 3
 2
-XXX
+The American people are happy that you are dedicated to finish the fight against terrorism.
 Maintain a small amount of troops in Syria to keep an eye on the situation.
 2
 2
 3
-XXX
+Americans are impressed by your tactics and are pleased that you are lending support to Syria while acting in the interests of soldiers positioned there.
 One of your key campaign policies on border control is unlikely to be funded in the next government budget. What is your plan?
 Demand funding for the policy and threaten to veto the bill and shut the government down if it isn’t funded.
 -4
 1
 -2
-XXX
+While your party is pleased by your commitment to your campaign promise, the American people are generally displeased by the government shutdown.
 Allow the budget to be passed without the funding you requested.
 2
 -1
 1
-XXX
+Americans are happy that you avoided a government shutdown, but your supporters are concerned you may never fulfill your promises to them.
 Convince the Senate to fund related border issues instead.
 -1
 3
 2
-XXX
+Americans are happy that you avoided a government shutdown, and proponents of border control are happy you are working to strengthen it.
 Tensions are escalating over a possible trade war with China. What will you do?
 Enact additional tariffs in an attempt to get China to back off.
 -4
 2
 -1
-XXX
+While some voters are pleased by your risky tactics, many people grow increasingly worried the trade war will directly hurt them.
 Lift tariffs to appease fears of a damaging trade war.
 3
 -1
 1
-XXX
+The American people are generally happy that you chose a safe option for the national economy, although some people think you should have been harder on China.
 Temporarily cut off trade with China entirely.
 -8
 -8
 -8
-XXX
+Your decision is universally renounced, as it severely damages both your relationship with China and the global economy.
 Tensions over North Korea’s nuclear program are mounting. How will you address the issue?
-Meet with NK and form an agreement allowing them significant nuclear capabilities.
+Meet with North Korea and form an agreement allowing them significant nuclear capabilities.
 -5
 -5
 -5
-XXX
-Meet with NK and negotiate a restrictive agreement allowing some nuclear development.
+Most Americans disapprove of this decision and fear that North Korea may become strong enough to mount a nuclear attack against the U.S.
+Meet with North Korea and negotiate a restrictive agreement allowing some nuclear development.
 1
 1
 1
-XXX
-Refuse to meet with NK and continue to monitor their progress as much as possible.
+Americans are pleased that we are cooperating well with North Korea and maintaining oversight over them.
+Refuse to meet with North Korea and continue to monitor their progress as much as possible.
 -1
 -1
 -1
-XXX
+Americans are glad you did not concede anything to North Korea but are concerned they may continue nuclear development anyway.
 Your administration has been criticized for separating families that attempt to cross the border illegally. How will you respond?
 End the family separations and detain the families together.
 -3
 2
 0
-XXX
+The American people are relieved that families are allowed to stay together, but some activists are still concerned about the families’ conditions.
 Keep the policy in place as a deterrent for potential illegal immigrants.
 -5
 2
 -2
-XXX
+Stricter isolationists are pleased by your hardline position, but many other Americans are concerned the policy will not stop families and is needlessly cruel.
 Keep the policy in place, but devote more resources towards taking care of the children.
 0
 -1
 0
-XXX
+Some Americans are upset that resources are being allocated to illegal immigrants, but the decision is generally seen as fair.
 The FBI has released a report stating that Russia meddled in the election to help put you in office. How will you respond?
 Deny the allegations to strengthen the U.S.-Russia relationship.
 -3
 2
 -1
-XXX
+Many Americans remain unconvinced, and in exchange for a stronger Russian relationship, you’ve injured your standing with federal agencies.
 Stand by the FBI’s statement and pledge to improve election security.
 2
 1
 2
-XXX
+Russia takes offense that you believe the accusations, but the American people are happy that you are working to strengthen our democracy.
 Claim that Russia meddled in favor of your opponents, not you.
 -4
 1
 -2
-XXX
+Most Americans don’t believe you, and you erode trust in federal agencies.
 Justice Anthony Kennedy has resigned from the Supreme Court. Who will you appoint in his place?
 Appoint Brett Kavanaugh, a conservative federal appeals court judge.
--4
-4
+-5
+5
 0
-XXX
+Conservative voters are pleased by the shift in the Supreme Court’s ideology, while liberal voters find him controversial and strongly disapprove of his appointment.
 Appoint Thomas Hardiman, a conservative/moderate federal appeals court judge.
 -2
 3
 1
-XXX
+Liberal voters are concerned that the ideology of the Supreme Court is shifting right-wing, but are glad a more conservative choice was not chosen.
 Appoint Sri Srivinasan, a liberal federal appeals court judge.
-4
--4
+5
+-5
 0
-XXX
-Congress will not pass a federal funding bill without support for DACA, allowing child immigrants to stay in the country. What is your plan?
+Liberal voters are extremely happy that a solid chunk of the Supreme Court is left-wing, but conservative voters are appalled for the same reason.
+Congress will not pass a federal funding bill without support for the DACA (Deferred Action for Childhood Arrivals) program, allowing child immigrants to stay in the country. What is your plan? 
 Refuse to cooperate with Congress and shut down the government over the issue.
 -4
 -3
 -3
-XXX
+Most Americans and most of Congress disapproves of the decision; while many people are opposed to DACA, they don’t think it is worth shutting down the government over.
 Include funding for DACA and pass funding.
 4
 -1
 2
-XXX
+There is a partisan split over DACA, but most Americans are pleased that the government remained open.
 Engage in lengthy negotiations while extending the federal budget week-by-week.
 2
 1
 2
-XXX
+The American people are pleased by your willingness to negotiate and your ability to come to a compromise.
 How do you intend to manage the threat of Iran developing nuclear weapons?
 Continue to abide by the terms of the 2015 Iran nuclear deal.
 3
--2
-0
-XXX
+-1
+1
+While some voters want to reimpose sanctions on Iran and be stricter on the country, more voters are glad that Iran’s nuclear capabilities are still being restricted.
 Withdraw from the deal - it is not in the U.S.’ best interests.
 -3
-2
+1
 -1
-XXX
+Many Americans are concerned that Iran may resume nuclear development, although a select few are glad you are reimposing sanctions.
 Demand stronger restrictions on Iran’s nuclear program.
 4
 -3
 0
-XXX
+Voters are glad that Iran’s nuclear program will not grow out of control, but there are concerns that negotiations with Iran may deteriorate or they may pull out themselves.
 Many Salvadorans are in America under a temporary protected status due to conditions in El Salvador. What will you do about this?
-Allow them to stay, their home country is not safe to return to.
+Allow them to stay; their home country is not safe to return to.
 2
 -3
 1
@@ -686,7 +687,7 @@ Scale back operations.
 -1
 0
 XXX
-Your gun policies have been criticized in the wake of recent mass shootings. Will you change them?
+Your gun policies have been criticized in the wake of recent mass shootings. Will you change them? 
 Reaffirm your commitment to the 2nd Amendment.
 -2
 2
@@ -734,7 +735,7 @@ No, they can’t be expected to fight for our country if they can’t pick a gen
 0
 -2
 XXX
-The Wall Street Journal has reported on an affair you had with an adult film star and that your personal lawyer paid money to cover it up. How do you respond?
+The Wall Street Journal has reported on an affair you had with an adult film star and that your personal lawyer paid money to cover it up. How do you respond? 
 Adamantly deny the allegations and call them completely untrue.
 -3
 1
@@ -761,7 +762,7 @@ State that Russia’s involvement in G7 is vital to making progress in the summi
 0
 -1
 XXX
-State that Russia should be provisionally readmitted to the summits, but only if they maintain strong relations with the other G7 nations.
+State that Russia should be readmitted to the summits as long as they maintain strong relations with the G7 nations.
 1
 1
 1
@@ -942,8 +943,8 @@ Refrain from making any statement to prevent economic retaliation.
 2
 1
 XXX
-Saudi Arabia is being accused of human rights violations in Yemen due to their airstrikes on civilians. Should the United States government continue to provide them with weapons?
-Yes, it would be foolish to cancel the multi-billion dollar arms deal.
+Saudi Arabia is being accused of human rights violations in Yemen due to their airstrikes on civilians. Should the United States government continue to provide them with weapons? 
+Yes, it would be foolish to cancel the multi-billion dollar arms deal. 
 -3
 3
 1
@@ -963,161 +964,161 @@ Add a question asking whether the resident is a citizen of the United States.
 -3
 2
 0
-XXX
+Many people criticize this addition, saying that it will cause the census to be less reliable by potentially dissuading people from answering questions truthfully. 
 Add more answer categories for race and relationship status to account for the increasing diversity of the U.S.
 3
 1
 1
-XXX
+After some debate, a section was added to the census allowing people to be more specific when answering questions about their race and marital status.
 The census does not need any specific updates at this time.
 0
 0
 0
-XXX
+The census is shipped out with only minor changes from the decade before.
 You are finding it incredibly difficult to get funding for a major policy you are interested in pursuing. How will you go about trying to solve this issue?
 Offer major concessions to the people opposing this policy in exchange for the needed funding.
-3
--1
+2
+-3
 1
-XXX
-Declare a state of emergency in order to appropriate the needed funds without the need for congressional approval.
+While you do manage to get the money you want, there are many restrictions placed on your goal and a large number of people in your own party are greatly displeased by your actions.
+Declare a state of emergency in order to appropriate the needed funds without the need for congressional approval. 
 -3
 0
 -1
-XXX
-Accept that you can not get funding for your project in its current state and consider changing the details of the project in order to gain a broader base of support.
+A coalition of sixteen States immediately file a lawsuit with the U.S. district court. The Speaker of the House also vows to join the legal effort to block this use of emergency powers.
+Change the details of the project in order to gain a broader base of support.
 3
 1
 1
-XXX
+After accepting that your project was clearly too unpopular in its current form, you try to revise it to make it more appealing to a wider range of political views, but ultimately the project falls apart and is never implemented. 
 Due to disagreements about a new government budget, the government has been shut down. You are frustrated by the lack of progress during meetings. How do you react?
 Walk out of meetings with the opposing party in exasperation.
 -3
 -1
 -2
-XXX
+Without mutual cooperation, this government shutdown becomes the longest in U.S. history and is incredibly unpopular due to its severe impact on federal workers and services. 
 Compromise on the budget in order to end the government shutdown.
 2
 1
 2
-XXX
+With both sides agreeing to compromise on issues, a new budget is quickly approved and the shutdown ends, with little impact on the lives of federal workers. 
 Propose a short term budget without funding for your own personal projects with the condition that you will return to the issue during a more long term budget.
 0
 2
 1
-XXX
+After thirty-five days of shutdown, a bill is signed to fund the government for a period of three weeks. While you do not achieve your goals, you assure people that you will ensure that a more long term budget will include funding for your project.
 Several mass shootings have occurred over the last few weeks. The public is clamoring for a response from the POTUS.
-Push for more restrictive gun control laws such as “red flag” laws that would allow authorities to temporarily seize guns from people who are deemed a major risk.
+Push for stronger gun control laws that would allow authorities to seize guns from people who are deemed a major risk.
 4
 -4
 1
-XXX
+The NRA is highly opposed to this prospect and expresses its displeasure through its lobbyists. 
 Propose legislation to provide better mental health support and prevent those deemed at risk from purchasing guns.
 2
 0
 0
-XXX
+Many people are happy about the proposed policies, but many liberal voters are concerned that such legislation will not go far enough.
 Blame the shootings on violent video games and dismiss the need for more restrictive gun control laws.
 -3
 2
 -1
-XXX
+Many people are frustrated that the issue was dismissed so readily, but gun lobbyists and the NRA were pleased by your justifications.
 You are currently being sued by almost twenty states over a controversial use of emergency powers. How will you respond to these allegations?
 Refute that your actions are in any way a misuse of your executive power and continue on your current course of action.
 -2
 0
 -1
-XXX
+Many people are still concerned about your use of executive power and are worried by your dismissive attitude towards the issue. 
 Temporarily halt your course of action and meet with representatives of the states to see if you can come to a peaceful resolution.
 1
 -2
 1
-XXX
+Many people are pleased that you chose to address the issue, but some of your supporters who approved of your use of executive power are displeased by what they see as you backing down in the face of pressure. 
 Continue with your emergency actions but hold a conference to discuss the issue in depth.
 1
 1
 -1
-XXX
+Many people on both sides of the issue are pleased by your obvious willingness to discuss this issue, but some members of the public are unhappy with you capitulating to pressure so easily. 
 A white supremacist committed an act of terrorism against two mosques in New Zeland, killing 51 people. How will you respond to this attack?
 Condemn the shooter and offer your condolences to the people affected.
 1
 1
 0
-XXX
+People are generally pleased with your response to the attack, but many are dissatisfied with how far you went in addressing the issue.
 Condemn the actions of white supremacist terrorists and promise that you will work to ensure that such things will never happen again.
 2
 1
 1
-XXX
-Denounce the actions of the shooter, but mention that white supremacy is not a major issue that your administration is seeking to address.
+People on both sides of the party line are pleased by your willingness to help prevent future terrorist attacks.
+Denounce the actions of the shooter, but mention that white supremacy is not a major issue that your administration is seeking to address. 
 -1
 1
 -1
-XXX
+While people are pleased with your response to the shooter, many liberal voters are worried by your dismissal of the issue of white supremacists. 
 Robert Mueller has just published his report on the Russian interference in the 2016 election. How will you react to this report?
 Accuse Mueller of being biased and try to suppress the content of the report.
 -3
-1
 -1
-XXX
-Allow the report to be released and cooperate with any response generated by the report; you have nothing to hide.
+-1
+Many people are worried about your personal attack on Mueller and by your refusal to release the report. Even some of your supporters are concerned by your actions.
+Allow the report to be released and promise to cooperate with any response generated by the report; you have nothing to hide.
 3
 1
 1
-XXX
+Many people are reassured by your openness regarding the report and are encouraged by your willingness to cooperate with investigators.
 Allow the report to be released and claim that it vindicates you and shows that you did nothing wrong.
 -2
 1
 -1
-XXX
+While your willingness to release the report is encouraging to many voters, but your claims that it completely exonerates you of any blame is concerning to those who have read the report.
 There is an upcoming meeting about the climate crisis and Amazon fires at the G7 conference. Is there anything specific you would be interested in doing for this meeting?
 Do not attend the meeting and claim you were busy with a meeting with other world leaders.
 -3
 1
 -1
-XXX
+Many people are concerned about you not attending this meeting, especially since the world leaders that you claimed to be meeting with at the time all attended the meeting.
 Attend the meeting and support motions to help fight climate change
 4
 -3
 1
-XXX
+Many liberal voters are encouraged by your support for battling global warming, but people who believe that climate change is not a major issue dislike the proposals you made at this meeting.
 Attend the meeting but do not offer your support to any specific motions and proposals.
 1
 1
 0
-XXX
+People on both sides of the climate change issue are relatively satisfied by your actions, but many voters are displeased by your lack of action one way or the other. 
 People have been raising concerns about the various troops the United States has posted abroad. Would you like to do anything about the current deployment of U.S. troops?
 All the American soldiers stationed abroad right now are necessary to protect American interests around the world.
--2
-2
+-1
+1
 0
-XXX
+While some people are pleased or displeased by continued U.S. military involvement around the world, the general populous is not concerned with innaction. 
 Yes, I will immediately withdraw most American troops from Syria in order to pursue other goals in the region
 -8
 -8
 -5
-XXX
+People of all political affiliations are incredibly concerned by this action. In withdrawing from Syria, you have abandoned the Kurdish people, who have been close U.S. allies for years, to the merciless Turkish army. 
 Yes, there are too many American troops stationed abroad, but any hasty actions could have major impacts on American allies so we will move to slowly begin decreasing American troop deployment
 2
 -1
 1
-XXX
+Some liberals are pleased by the decrease in U.S. military involvement around the world and some conservatives are displeased by the same,but the populus is generally pleased by what they see as definite actions by the government. 
 The 2020 election is coming up and you are beginning to worry about your chance of reelection. Is there anything you are interested in doing to try and gain an advantage over your opponents?
 Ask foreign countries for damaging information on political opponents.
 -6
 -3
 -4
-XXX
+Your questionable actions have landed you in deep legal trouble, and Americans of all stripes are deeply concerned about your conduct and morals.
 Hold rallies in relevant states to help build support in the electorate.
 0
 2
 0
-XXX
+Your party is glad you are raising support to increase your election chances, but Americans also want you to continue making policy.
 Address issues with major bipartisan support to help gather support from throughout the political spectrum.
 1
 -2
 1
-XXX
+Your support of bipartisan issues is generally well-received, but some Republican lawmakers instead want to continue passing conservative bills.
 A recent anti-vaccination movement had led to outbreaks of measles in the U.S. How will you address the issue?
 Release a statement emphasizing the importance of vaccinations for public health.
 2
@@ -1177,7 +1178,7 @@ Release a statement reassuring the affected populace and promise to increase eff
 1
 1
 XXX
-Post about how such weather is a direct side effect of global warming and that we must ensure that such situations do not continue to worsen into the future.
+Post that this weather is directly caused by global warming and that we must ensure conditions don’t worsen in the future.
 2
 -2
 -1
@@ -1199,7 +1200,7 @@ Agree to release your tax returns; you have nothing to hide from the American pe
 1
 XXX
 Many people are raising concerns over the high level security clearances possessed by your children, accusing you of nepotism. How will you address these allegations?
-Release a statement saying that the clearances they have are unrelated to them being your children and that they are simply the best people for the jobs they hold.
+State the clearances they have are unrelated to them being your children and that they are simply the best people for the jobs they hold.
 -2
 0
 -1
@@ -1257,7 +1258,7 @@ Double down and continue to insist that your original statement was correct.
 -1
 -1
 XXX
-Alter a weather map with a sharpie to show that your original statement was correct and continue to undermine trust in NOAA.
+Alter a weather map with a sharpie to show that your original statement was correct and continue to undermine trust in NOAA. 
 -3
 -2
 -2
@@ -1273,28 +1274,28 @@ Sign an executive order to help prevent the suppression of free speech and open 
 1
 1
 XXX
-Release a statement encouraging colleges to allow students greater freedom of expression and offer your support to advocate groups on this issue
+Encourage colleges to allow promote freedom of expression and offer your support to advocate groups on this issue.
 1
 1
 0
 XXX
-The NRA is requesting that you pull out of the United Nations Arms Trade Treaty. What would you like to do?
+The NRA is requesting that you pull out of the United Nations Arms Trade Treaty. What would you like to do? 
 Pull out of the agreement because you feel that foreign bureaucrats should not be meddling in the Second Amendment rights of Americans.
 -2
 3
 -1
 XXX
-Remain in the agreement to promote international peace.
+Remain in the agreement to promote international peace. 
 2
 -3
 0
 XXX
-Pull out of the agreement because you would rather make firearms decisions on a national level.
+Pull out of the agreement because you would rather make firearms decisions on a national level.   
 -1
 2
 -1
 XXX
-A Chinese telecommunications company known as Huawei may be using its consumer technology to spy on Americans. What do you plan to do about this?
+Huawei, a major Chinese telecommunications company, is suspected of using its consumer technology to spy on Americans. What do you plan to do about this?
 Sign an executive order banning all economic interactions with Huawei.
 1
 2
@@ -1316,7 +1317,7 @@ Criticize the mayor of London for his recent policies.
 -2
 -2
 XXX
-Meet with scientists and relevant officials to discuss the climate crisis.
+Meet with scientists and relevant officials to discuss the climate crisis. 
 1
 -1
 0
@@ -1343,7 +1344,7 @@ Give speeches that encourage people to accept asylum seekers and push legislatio
 1
 XXX
 The fund to help 9/11 victims and first responders announced that it would need to significantly reduce its awards unless a funding bill passes. What is your response?
-Offer your own support to the bill as well and sign it immediately if it gets through Congress.
+Offer your own support to the bill as well and sign it immediately if it gets through Congress. 
 2
 2
 2
@@ -1369,12 +1370,12 @@ Release a statement promising to investigate the death and find who is responsib
 1
 1
 XXX
-Stay silent about the issue, allowing federal and local investigators to work as usual.
+Stay silent about the issue, allowing federal and local investigators to work as usual. 
 0
 0
 0
 XXX
-Several Democratic members of Congress have expressed criticism towards many of your actions as the POTUS. How will you respond to their accusations?
+Several Democratic members of Congress have expressed criticism towards many of your actions as the POTUS. How will you respond to their accusations? 
 Meet with these members and discuss how you can better work together to serve the American people.
 2
 -1
@@ -1385,7 +1386,7 @@ Ignore the remarks and continue working on more pressing issues.
 1
 0
 XXX
-Accuse the congress members of being unpatriotic and tell them they are free to return to the countries in which they were born if they don’t like the United States.
+Call the congress members unpatriotic and say they can go back to the countries they came from if they don’t like the U.S.
 -3
 -1
 -2
@@ -1417,13 +1418,13 @@ Raise taxes in order to build the wall.
 -2
 -3
 XXX
-Offer major concessions to the Democrats in order to get their support in congress.
+Offer major concessions to the Democrats in order to get their support in congress. 
 4
 -3
 1
 XXX
 Mr. President, military forces have just eliminated terrorist leader Abu Bakr al-Baghdadi. How would you like to present this news to the American people?
-Congratulate the military personnel involved and thank the other countries involved in the operation for their assistance.
+Congratulate the military personnel involved and thank the other countries involved in the operation for their assistance. 
 2
 1
 2
