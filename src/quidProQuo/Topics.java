@@ -1,10 +1,7 @@
 package quidProQuo;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Topics {
 
@@ -19,6 +16,7 @@ public class Topics {
     private ArrayList<Decision> year3Major = new ArrayList<Decision>();
     private ArrayList<String> year3MajorLinks = new ArrayList<String>();
     private ArrayList<Decision> year3Minor = new ArrayList<Decision>();
+    private HashMap<String, String> highMap = new HashMap<String, String>();
 
 
     Topics(){
@@ -27,7 +25,7 @@ public class Topics {
             Scanner scan = new Scanner(Topics.class.getResourceAsStream("topics.txt"));
 
             //Each for loop assigns the responses to each array from the text file
-            for(int i = 0; i < Constants.majorNum; i++) {
+            for (int i = 0; i < Constants.majorNum; i++) {
                 year1Major.add(new Decision(scan.nextLine(), new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()),
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()),
                         new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()),
@@ -35,7 +33,7 @@ public class Topics {
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()), true));
             }
 
-            for(int i = 0; i < Constants.minorNum; i++) {
+            for (int i = 0; i < Constants.minorNum; i++) {
                 year1Minor.add(new Decision(scan.nextLine(), new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()),
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()),
                         new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()),
@@ -43,7 +41,7 @@ public class Topics {
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()), false));
             }
 
-            for(int i = 0; i < Constants.majorNum; i++) {
+            for (int i = 0; i < Constants.majorNum; i++) {
                 year2Major.add(new Decision(scan.nextLine(), new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()),
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()),
                         new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()),
@@ -51,7 +49,7 @@ public class Topics {
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()), true));
             }
 
-            for(int i = 0; i < Constants.minorNum; i++) {
+            for (int i = 0; i < Constants.minorNum; i++) {
                 year2Minor.add(new Decision(scan.nextLine(), new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()),
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()),
                         new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()),
@@ -59,7 +57,7 @@ public class Topics {
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()), false));
             }
 
-            for(int i = 0; i < Constants.majorNum; i++) {
+            for (int i = 0; i < Constants.majorNum; i++) {
                 year3Major.add(new Decision(scan.nextLine(), new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()),
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()),
                         new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()),
@@ -67,7 +65,7 @@ public class Topics {
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()), true));
             }
 
-            for(int i = 0; i < Constants.minorNum; i++) {
+            for (int i = 0; i < Constants.minorNum; i++) {
                 year3Minor.add(new Decision(scan.nextLine(), new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()),
                         Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()), scan.nextLine()),
                         new Response(scan.nextLine(), Integer.parseInt(scan.nextLine()), Integer.parseInt(scan.nextLine()),
@@ -79,30 +77,18 @@ public class Topics {
             try {
                 Scanner high = new Scanner(new File(Topics.class.getResource("highlight.txt").getPath()));
 
-                for(int i = 0; i < Constants.majorNum *9; i++){
-                    highlights.add(new Highlight(high.nextLine(), high.nextLine(), high.nextLine()));
+                for (int i = 0; i < Constants.majorNum * 9; i++) {
+                    highMap.put(high.nextLine(), high.nextLine());
+                    String link = high.nextLine();
                 }
-            }
-            catch (Exception e){
+            } catch (Exception e) {
 
             }
 
             //scan major links information, add that to arraylists
 
-            Scanner linkScan = new Scanner(new File(Topics.class.getResource("topiclinks.txt").getPath()));
-            for(int i = 0; i < Constants.majorNum; i++) {
-                year1MajorLinks.add(linkScan.nextLine());
-            }
-            for(int i = 0; i < Constants.majorNum; i++) {
-                year2MajorLinks.add(linkScan.nextLine());
-            }
-            for(int i = 0; i < Constants.majorNum; i++) {
-                year3MajorLinks.add(linkScan.nextLine());
-            }
-            linkScan.close();
-        }
-        catch (Exception e){
-            System.out.println(e.toString());
+        }catch (Exception e){
+
         }
     }
 
@@ -166,6 +152,10 @@ public class Topics {
 
         Collections.shuffle(place);
         return place;
+    }
+
+    public String getBlurb(String key){
+        return highMap.get(key);
     }
 
     public ArrayList<Decision> getAllResponses(){

@@ -20,15 +20,17 @@ public class StateOfTheUnionView extends JPanel {
     private static final int HEIGHT = 825;
     private int fakeYear;
     private static int year;
+    private Topics topics;
     //private Clip newTrack;
     //private FloatControl volume;
     private ArrayList<Decision> yearHighlights;
     private ArrayList<Response> highlightResponses;
     private BufferedImage stateBox, resBox, descBox;
 
-    public StateOfTheUnionView(int year, ArrayList<Decision> yearHighlights, ArrayList<Response> highlightResponses) {
+    public StateOfTheUnionView(int year, ArrayList<Decision> yearHighlights, ArrayList<Response> highlightResponses, Topics topics) {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
         setBackground(Color.BLACK);
+        this.topics = topics;
         this.fakeYear = year;
         this.yearHighlights = yearHighlights;
         this.highlightResponses = highlightResponses;
@@ -246,6 +248,48 @@ public class StateOfTheUnionView extends JPanel {
         g.setColor(Color.WHITE);
         g.setFont(new Font(Font.DIALOG, Font.BOLD, 24));
         g.drawString("Click Anywhere to Continue", 525, 810);
+
+        /** Blurb text **/
+        g.setFont(new Font(Font.DIALOG, Font.BOLD, 14));
+        line = "";
+        jump = 0;
+        for (String word : (topics.getBlurb(yearHighlights.get(0).toString())).split(" ")) {
+            if (line.length() + word.length() <= 35) {
+                line += word + " ";
+            } else {
+
+                g.drawString(line, 20 + 30, 390 + 120 + g.getFontMetrics().getHeight() * jump);
+                jump++;
+                line = word + " ";
+            }
+        }
+        g.drawString(line, 20 + 30, 390 + 120 + g.getFontMetrics().getHeight() * jump);
+        line = "";
+        jump = 0;
+        for (String word : (topics.getBlurb(yearHighlights.get(1).toString())).split(" ")) {
+            if (line.length() + word.length() <= 35) {
+                line += word + " ";
+            } else {
+
+                g.drawString(line, 495 + 30, 390 + 120 + g.getFontMetrics().getHeight() * jump);
+                jump++;
+                line = word + " ";
+            }
+        }
+        g.drawString(line, 495 + 30, 390 + 120 + g.getFontMetrics().getHeight() * jump);
+        line = "";
+        jump = 0;
+        for (String word : (topics.getBlurb(yearHighlights.get(2).toString())).split(" ")) {
+            if (line.length() + word.length() <= 35) {
+                line += word + " ";
+            } else {
+
+                g.drawString(line, 980 + 30, 390 + 120 + g.getFontMetrics().getHeight() * jump);
+                jump++;
+                line = word + " ";
+            }
+        }
+        g.drawString(line, 980 + 30, 390 + 120 + g.getFontMetrics().getHeight() * jump);
 
 
     }
