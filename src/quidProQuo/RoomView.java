@@ -448,9 +448,9 @@ public class RoomView extends JPanel implements ActionListener{
         }
 
 
-        if (!dialogue && !aidLeaving && !aidMoving && year1.size() != 0){
+        if (!dialogue && !aidLeaving && !aidMoving && year.size() != 0){
             currentAidOne = new Aid(aids.get(rand.nextInt(6)).getSprite(), 0, 825);
-            currentDesc = year1.remove(0);
+            currentDesc = year.remove(0);
             aidMoving = true;
         }
 
