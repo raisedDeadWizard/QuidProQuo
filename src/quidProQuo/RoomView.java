@@ -110,7 +110,7 @@ public class RoomView extends JPanel implements ActionListener{
 
         topics = new Topics();
         year1 = topics.getYear1();
-        currentDesc = year1.remove(0);
+
 
 
         // Listener for user interaction
@@ -271,8 +271,11 @@ public class RoomView extends JPanel implements ActionListener{
         g.drawImage(currentAidOne.getSprite(), currentAidOne.getX(), currentAidOne.getY(), null);
 
         if (dialogue && !aidLeaving && !aidMoving){
+
             if (isOnResOne){
                 g.drawImage(dialogueBox[1], Constants.dialogueBoxX, Constants.dialogueBoxY, null);
+
+
             }
             else if (isOnResTwo){
                 g.drawImage(dialogueBox[2], Constants.dialogueBoxX, Constants.dialogueBoxY, null);
@@ -284,12 +287,38 @@ public class RoomView extends JPanel implements ActionListener{
                 g.drawImage(dialogueBox[0], Constants.dialogueBoxX, Constants.dialogueBoxY, null);
             }
 
+            g.setFont(new Font(Font.DIALOG, Font.BOLD, 16));
+            String z = "";
+            int len = 0;
+            int jump = 0;
+            for (char c : currentDesc.toCharArray()){
+                z += c;
+                len++;
+
+                if (len > 38){
+
+                    g.drawString(z + "-", Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 45 + g.getFontMetrics().getHeight()*jump);
+                    jump++;
+                    z = "";
+                    len = 0;
+                }
+            }
+            g.drawString(z, Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 45 + g.getFontMetrics().getHeight()*jump);
+            g.setFont(new Font(Font.DIALOG, Font.BOLD, 14));
+
+            g.drawChars(currentDesc.getResOne().toCharArray(), 0, currentDesc.getResOne().toCharArray().length,
+                    Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 250);
+            g.drawChars(currentDesc.getResTwo().toCharArray(), 0, currentDesc.getResTwo().toCharArray().length,
+                    Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 370);
+            g.drawChars(currentDesc.getResThree().toCharArray(), 0, currentDesc.getResThree().toCharArray().length,
+                    Constants.dialogueBoxX + 70, Constants.dialogueBoxY + 490);
         }
 
 
 
 
     }
+
 
 
     private BufferedImage loadImage(String resourceName) {
@@ -368,6 +397,7 @@ public class RoomView extends JPanel implements ActionListener{
             blink = false;
             ticks = 0;
         }
+
 
         if (!dialogue && !aidLeaving && !aidMoving && year1.size() != 0){
             currentAidOne = new Aid(aids.get(rand.nextInt(6)).getSprite(), 0, 825);
