@@ -162,7 +162,7 @@ Mr. President, how do you plan to interact with the press at tonight’s confere
 Accuse the news media of putting out fake news. 
 -3
 1
--1 
+-1
 XXX
 Answer their questions honestly and try to have a productive discussion. 
 1
@@ -493,8 +493,7 @@ Declare a national emergency and cut aid to Central American countries in retali
 -5
 3
 -1
-The migrants are left with nowhere to go and the conditions in Central America deteriorate. 
-Nationalist voters are happy with your decision to prioritize American interests.
+The migrants are left with nowhere to go and the conditions in Central America deteriorate. Nationalist voters are happy with your decision to prioritize American interests.
 ISIS has lost most of its ground in Syria. Are you ready to call the operations successful?
 Yes, ISIS is defeated! Pull out all U.S. troops.
 -5
