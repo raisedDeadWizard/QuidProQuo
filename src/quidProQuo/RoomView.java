@@ -108,6 +108,7 @@ public class RoomView extends JPanel implements ActionListener{
 
         topics = new Topics();
         year1 = topics.getYear1();
+        currentDesc = year1.remove(0);
 
 
         // Listener for user interaction
@@ -170,7 +171,6 @@ public class RoomView extends JPanel implements ActionListener{
         if (dialogue) {
             if (isOnResOne(e)) {
                 dialogue = false;
-                aidCount--;
                 aidLeaving = true;
                 Response a = currentDesc.getResOne();
                 demBar.updateVal(demBar.getVal() + a.getDem());
@@ -180,7 +180,6 @@ public class RoomView extends JPanel implements ActionListener{
             } else if (isOnResTwo(e)) {
                 Response a = currentDesc.getResTwo();
                 dialogue = false;
-                aidCount--;
                 aidLeaving = true;
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
@@ -189,7 +188,6 @@ public class RoomView extends JPanel implements ActionListener{
             } else if (isOnResThree(e)) {
                 Response a = currentDesc.getResThree();
                 dialogue = false;
-                aidCount--;
                 aidLeaving = true;
                 demBar.updateVal(demBar.getVal() + a.getDem());
                 repBar.updateVal(repBar.getVal() + a.getRep());
@@ -369,23 +367,28 @@ public class RoomView extends JPanel implements ActionListener{
             ticks = 0;
         }
 
-        if (!dialogue && aidTicks > 3*Constants.ticksPerSec + Constants.ticksPerSec*rand.nextInt(6)){
+        if (!dialogue && aidTicks > 3*Constants.ticksPerSec + Constants.ticksPerSec*rand.nextInt(6) && !aidLeaving){
             currentAidOne = aids.get(rand.nextInt(6));
-            currentDesc = year1.remove(rand.nextInt(year1.size()));
-            aidCount++;
+            currentDesc = year1.remove(0);
             aidTicks = 0;
             aidLeaving = false;
         }
 
-        if (aidCount == 1 && currentAidOne.getX() < 400 && currentAidOne.getY() > 200){
+        if (!aidLeaving && currentAidOne.getX() < 400 && currentAidOne.getY() > 200){
             currentAidOne.moveX(5);
             currentAidOne.moveY(-7);
         }
 
-        if (aidCount == 0 && aidLeaving){
+        if (aidLeaving){
             currentAidOne.moveY(5);
+            if (currentAidOne.getY() > 825){
+                aidLeaving = false;
+            }
         }
-        else if (aidCount == 1 && currentAidOne.getX() == 390){
+
+
+
+        if (!aidLeaving && currentAidOne.getX() == 390){
             dialogue = true;
         }
 
