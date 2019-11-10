@@ -23,7 +23,8 @@ public class StartView extends JPanel{
     private static final int HEIGHT = 825;
     private BufferedImage background;
     private BufferedImage[] playButton = new BufferedImage[2];
-    private boolean isOnPlay = false;
+    private BufferedImage[] creditsButton = new BufferedImage[2];
+    private boolean isOnPlay = false, isOnCredits = false;
 
     private Clip openingTrack;
 
@@ -32,7 +33,10 @@ public class StartView extends JPanel{
         background = loadImage("StartMenu.png");
         playButton[0] = loadImage("playbutton.png");
         playButton[1] = loadImage("playbutton1.png");
+        creditsButton[0] = loadImage("CreditsButton.png");
+        creditsButton[1] = loadImage("CreditsButton1.png");
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
+
         openingTrack = loadSound("hailToCheif.wav");
         FloatControl volume = (FloatControl) openingTrack.getControl(FloatControl.Type.MASTER_GAIN);
         volume.setValue(-20);
@@ -74,6 +78,13 @@ public class StartView extends JPanel{
             isOnPlay = false;
         }
 
+        if (isOnCredits(e)){
+            isOnCredits = true;
+        }
+        else {
+            isOnCredits = false;
+        }
+
         repaint();
     }
 
@@ -81,6 +92,14 @@ public class StartView extends JPanel{
     protected void handleMousePressed(MouseEvent e) {
         if (isOnPlay){
             Main.frame.setContentPane(new RoomView());
+            Main.frame.pack();
+            Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            Main.frame.setVisible(true);
+            openingTrack.stop();
+        }
+
+        if (isOnCredits){
+            Main.frame.setContentPane(new CreditsView());
             Main.frame.pack();
             Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Main.frame.setVisible(true);
@@ -111,6 +130,14 @@ public class StartView extends JPanel{
             g.drawImage(playButton[0], 275, 650, null);
         }
 
+
+        if (isOnCredits){
+            g.drawImage(creditsButton[1], 800, 650, null);
+        }
+        else {
+            g.drawImage(creditsButton[0], 800, 650, null);
+        }
+
     }
 
     private boolean isOnPlay(MouseEvent e){
@@ -121,6 +148,16 @@ public class StartView extends JPanel{
             return false;
         }
     }
+
+    private boolean isOnCredits(MouseEvent e){
+        if (e.getX() > 800 && e.getX() < 1300 && e.getY() > 650 && e.getY() < 750){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     private BufferedImage loadImage(String resourceName) {
         BufferedImage image;
         try {

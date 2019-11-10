@@ -48,6 +48,7 @@ public class CreditsView extends JPanel {
         Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Main.frame.setVisible(true);
 
+
     }
 
     protected void handleMouseDragged(MouseEvent e) {
