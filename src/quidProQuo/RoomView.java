@@ -277,7 +277,12 @@ public class RoomView extends JPanel implements ActionListener{
             g.drawImage(donald[0], Constants.donaldX, Constants.donaldY, null);
         }
 
-
+        //create Year X box
+        g.setColor(Color.GRAY);
+        g.fillRect(1330, 20, 100, 50);
+        g.setColor(Color.BLACK);
+        g.drawRect(1330, 20, 100, 50);
+        g.drawString("Year " + getYear(), 1340, 55);
 
         //Diet Coke
         g.drawImage(coke, Constants.cokeX, Constants.cokeY, null);
@@ -456,6 +461,16 @@ public class RoomView extends JPanel implements ActionListener{
         }
         else {
             return false;
+        }
+    }
+
+    public int getYear() {
+        if(year.size() > 19) {
+            return 1;
+        } else if(year.size() > 9) {
+            return 2;
+        } else {
+            return 3;
         }
     }
 
