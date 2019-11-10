@@ -8,9 +8,11 @@ import java.awt.event.MouseEvent;
 public class CreditsView extends JPanel {
     private static final int WIDTH = 1480;
     private static final int HEIGHT = 825;
+    private static String credits = "CREDITS";
 
     public CreditsView() {
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        setBackground(Color.BLACK);
 
         MouseAdapter listener = new MouseAdapter() {
             @Override
@@ -42,7 +44,7 @@ public class CreditsView extends JPanel {
 
 
     protected void handleMousePressed(MouseEvent e) {
-        Main.frame.setContentPane(new RoomView());
+        Main.frame.setContentPane(new StartView());
         Main.frame.pack();
         Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Main.frame.setVisible(true);
@@ -57,4 +59,12 @@ public class CreditsView extends JPanel {
         repaint();
     }
 
+    /** Paint Component **/
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        g.setColor(Color.WHITE);
+        g.drawString(credits, 500, 100);
+    }
 }
