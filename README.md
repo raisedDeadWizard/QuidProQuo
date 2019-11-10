@@ -1,5 +1,5 @@
 # QuidProQuo
-Games for Social Impact Game Jam
+## Games for Social Impact Game Jam
 
 **Purpose** 
 	
