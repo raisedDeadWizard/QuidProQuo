@@ -51,6 +51,8 @@ public class RoomView extends JPanel implements ActionListener{
     private ArrayList<Decision> year1;
     private ArrayList<Decision> year2;
     private ArrayList<Decision> year3;
+    private ArrayList<Decision> yearAll;
+
 
 
 
@@ -118,6 +120,7 @@ public class RoomView extends JPanel implements ActionListener{
         year1 = topics.getYear1();
         year2 = topics.getYear2();
         year3 = topics.getYear3();
+        yearAll = topics.getAllResponses();
 
         //combines all of the randomly assigned decisions into one arraylist, sorted by year
         year = new ArrayList<Decision>(year1);
@@ -277,7 +280,12 @@ public class RoomView extends JPanel implements ActionListener{
             g.drawImage(donald[0], Constants.donaldX, Constants.donaldY, null);
         }
 
-
+        //create Year X box
+        g.setColor(Color.GRAY);
+        g.fillRect(1330, 20, 100, 50);
+        g.setColor(Color.BLACK);
+        g.drawRect(1330, 20, 100, 50);
+        g.drawString("Year " + getYear(), 1340, 55);
 
         //Diet Coke
         g.drawImage(coke, Constants.cokeX, Constants.cokeY, null);
@@ -459,6 +467,16 @@ public class RoomView extends JPanel implements ActionListener{
         }
     }
 
+    public int getYear() {
+        if(year.size() > 19) {
+            return 1;
+        } else if(year.size() > 9) {
+            return 2;
+        } else {
+            return 3;
+        }
+    }
+
     /** reoccuring events to animate go in this function**/
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -477,7 +495,10 @@ public class RoomView extends JPanel implements ActionListener{
 
         if (!dialogue && !aidLeaving && !aidMoving && year.size() != 0){
             currentAidOne = new Aid(aids.get(rand.nextInt(6)).getSprite(), 0, 825);
+            // comment out following line to test all responses
             currentDesc = year.remove(0);
+            // uncomment following line to test all responses
+            //currentDesc = yearAll.remove(0);
             aidMoving = true;
         }
 
