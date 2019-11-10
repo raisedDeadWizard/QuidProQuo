@@ -91,7 +91,7 @@ public class StartView extends JPanel{
 
     protected void handleMousePressed(MouseEvent e) {
         if (isOnPlay){
-            Main.frame.setContentPane(new RoomView());
+            Main.frame.setContentPane(Main.room = new RoomView(Main.year,Main.dem, Main.rep, Main.nat));
             Main.frame.pack();
             Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             Main.frame.setVisible(true);

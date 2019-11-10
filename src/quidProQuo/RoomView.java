@@ -52,6 +52,7 @@ public class RoomView extends JPanel implements ActionListener{
     private ArrayList<Decision> year2;
     private ArrayList<Decision> year3;
     private ArrayList<Decision> yearAll;
+    private int yearValue;
 
 
 
@@ -65,8 +66,8 @@ public class RoomView extends JPanel implements ActionListener{
 
 
 
-    public RoomView() {
-
+    public RoomView(int yearValue, int dem, int rep, int nat) {
+        this.yearValue = yearValue;
         // Sets the background color of the window
         setBackground(Color.WHITE);
 
@@ -82,9 +83,9 @@ public class RoomView extends JPanel implements ActionListener{
         FloatControl volume = (FloatControl) soundTrack.getControl(FloatControl.Type.MASTER_GAIN);
         volume.setValue(-20);
         soundTrack.loop(Clip.LOOP_CONTINUOUSLY);
-        demBar = new Bar(30,Constants.demBarX, Constants.demBarY);
-        repBar = new Bar(80,Constants.repBarX, Constants.repBarY);
-        natBar = new Bar(51,Constants.natBarX, Constants.natBarY);
+        demBar = new Bar(dem,Constants.demBarX, Constants.demBarY);
+        repBar = new Bar(rep,Constants.repBarX, Constants.repBarY);
+        natBar = new Bar(nat,Constants.natBarX, Constants.natBarY);
 
 
         donald[0] = loadImage("Donald.png");
@@ -123,9 +124,15 @@ public class RoomView extends JPanel implements ActionListener{
         yearAll = topics.getAllResponses();
 
         //combines all of the randomly assigned decisions into one arraylist, sorted by year
-        year = new ArrayList<Decision>(year1);
-        year.addAll(year2);
-        year.addAll(year3);
+        if (yearValue == 1){
+            year = new ArrayList<Decision>(year1);
+        }
+        else if (yearValue == 2){
+            year = new ArrayList<Decision>(year2);
+        }
+        else {
+            year = new ArrayList<Decision>(year3);
+        }
 
 
 
@@ -286,6 +293,16 @@ public class RoomView extends JPanel implements ActionListener{
         g.setColor(Color.BLACK);
         g.drawRect(1330, 20, 100, 50);
         g.drawString("Year " + getYear(), 1340, 55);
+        if(year.size() == 0) {
+            Main.dem = demBar.getVal();
+            Main.rep = repBar.getVal();
+            Main.nat = natBar.getVal();
+            Main.year = yearValue+1;
+            Main.frame.setContentPane(new StateOfTheUnionView(yearValue));
+            Main.frame.pack();
+            Main.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            Main.frame.setVisible(true);
+        }
 
         //Diet Coke
         g.drawImage(coke, Constants.cokeX, Constants.cokeY, null);
@@ -468,13 +485,7 @@ public class RoomView extends JPanel implements ActionListener{
     }
 
     public int getYear() {
-        if(year.size() > 19) {
-            return 1;
-        } else if(year.size() > 9) {
-            return 2;
-        } else {
-            return 3;
-        }
+        return yearValue;
     }
 
     /** reoccuring events to animate go in this function**/
