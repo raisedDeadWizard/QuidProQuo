@@ -24,7 +24,7 @@ public class Topics {
     Topics(){
 
         try {
-            Scanner scan = new Scanner(new File(Topics.class.getResource("topics.txt").getPath()));
+            Scanner scan = new Scanner(Topics.class.getResourceAsStream("topics.txt"));
 
             //Each for loop assigns the responses to each array from the text file
             for(int i = 0; i < Constants.majorNum; i++) {
